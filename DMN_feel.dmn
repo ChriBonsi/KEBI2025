@@ -1,0 +1,1199 @@
+<?xml version="1.0" encoding="UTF-8"?><dmn:definitions xmlns:dmn="http://www.omg.org/spec/DMN/20151101/dmn.xsd" xmlns:triso="http://www.trisotech.com/2015/triso/modeling" xmlns="http://www.trisotech.com/definitions/_18bc3d6f-ca3c-4375-809e-9bf1990eb25d" xmlns:boxedext="https://www.trisotech.com/spec/DMN/20191111/EXT/" xmlns:drools="http://www.drools.org/kie/dmn/1.1" xmlns:feel="http://www.omg.org/spec/FEEL/20140401" xmlns:i18n="http://www.omg.org/spec/BPMN/non-normative/extensions/i18n/1.0" xmlns:openapi="https://openapis.org/omg/extension/1.0" xmlns:rss="http://purl.org/rss/2.0/" xmlns:sdmn="https://www.omg.org/spec/SDMN/" xmlns:tc="http://www.omg.org/spec/DMN/20160719/testcase" xmlns:trisodmn="http://www.trisotech.com/2016/triso/dmn" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" exporter="Decision Modeler" exporterVersion="9.8.4" id="_18bc3d6f-ca3c-4375-809e-9bf1990eb25d" name="first model " namespace="http://www.trisotech.com/definitions/_18bc3d6f-ca3c-4375-809e-9bf1990eb25d" triso:logoChoice="Default" xml:lang="en">
+  <dmn11:extensionElements xmlns:dmn11="http://www.omg.org/spec/DMN/20151101/dmn.xsd">
+    <drools:decisionServices>
+      <dmn11:decisionService id="_18bc3d6f-ca3c-4375-809e-9bf1990eb25d_DS" name="Whole Model Decision Service" triso:dynamicDecisionService="true" triso:wholeModelService="true">
+        <dmn:outputDecision href="#_2b70dce2-26e9-40e2-8fb2-9a2313c699ca"/>
+        <dmn:encapsulatedDecision href="#_42689ad5-6ab5-4261-995f-e35864787d3c"/>
+        <dmn:encapsulatedDecision href="#_9fe0f2f5-75cf-4d24-b6e3-8eb6763a38a8"/>
+        <dmn:encapsulatedDecision href="#_f1020c8e-8d92-4013-b200-4b0086176059"/>
+        <dmn:encapsulatedDecision href="#_48af6b4d-866c-4343-8b26-c9665bc4eae7"/>
+        <dmn:encapsulatedDecision href="#_3b96a0ce-3ffc-4eed-93fd-26f76cf35a96"/>
+        <dmn:inputData href="#_9ecf3302-deaf-4f37-9d01-b5f17f2cf41c"/>
+        <dmn:inputData href="#_669fa454-afcf-4627-bc00-7d4829df5c1c"/>
+        <dmn:inputData href="#_97dac1c9-1985-43a5-b11f-239e75eaa517"/>
+        <dmn:inputData href="#_ee365248-99cd-4454-83e8-fc8ddbcce10f"/>
+        <dmn:inputData href="#_ce50779e-27c4-485e-b27d-11585f57f956"/>
+        <dmn:inputData href="#_db05b45e-9f74-424e-8d9b-7645fe4f8e5a"/>
+        <dmn:inputData href="#_4ed21f87-61cb-4cf6-a4da-8bc6a7d4d85e"/>
+        <dmn:inputData href="#_8e58ea7f-f5b6-4ba4-ba9a-e084ac27314b"/>
+        <dmn:inputData href="#_d7892d9b-7a19-41e0-a244-112993db0da0"/>
+      </dmn11:decisionService>
+      <dmn11:decisionService id="_aacd7a05-79e7-435e-8166-b9127ce0ab12_DS" name="Diagram Page 1" triso:dynamicDecisionService="true">
+        <dmn:outputDecision href="#_2b70dce2-26e9-40e2-8fb2-9a2313c699ca"/>
+        <dmn:encapsulatedDecision href="#_9fe0f2f5-75cf-4d24-b6e3-8eb6763a38a8"/>
+        <dmn:encapsulatedDecision href="#_f1020c8e-8d92-4013-b200-4b0086176059"/>
+        <dmn:encapsulatedDecision href="#_48af6b4d-866c-4343-8b26-c9665bc4eae7"/>
+        <dmn:encapsulatedDecision href="#_42689ad5-6ab5-4261-995f-e35864787d3c"/>
+        <dmn:encapsulatedDecision href="#_3b96a0ce-3ffc-4eed-93fd-26f76cf35a96"/>
+        <dmn:inputData href="#_9ecf3302-deaf-4f37-9d01-b5f17f2cf41c"/>
+        <dmn:inputData href="#_669fa454-afcf-4627-bc00-7d4829df5c1c"/>
+        <dmn:inputData href="#_97dac1c9-1985-43a5-b11f-239e75eaa517"/>
+        <dmn:inputData href="#_ee365248-99cd-4454-83e8-fc8ddbcce10f"/>
+        <dmn:inputData href="#_ce50779e-27c4-485e-b27d-11585f57f956"/>
+        <dmn:inputData href="#_db05b45e-9f74-424e-8d9b-7645fe4f8e5a"/>
+        <dmn:inputData href="#_4ed21f87-61cb-4cf6-a4da-8bc6a7d4d85e"/>
+        <dmn:inputData href="#_8e58ea7f-f5b6-4ba4-ba9a-e084ac27314b"/>
+        <dmn:inputData href="#_d7892d9b-7a19-41e0-a244-112993db0da0"/>
+      </dmn11:decisionService>
+    </drools:decisionServices>
+  </dmn11:extensionElements>
+  <dmn:itemDefinition isCollection="true" name="collectionOfString">
+    <dmn11:typeRef xmlns:dmn11="http://www.omg.org/spec/DMN/20151101/dmn.xsd">feel:string</dmn11:typeRef>
+  </dmn:itemDefinition>
+  <dmn:inputData id="_9ecf3302-deaf-4f37-9d01-b5f17f2cf41c" name="only vegetarian meal" triso:readOnly="false">
+    <dmn:variable id="_9bab5c38-0e1e-42eb-ab33-9b100587045d" name="only vegetarian meal" typeRef="feel:boolean"/>
+  </dmn:inputData>
+  <dmn:inputData id="_669fa454-afcf-4627-bc00-7d4829df5c1c" name="only lactose int meal" triso:readOnly="false">
+    <dmn:variable id="_d48c698d-f19f-4b42-b29c-b6634f20f0e8" name="only lactose int meal" typeRef="feel:boolean"/>
+  </dmn:inputData>
+  <dmn:inputData id="_97dac1c9-1985-43a5-b11f-239e75eaa517" name="only celiac meal" triso:readOnly="false">
+    <dmn:variable id="_7be2ac7a-525c-438f-b472-b99230e1a992" name="only celiac meal" typeRef="feel:boolean"/>
+  </dmn:inputData>
+  <dmn:decision id="_42689ad5-6ab5-4261-995f-e35864787d3c" name="foods" triso:readOnly="false">
+    <dmn:variable id="_d2025ca2-c23a-4745-a619-6d08eaa4789e" name="foods" typeRef="collectionOfString"/>
+    <dmn:informationRequirement triso:readOnly="false">
+      <dmn:requiredInput href="#_9ecf3302-deaf-4f37-9d01-b5f17f2cf41c"/>
+    </dmn:informationRequirement>
+    <dmn:informationRequirement triso:readOnly="false">
+      <dmn:requiredInput href="#_669fa454-afcf-4627-bc00-7d4829df5c1c"/>
+    </dmn:informationRequirement>
+    <dmn:informationRequirement triso:readOnly="false">
+      <dmn:requiredInput href="#_97dac1c9-1985-43a5-b11f-239e75eaa517"/>
+    </dmn:informationRequirement>
+    <dmn:decisionTable hitPolicy="COLLECT" id="_0b5af979-994e-43aa-9cec-50d418250624" outputLabel="foods" triso:descriptionVisible="false" triso:expressionId="_369b6ec8-16d1-424d-84c9-fba7aed8f93d" typeRef="collectionOfString">
+      <dmn:input id="_805c50ce-7de4-4b6e-9be8-765cd24e84a8" label="only celiac meal">
+        <dmn:inputExpression typeRef="feel:boolean">
+          <dmn:text>only celiac meal</dmn:text>
+        </dmn:inputExpression>
+      </dmn:input>
+      <dmn:input id="_9f2e1984-8c06-474c-9e0e-b696e3085be2" label="only lactose int meal">
+        <dmn:inputExpression typeRef="feel:boolean">
+          <dmn:text>only lactose int meal</dmn:text>
+        </dmn:inputExpression>
+      </dmn:input>
+      <dmn:input id="_57432bdc-1e31-450f-9747-4d135ba57617" label="only vegetarian meal">
+        <dmn:inputExpression typeRef="feel:boolean">
+          <dmn:text>only vegetarian meal</dmn:text>
+        </dmn:inputExpression>
+      </dmn:input>
+      <dmn:output id="_3a80f0ae-d9b7-4ab5-a73d-f37a09096fea" triso:allowNull="true"/>
+      <dmn:rule id="_ad52e097-f76b-4863-8d9d-bbe5e7dda644">
+        <dmn:inputEntry id="_b07345b1-3c0b-49f3-af21-949a11c3a583">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_f5697248-7baa-4b62-89ad-e8df0a7d8b94">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_2fb75ab9-7367-4eff-9a52-cfe1489007e9">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry id="_dc84fdd5-615c-4186-a773-9f58a7a502a1">
+          <dmn:text>"aglio"</dmn:text>
+        </dmn:outputEntry>
+      </dmn:rule>
+      <dmn:rule id="_7065b658-0794-468e-a759-a2e665c3b745">
+        <dmn:inputEntry id="_9186586f-f2c8-4721-a1dd-9ed5e1fd279d">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_bfeb1aaf-0134-4e7d-a5e2-ee14c7b1c75c">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_3f638838-56b2-4e15-9450-8752cc584bab">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry id="_e68a61ad-fdf0-4a28-a41d-5ab4c33e5802">
+          <dmn:text>"basilico"</dmn:text>
+        </dmn:outputEntry>
+      </dmn:rule>
+      <dmn:rule id="_c8d450e1-c97c-4aba-b8e6-9be8617954ad">
+        <dmn:inputEntry id="_3a4b59af-685e-4b9a-8c95-87a035aaa0c3">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_a037df56-6b98-4b8b-ab35-62dfb7ed7403">
+          <dmn:text>false</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_e8196b7c-f1f2-46a8-b7f2-05632af24a9d">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry id="_a908f112-013f-487d-b90f-12d13ea86e02">
+          <dmn:text>"burro"</dmn:text>
+        </dmn:outputEntry>
+      </dmn:rule>
+      <dmn:rule id="_f1d5224e-a4ac-4738-9df1-70169b10825a">
+        <dmn:inputEntry id="_b8841c26-dc4d-4578-8ed0-b9553ef9933a">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_dffc3fb5-1923-490e-903d-76be4de071ac">
+          <dmn:text>false</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_e152afb9-e4df-4e78-a418-17db98f396f0">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry id="_beb5bdfd-fa18-4e92-ac7a-71ca4f476f4e">
+          <dmn:text>"caciotta"</dmn:text>
+        </dmn:outputEntry>
+      </dmn:rule>
+      <dmn:rule id="_ce68f342-2952-4ee0-8119-7380a9c4e8c4">
+        <dmn:inputEntry id="_2d87e3fd-5d8c-4f1d-82dd-df9a8e22cea1">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_aecc7b1a-8358-4c44-9dc4-8f7d37c3c386">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_4f38d145-6e58-4383-be3f-35688877005c">
+          <dmn:text>false</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry id="_c2c7d7dc-f1d7-4327-b492-7cadf94a66ff">
+          <dmn:text>"carne"</dmn:text>
+        </dmn:outputEntry>
+      </dmn:rule>
+      <dmn:rule id="_f282a5fe-bd0a-42c5-8eea-02f9f27afa89">
+        <dmn:inputEntry id="_65bbbc96-7be8-4c34-b522-db25c02e28e0">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_a6d1995b-37d8-4753-831f-f8e49145a1ed">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_209d8ee8-47b3-47a3-9e81-ac62fc79be5b">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry id="_0f14edd4-9061-48e8-b6b7-f5ecd090e7b7">
+          <dmn:text>"ceci"</dmn:text>
+        </dmn:outputEntry>
+      </dmn:rule>
+      <dmn:rule id="_daa58bfa-d0a7-4b18-8b77-3c9d15c1692c">
+        <dmn:inputEntry id="_561cf3c6-c8eb-4c38-b478-16932bbb293b">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_0faa1344-0694-4f55-9620-15f88e4e1a0d">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_b21518df-bb93-4f9e-8be0-8950b48017ab">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry id="_f5cbc894-ac08-4d6e-aace-42cf07dd6f5d">
+          <dmn:text>"cipolla"</dmn:text>
+        </dmn:outputEntry>
+      </dmn:rule>
+      <dmn:rule id="_bca75be4-230a-4218-b0fb-a0e374a9905c">
+        <dmn:inputEntry id="_754eebe4-1cf8-43d7-a3d5-eaf86ff49726">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_0e1ef66d-da43-4f7f-9e23-b28dc13212c6">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_8c2e40e9-65d2-4d44-9178-2287799bdfe8">
+          <dmn:text>false</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry id="_feb456e8-51a5-4e06-acdc-efcde6d08bc7">
+          <dmn:text>"coppa"</dmn:text>
+        </dmn:outputEntry>
+      </dmn:rule>
+      <dmn:rule id="_1a1ddfc4-f812-44c8-854b-064b1e7bd72c">
+        <dmn:inputEntry id="_1acd4f02-e02c-4d2d-91b3-0388ab9ee4c2">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_c184dbda-ce90-4b6a-a7f6-c141335df01d">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_fee7be59-9c35-471f-9549-257c8495a0a8">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry id="_9af1356a-ff5c-4788-87ab-95605ebbefe7">
+          <dmn:text>"fagioli"</dmn:text>
+        </dmn:outputEntry>
+      </dmn:rule>
+      <dmn:rule id="_e6cb3b5e-9a7d-4401-a265-4eb8f0c2bc4e">
+        <dmn:inputEntry id="_debbc311-951c-471d-a18c-fe6cad0cdc0e">
+          <dmn:text>false</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_94b933b4-83e9-4f64-aa58-a2617179ff1a">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_1f26a431-6fd9-46b1-9213-87b7bba7ab42">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry id="_fca66987-803c-4537-8822-8132d15d72d8">
+          <dmn:text>"farina"</dmn:text>
+        </dmn:outputEntry>
+      </dmn:rule>
+      <dmn:rule id="_5def8109-da14-4bdd-804e-8ac5fe293beb">
+        <dmn:inputEntry id="_5060be2f-f40f-4fea-8fa2-abf928b9bca7">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_bc697c20-fc8d-4237-aa7e-a99931b542c5">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_2376b7fe-453d-4933-8595-63f135fd81c5">
+          <dmn:text>false</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry id="_4025a159-89b2-4982-bf47-3a6a77309b7a">
+          <dmn:text>"guanciale"</dmn:text>
+        </dmn:outputEntry>
+      </dmn:rule>
+      <dmn:rule id="_22002893-3eb3-401f-bdaa-ec777f0875a4">
+        <dmn:inputEntry id="_b68a015f-2cfc-42db-8f45-606a890beb28">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_7c597a3c-d77d-4dc9-96ec-a9cc511af501">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_494a71bf-2704-4b1d-bbde-d8e4e8ed25db">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry id="_70e5622a-ff78-4eed-8c0d-b089ce262957">
+          <dmn:text>"lenticchie"</dmn:text>
+        </dmn:outputEntry>
+      </dmn:rule>
+      <dmn:rule id="_63ca99a9-5a45-49ae-93ad-6bab6faddaca">
+        <dmn:inputEntry id="_9f16808e-d7b5-4320-8a1c-87c0c6213088">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_86b42a33-b1e5-4552-90eb-1f0a76903733">
+          <dmn:text>false</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_abc09889-d2bb-4d57-b455-23bf7db58dd1">
+          <dmn:text>false</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry id="_56bca134-7814-467f-9c7d-a319a4297e67">
+          <dmn:text>"mortadella"</dmn:text>
+        </dmn:outputEntry>
+      </dmn:rule>
+      <dmn:rule id="_e6e52002-4253-4e61-8cc4-1bbf28adc11c">
+        <dmn:inputEntry id="_83a8edf7-7309-4d0d-950a-841db8466b20">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_f45bf7e3-62a0-4b08-9828-13d8d229c7fe">
+          <dmn:text>false</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_aff2f06b-0410-4a4f-b72a-199cf6bdf3b8">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry id="_a39da48c-8bfa-4379-b4de-bf9878369503">
+          <dmn:text>"mozzarella"</dmn:text>
+        </dmn:outputEntry>
+      </dmn:rule>
+      <dmn:rule id="_d64aaf60-b266-4c1d-887b-28ed8b3b3d05">
+        <dmn:inputEntry id="_0b082996-ec81-4820-a8af-af273dca7104">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_bfd80f97-236f-43c6-ab1c-e41f3276af6b">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_c74ec61e-41c6-4c13-ad4f-161e3df5000f">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry id="_6e01e9f9-0a31-48db-809a-883b1786402d">
+          <dmn:text>"olio"</dmn:text>
+        </dmn:outputEntry>
+      </dmn:rule>
+      <dmn:rule id="_6ff8ffaa-8c97-41f8-a8b5-412fa4320285">
+        <dmn:inputEntry id="_4fd02a54-fff5-4aa5-980a-b08db5c4e324">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_c5100536-ca8f-4401-a051-8b2aea7eb24c">
+          <dmn:text>false</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_70a3ac03-c5df-4c0a-bc05-3042f9bb25ea">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry id="_ae2c8a14-963f-4d95-bed8-130161b115e4">
+          <dmn:text>"parmigiano"</dmn:text>
+        </dmn:outputEntry>
+      </dmn:rule>
+      <dmn:rule id="_3f4838c3-61d5-4843-8d30-f803ee005516">
+        <dmn:inputEntry id="_f1610788-1423-4230-a5b6-1739a1fbf7b6">
+          <dmn:text>false</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_5f74178c-4115-445a-a587-a8172491011e">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_68f087e6-d3fa-48f0-b5f5-c15d01d73bba">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry id="_bf512b7b-3875-4e03-ad7b-3efde427f9f1">
+          <dmn:text>"pasta"</dmn:text>
+        </dmn:outputEntry>
+      </dmn:rule>
+      <dmn:rule id="_a0239a41-e1c6-469b-9982-df18a0c97339">
+        <dmn:inputEntry id="_39510b9c-7119-46e6-9727-d1e23b0edf9b">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_d73ea498-55b6-4211-8f27-d23afbdb29e2">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_6353bc7b-1c9d-42c4-ba3e-aba7aa15499c">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry id="_1cc92521-4083-4f9c-897c-346f91a3bb1b">
+          <dmn:text>"pecorino"</dmn:text>
+        </dmn:outputEntry>
+      </dmn:rule>
+      <dmn:rule id="_79e25323-a7cb-4ce9-8910-54896e52f952">
+        <dmn:inputEntry id="_0f2f78fe-0409-4a46-9dc5-90e7d80f40ca">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_d4152b2d-9271-4bf9-9c16-b47f7c03684f">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_11d0e60f-9519-4145-802a-9e009526e0ee">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry id="_3aae0c3c-5333-4a0a-beb2-606d09fa9d8a">
+          <dmn:text>"pepe"</dmn:text>
+        </dmn:outputEntry>
+      </dmn:rule>
+      <dmn:rule id="_f5ff3e2d-090b-4c10-883c-04ae66c984ca">
+        <dmn:inputEntry id="_d665b793-0ccb-41e8-b0a8-c8ee5170cbfd">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_7944215f-f0bf-4171-9ded-9eeb3f32a058">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_55c72548-ada9-432e-b06c-5f03c02e6117">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry id="_1a06e061-2cde-4974-9694-91063086bca3">
+          <dmn:text>"pomodoro"</dmn:text>
+        </dmn:outputEntry>
+      </dmn:rule>
+      <dmn:rule id="_a6005f53-91d0-4d43-81e5-303882b897d2">
+        <dmn:inputEntry id="_f6a626cf-600c-45d7-9635-22e5196da26f">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_078be292-4fab-467d-8875-e568a5d3e85d">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_8d3a806f-04ab-476c-b02c-d6f2441c4554">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry id="_82aae5e3-0114-4b90-b6be-6cd4357d569f">
+          <dmn:text>"riso"</dmn:text>
+        </dmn:outputEntry>
+      </dmn:rule>
+      <dmn:rule id="_866f2316-ad1e-4e84-9531-a6f793c4be95">
+        <dmn:inputEntry id="_9e5ee361-06bf-421e-ad5c-d378b66b80aa">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_d70f2b32-db2a-4983-99a5-817811c15728">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_7d59e6a3-b181-4f0c-a6ad-8bd73e769249">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry id="_fc5706a7-c24e-4ebe-a4fc-d56e587d919b">
+          <dmn:text>"rosmarino"</dmn:text>
+        </dmn:outputEntry>
+      </dmn:rule>
+      <dmn:rule id="_7b0e07e3-345c-4d94-8667-b59af99dbffe">
+        <dmn:inputEntry id="_e353e085-0f9b-4440-aa19-5745cc1f7a06">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_25fced1c-aaff-4b08-9c87-bba2ed5b7d21">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_0c477593-d099-4fdf-baa4-5c54f8e21676">
+          <dmn:text>false</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry id="_f643af98-c363-408a-baf9-4c228bc0bcfd">
+          <dmn:text>"salame"</dmn:text>
+        </dmn:outputEntry>
+      </dmn:rule>
+      <dmn:rule id="_a4e3ab95-4189-412d-b02e-70d6af566610">
+        <dmn:inputEntry id="_385ff87f-8950-4001-87d4-619f1dd4a61f">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_57e6cf92-0ca1-460b-9e36-aaa1f6fbd278">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_9a899ecc-b38e-459d-9db5-af9c0fa42037">
+          <dmn:text>false</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry id="_d8d85c42-a71c-4e55-9fe5-4e478a5b371a">
+          <dmn:text>"spianata"</dmn:text>
+        </dmn:outputEntry>
+      </dmn:rule>
+      <dmn:rule id="_83a3495c-c1f7-4cb2-9c53-a5e62559025a">
+        <dmn:inputEntry id="_abd82958-2ae8-405d-a2cd-8a0e3bca0d15">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_2bb7b6ac-b4b2-465c-a38b-1fc801dbf96f">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_d0079b69-c789-4785-baf5-e780166b19c8">
+          <dmn:text>false</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry id="_cfb64188-33c8-4d9b-bdda-f83d5f22b6b7">
+          <dmn:text>"tonno"</dmn:text>
+        </dmn:outputEntry>
+      </dmn:rule>
+      <dmn:rule id="_8691d2d9-5b67-4f1d-8883-2bc472e2b523">
+        <dmn:inputEntry id="_3ce8811e-02db-49db-9011-3811009cdb4a">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_b33641f2-0c44-4f8e-9e8e-9bc169c4fab1">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_d54f6880-8c58-4a92-bb1c-c09040d4e863">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry id="_b3eadf28-6c20-4d5f-8821-52a05de63360">
+          <dmn:text>"uova"</dmn:text>
+        </dmn:outputEntry>
+      </dmn:rule>
+    </dmn:decisionTable>
+  </dmn:decision>
+  <dmn:decision id="_9fe0f2f5-75cf-4d24-b6e3-8eb6763a38a8" name="ingredientsPerDishes" triso:readOnly="false">
+    <dmn:variable id="_4baea53a-7a4a-444e-8dc0-09bb83055ff2" name="ingredientsPerDishes" typeRef="collectionOfString"/>
+    <dmn:list id="_e97a0156-a4b9-4f24-9f75-750f0d8ffa69" triso:descriptionVisible="false" triso:expressionId="_42722df0-6348-4d82-b5ac-cd63fbbf6ba5" typeRef="collectionOfString">
+      <dmn:literalExpression id="_536ed9cc-c815-499c-a231-ec48bac9ba6c">
+        <dmn:text>[ "tagliereFormaggi", ["caciotta", "pecorino", "parmigiano"]]</dmn:text>
+      </dmn:literalExpression>
+      <dmn:literalExpression id="_793d016b-31f0-4a94-bc8a-7cb870c6b364">
+        <dmn:text>["tagliereSalumi", ["salame", "mortadella", "coppa"]]</dmn:text>
+      </dmn:literalExpression>
+      <dmn:literalExpression id="_eefd5197-3758-4dc3-82ed-e47273c625e2">
+        <dmn:text>["crescia", ["acqua", "olio", "farina", "rosmarino"]]</dmn:text>
+      </dmn:literalExpression>
+      <dmn:literalExpression id="_c8b41e5e-3c3c-4fa2-a05a-c9a7807f56c6">
+        <dmn:text>["pastaPesto", ["pasta", "olio", "basilico", "aglio", "parmigiano"]]</dmn:text>
+      </dmn:literalExpression>
+      <dmn:literalExpression id="_252d28dc-7be3-45f4-bd98-2e2c9ad839c5">
+        <dmn:text>["pastaCarbonara", ["guanciale", "pecorino", "uova", "pasta", "pepe"]]</dmn:text>
+      </dmn:literalExpression>
+      <dmn:literalExpression id="_0d3894fe-23f1-42ab-89e6-3d7c104cab3f">
+        <dmn:text>["risottoPomodoro", ["riso", "pomodoro", "basilico", "parmigiano", "burro"]]</dmn:text>
+      </dmn:literalExpression>
+      <dmn:literalExpression id="_c7fbfe03-5a1c-41ff-8bdd-93247bee80a8">
+        <dmn:text>["pizzaMargherita", ["farina", "olio", "acqua", "pomodoro", "mozzarella", "basilico"]]</dmn:text>
+      </dmn:literalExpression>
+      <dmn:literalExpression id="_9041b26f-c79f-444c-8639-87cb588e3c69">
+        <dmn:text>["pizzaTonnoCipolla", ["farina", "olio", "acqua", "tonno", "cipolla"]]</dmn:text>
+      </dmn:literalExpression>
+      <dmn:literalExpression id="_29d6b240-b648-4a2c-9ddc-aca52f244b9b">
+        <dmn:text>["pizzaDiavola", ["farina", "acqua", "olio", "spianata", "pomodoro"]]</dmn:text>
+      </dmn:literalExpression>
+      <dmn:literalExpression id="_13b74204-85d4-4b46-b6c8-cb5c79096d61">
+        <dmn:text>["insalataLegumi", ["ceci", "lenticchie", "fagioli", "pepe", "olio", "cipolla"]]</dmn:text>
+      </dmn:literalExpression>
+      <dmn:literalExpression id="_660df771-8d88-4d9c-a3ae-555d08a4d8cc">
+        <dmn:text>["uovaSode", ["uova", "olio", "pepe"]]</dmn:text>
+      </dmn:literalExpression>
+      <dmn:literalExpression id="_70d350db-bfe0-4c04-b827-b2ebb203bc2e">
+        <dmn:text>["tagliataRosmarino", ["carne", "olio", "rosmarino", "aglio"]]</dmn:text>
+      </dmn:literalExpression>
+    </dmn:list>
+  </dmn:decision>
+  <dmn:decision id="_f1020c8e-8d92-4013-b200-4b0086176059" name="dietsResults" triso:readOnly="false">
+    <dmn:variable id="_ce494e26-b1f7-400e-884e-5974ee6a8d1c" name="dietsResults" typeRef="collectionOfString"/>
+    <dmn:informationRequirement triso:readOnly="false">
+      <dmn:requiredDecision href="#_9fe0f2f5-75cf-4d24-b6e3-8eb6763a38a8"/>
+    </dmn:informationRequirement>
+    <dmn:informationRequirement triso:readOnly="false">
+      <dmn:requiredDecision href="#_42689ad5-6ab5-4261-995f-e35864787d3c"/>
+    </dmn:informationRequirement>
+    <dmn:literalExpression id="_27ffceed-133a-42cd-9efd-fc3ada06fb09" triso:descriptionVisible="false" triso:expressionId="_a3f2e6a7-a7d4-41f6-9968-b91f5a434188" typeRef="collectionOfString">
+      <dmn:text>for item in ingredientsPerDishes
+return if every ingr in item[2] satisfies ingr in foods then item[1] else "EXCLUDE"
+
+  
+</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_48af6b4d-866c-4343-8b26-c9665bc4eae7" name="allergensAndAliments" triso:readOnly="false">
+    <dmn:variable id="_385d3bb0-6b82-4ef1-88b7-b4a74c6a258d" name="allergensAndAliments" typeRef="collectionOfString"/>
+    <dmn:informationRequirement triso:readOnly="false">
+      <dmn:requiredInput href="#_4ed21f87-61cb-4cf6-a4da-8bc6a7d4d85e"/>
+    </dmn:informationRequirement>
+    <dmn:informationRequirement triso:readOnly="false">
+      <dmn:requiredInput href="#_ee365248-99cd-4454-83e8-fc8ddbcce10f"/>
+    </dmn:informationRequirement>
+    <dmn:informationRequirement triso:readOnly="false">
+      <dmn:requiredInput href="#_ce50779e-27c4-485e-b27d-11585f57f956"/>
+    </dmn:informationRequirement>
+    <dmn:informationRequirement triso:readOnly="false">
+      <dmn:requiredInput href="#_db05b45e-9f74-424e-8d9b-7645fe4f8e5a"/>
+    </dmn:informationRequirement>
+    <dmn:informationRequirement triso:readOnly="false">
+      <dmn:requiredInput href="#_8e58ea7f-f5b6-4ba4-ba9a-e084ac27314b"/>
+    </dmn:informationRequirement>
+    <dmn:informationRequirement triso:readOnly="false">
+      <dmn:requiredInput href="#_d7892d9b-7a19-41e0-a244-112993db0da0"/>
+    </dmn:informationRequirement>
+    <dmn:decisionTable hitPolicy="COLLECT" id="_87a81d80-b3e1-4b83-8a23-d2b8744ecf32" outputLabel="allergensAndAliments" triso:descriptionVisible="false" triso:expressionId="_d4cc5eb4-d578-4ab2-8784-ad85726fb9ff" typeRef="collectionOfString">
+      <dmn:input id="_16f0b4eb-9516-4fe3-9b23-3447b9497e0c" label="allergic to tree nuts">
+        <dmn:inputExpression typeRef="feel:boolean">
+          <dmn:text>allergic to tree nuts</dmn:text>
+        </dmn:inputExpression>
+      </dmn:input>
+      <dmn:input id="_40be79f6-88f0-499b-a518-06d0f60c2afe" label="allergic to soybean">
+        <dmn:inputExpression typeRef="feel:boolean">
+          <dmn:text>allergic to soybean</dmn:text>
+        </dmn:inputExpression>
+      </dmn:input>
+      <dmn:input id="_2f58b974-d9f6-4055-b96f-be7bce1fc324" label="allergic to peanuts">
+        <dmn:inputExpression typeRef="feel:boolean">
+          <dmn:text>allergic to peanuts</dmn:text>
+        </dmn:inputExpression>
+      </dmn:input>
+      <dmn:input id="_1198d0ee-518e-4717-866f-6ab6b46dea1f" label="allergic to fish">
+        <dmn:inputExpression typeRef="feel:boolean">
+          <dmn:text>allergic to fish</dmn:text>
+        </dmn:inputExpression>
+      </dmn:input>
+      <dmn:input id="_74cf9550-c334-4939-a50c-e1e6f5288f51" label="allergic to eggs">
+        <dmn:inputExpression typeRef="feel:boolean">
+          <dmn:text>allergic to eggs</dmn:text>
+        </dmn:inputExpression>
+      </dmn:input>
+      <dmn:input id="_ee644292-357d-4d13-962c-bde4bd7fb238" label="allergic to crustacean shellfish">
+        <dmn:inputExpression typeRef="feel:boolean">
+          <dmn:text>allergic to crustacean shellfish</dmn:text>
+        </dmn:inputExpression>
+      </dmn:input>
+      <dmn:output id="_5277ff97-cc11-4104-87b0-704ec9569117" triso:allowNull="true"/>
+      <dmn:rule id="_b4d537ba-0054-40a2-a146-859f10eaa358">
+        <dmn:inputEntry id="_555811f8-9d93-4aa5-ad72-f4ec4018fce7">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_30fd6d71-adea-4de4-b7b3-0c8c10fd0ccd">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_0b2e8c17-b179-4555-b94a-fb91e72c920c">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_2fbca14a-7d00-4528-b8a2-22a56fe82dd8">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_2f13c5c2-3e33-443e-ba9f-4d56b0b3df1d">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_9b16970a-c00c-461d-ab47-cbfa7df6fdf9">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry id="_79542a8d-ac86-4c9b-80e9-0ae289ac968c">
+          <dmn:text>"aglio"</dmn:text>
+        </dmn:outputEntry>
+      </dmn:rule>
+      <dmn:rule id="_7d395b83-81d8-4d6e-9986-047d682d8d67">
+        <dmn:inputEntry id="_59d84f8b-0eae-4ad8-bd5c-54c3d5400919">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_631eefb3-b59b-41f5-992a-64180346dd4f">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_85470716-24b0-4c5f-9f4f-cfaa4e8b8ab1">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_c09bfaaf-d4ca-46f4-86f3-40557e47501a">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_024adaf6-a757-4904-8b54-4a6689174c33">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_2ba3cf7b-e704-4b5c-83a0-d2ce2b2367fc">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry id="_fb4c30eb-6c19-4398-8e07-bc1c872921dd">
+          <dmn:text>"basilico"</dmn:text>
+        </dmn:outputEntry>
+      </dmn:rule>
+      <dmn:rule id="_bce25cae-9e82-446d-bc53-5dccae3af32d">
+        <dmn:inputEntry id="_022fa8cd-bf2e-4788-9847-a39a9f76ab38">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_73c4bf0f-9e8b-472d-b45c-61b24a49796b">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_102bb9c4-3341-417d-a994-4e86a741b0a1">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_aa293d6b-e8d6-4a44-9fb7-076652a14e02">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_f7eaf6b1-e9cf-4130-9b67-25079b4e843d">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_2967c737-943e-4e6d-9c40-28a2e47d9f17">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry id="_55e2e5b2-473f-41d6-b318-f039e7572d76">
+          <dmn:text>"burro"</dmn:text>
+        </dmn:outputEntry>
+      </dmn:rule>
+      <dmn:rule id="_9c377448-f3b8-4706-b28b-413537bd0048">
+        <dmn:inputEntry id="_b40decb5-ce50-414f-9fc6-42b3fa0b1ed8">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_0bb0f063-bcd8-4245-a2df-afa3a8770269">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_4ffa9b45-a41f-4d2a-9838-24beefacada9">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_22e7634b-50c9-4abc-b46d-aea9fe7ad594">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_f1343c07-87ac-4089-ae1a-548ea0dcd885">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_d2146c12-cb66-44b8-8881-b6f5ddd9807a">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry id="_58ee6ff8-7d8b-46c5-bf71-361c0f3c1d5a">
+          <dmn:text>"caciotta"</dmn:text>
+        </dmn:outputEntry>
+      </dmn:rule>
+      <dmn:rule id="_a7839bb9-1e5d-4d33-ad39-f6a104d2e6a4">
+        <dmn:inputEntry id="_668a181f-a227-45b9-9273-7c17149e8383">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_675c7bbc-15e5-47e2-bf22-428849b4c57f">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_e4f04540-1255-4cdf-b2c7-8cd01423ab8a">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_e30fd193-08e8-4396-ba30-14c4c05ed5fd">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_8eaa2136-61d2-451e-be1a-1280a2d2cc3f">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_dbfedd3f-08fd-4330-a0f5-f9c3bfd3f413">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry id="_8f9c7988-6932-42bb-8e7b-3ed48e8d4db4">
+          <dmn:text>"carne"</dmn:text>
+        </dmn:outputEntry>
+      </dmn:rule>
+      <dmn:rule id="_c90fef83-5536-46bf-94d2-4807fcb466a7">
+        <dmn:inputEntry id="_3463f5c1-dc2b-4348-9159-3c825912f13a">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_b4c98d1b-630c-43f8-82c0-ddfa56b5f26f">
+          <dmn:text>false</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_89d6bca0-0d4d-4ed3-9b8e-4425ee3a9e47">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_b3d6c1ee-ba83-4f17-86df-4473d38d7851">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_bf8cf0c6-b4fe-42bc-9faf-3b43de07ea1a">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_5aca6e66-c111-46e5-a76d-a17c55616b55">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry id="_7036842a-4a89-4789-8173-75d1de7383c0">
+          <dmn:text>"ceci"</dmn:text>
+        </dmn:outputEntry>
+      </dmn:rule>
+      <dmn:rule id="_7695a045-9fe8-4051-a295-a4d1b7a726cb">
+        <dmn:inputEntry id="_a79815d6-6729-4cbb-962c-b016606b8045">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_a5d944ee-5925-470f-bd81-2b7927fc7f95">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_04dc0af4-fdb8-4677-81f6-4760e0656f2e">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_bd9b57a4-60c0-4ec4-a346-eb7de726c775">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_73995035-1c61-475c-bdbe-86bdfc1b879b">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_8d11ee3c-d5c0-4ba6-8953-d49a6085c430">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry id="_dd536dcf-4ab4-4bf3-b63f-d3d2331facc1">
+          <dmn:text>"cipolla"</dmn:text>
+        </dmn:outputEntry>
+      </dmn:rule>
+      <dmn:rule id="_b1aee058-87b5-4f1c-a96d-52e24e8763d8">
+        <dmn:inputEntry id="_6225b859-886b-4788-84ed-0a52fc93d315">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_0d361ba4-a8a3-4491-8c04-d56d568d7362">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_30e1b227-74f1-4a25-8884-56a76fa4da05">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_49b52dab-8872-4583-b310-96cc0a5c3043">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_477a264b-09e8-479f-85d1-542ede108391">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_e63c92c3-0780-4472-9bd4-772d54a96257">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry id="_ab608702-fd14-495e-95eb-fb8f7f1e406a">
+          <dmn:text>"coppa"</dmn:text>
+        </dmn:outputEntry>
+      </dmn:rule>
+      <dmn:rule id="_c337395b-cb52-4d10-a6db-51fede3a841c">
+        <dmn:inputEntry id="_56e41473-fc09-450f-8d87-26abcbb5a64d">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_f5479b85-e3b2-4a1c-8fb1-020e93858072">
+          <dmn:text>false</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_5e1c275d-fe4c-4c83-b298-93e9d2101fb1">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_8fd4d517-84c7-4a98-902a-9a9690a07c1a">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_a2748e6f-036c-446a-aa2c-7e7afea8ce6e">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_862e72c6-2237-4685-9bfe-75036b0876f2">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry id="_c2764bec-e1d1-49e5-a2f5-630173a720cb">
+          <dmn:text>"fagioli"</dmn:text>
+        </dmn:outputEntry>
+      </dmn:rule>
+      <dmn:rule id="_f35cbfb3-3cde-4f22-826a-0619f97a468e">
+        <dmn:inputEntry id="_160937f2-c96c-42c9-8964-9a8db2cca4ee">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_1633e940-75e4-427e-a8c5-6409a6cb27dc">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_42e11396-5d9a-4ab0-8fcd-3ab528c2929c">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_9a936098-6243-4471-8bd3-1d1a202c0188">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_4307166f-4a2b-4d07-869e-b832ee52531a">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_3ba74cbc-b455-44d0-a0e6-2aebf0039155">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry id="_afe15448-9aff-4940-9e33-9270f292bf7f">
+          <dmn:text>"farina"</dmn:text>
+        </dmn:outputEntry>
+      </dmn:rule>
+      <dmn:rule id="_1f2d4f04-6c5b-4ca6-ad61-4b5e2c58df9e">
+        <dmn:inputEntry id="_178f621a-436e-4718-908d-6f9b34c07b89">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_9c3ad1e8-5ac3-487c-859a-38ccf297b563">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_427e5270-9cbd-4311-88e2-d862995f996d">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_ed3cb56b-701c-4d53-b727-a7b913352e85">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_5ce863e6-f47c-4667-9227-a0d66388b5cc">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_df77bbcc-7d2e-4183-9612-8ca5dcf85828">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry id="_07aa3cb3-68fb-4575-9e15-c61842fd3696">
+          <dmn:text>"guanciale"</dmn:text>
+        </dmn:outputEntry>
+      </dmn:rule>
+      <dmn:rule id="_96537f82-95a1-4623-b747-1685273b5fbb">
+        <dmn:inputEntry id="_3733ae27-0db2-47ca-ac57-b99e9c6e0bba">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_c2a780cc-916c-4cba-a8c5-0f1c4acb59fa">
+          <dmn:text>false</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_39a2bd73-8cdf-4a7e-8797-5769a086efe1">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_ee6c116f-1058-4397-b65f-f2c3a4daaae5">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_f415c24f-eb1d-4114-96dd-b3e5a663a047">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_afb57cfe-54e7-4428-a78f-932d1e5dd742">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry id="_bce18469-434e-4d5e-b34c-1343d590f474">
+          <dmn:text>"lenticchie"</dmn:text>
+        </dmn:outputEntry>
+      </dmn:rule>
+      <dmn:rule id="_de41261c-da33-4995-ba65-f71774db16ba">
+        <dmn:inputEntry id="_1456355d-fb9d-4ad6-ba6b-49c8cffdd2ed">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_6e424135-b111-422b-8bf6-899e176eab2a">
+          <dmn:text>false</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_2acd62c3-808c-4f58-b296-3994e253a12d">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_35c0b841-79f7-4910-99c7-aeea6d0d1353">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_b4c6ae08-37ec-4faa-aa0b-8131ec5ff37b">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_d079bb49-bf6e-4562-be7c-b6441234bf33">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry id="_f9382aec-5164-472c-86e2-da18ea8d7bcd">
+          <dmn:text>"mortadella"</dmn:text>
+        </dmn:outputEntry>
+      </dmn:rule>
+      <dmn:rule id="_0d2bb799-7815-4509-8351-50c9433a8f72">
+        <dmn:inputEntry id="_34ce6633-8c85-4a4a-978b-33fdbb6b4128">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_bfbbe44c-e73d-4696-9c3c-a39594b95d86">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_c8d48924-0da0-4d26-9004-615338e2495e">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_2af29bb4-b135-4842-9a54-93bba2e1516a">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_ecaf5275-1547-4ebd-9f7a-0c404adb0aef">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_841563d8-a404-4c88-94d4-96144f4c2bb9">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry id="_8657bc6a-b2b4-4e5e-a262-13cb3de6c078">
+          <dmn:text>"mozzarella"</dmn:text>
+        </dmn:outputEntry>
+      </dmn:rule>
+      <dmn:rule id="_2f8edfc1-f716-499f-9fda-e467b0f4498d">
+        <dmn:inputEntry id="_a3cede9d-dde7-441d-83ce-b9d18cd6e53d">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_0ffc5f70-6d61-43eb-936d-a63a4f20bb50">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_dbf400e9-be04-4338-8241-7d804e47c112">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_4c3c742b-7ab7-461c-bb33-b786d6d594e7">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_601064c8-c8eb-4f48-b4d8-c324fb6c6558">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_39a9f58d-264e-4039-94d9-03d99b689510">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry id="_7465bd20-634e-4b69-ac63-abe10decb95c">
+          <dmn:text>"olio"</dmn:text>
+        </dmn:outputEntry>
+      </dmn:rule>
+      <dmn:rule id="_2b0051f1-e781-4647-b407-6327d8c69c41">
+        <dmn:inputEntry id="_2cc1c89a-bf69-463f-b665-876cf513ac4e">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_05812b11-5735-489c-a267-119a0166a165">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_a7ca450f-5608-4f43-9e2e-c80b02b92ed7">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_c4f171ee-f4c7-4cce-92b6-697dcc29e1bc">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_58689c44-04a4-4031-a434-47b040a11fd1">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_a56e7423-6e3f-4917-8489-452f6a7c8ecc">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry id="_994634d5-d703-45de-a554-918fba8b7dfd">
+          <dmn:text>"parmigiano"</dmn:text>
+        </dmn:outputEntry>
+      </dmn:rule>
+      <dmn:rule id="_76207205-0004-4ebc-8719-5a002d73c010">
+        <dmn:inputEntry id="_01b2dc05-ead5-414d-a443-b142c009dba7">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_66359f27-294d-4b67-b7db-3522da5e1789">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_ae0941d4-a581-424b-a54f-67a1f5f76897">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_24fedbae-eb7a-4c3b-904f-d6da67e2a32e">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_28295d52-87f7-455e-bec5-c5d5dea1f3c8">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_82bf6b80-1ffe-4aee-a43c-ceacbf84ca0b">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry id="_a7cd3847-134c-4de2-95a8-4f2eb42562ca">
+          <dmn:text>"pasta"</dmn:text>
+        </dmn:outputEntry>
+      </dmn:rule>
+      <dmn:rule id="_3bf0054a-d0a0-4f5e-b18d-4096d957f113">
+        <dmn:inputEntry id="_835b25d5-d051-492c-8fcc-6bd5b8a6c24b">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_28f664c1-3e78-4f15-90ac-0b957296b5b6">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_1880b805-7c5b-47c6-8781-fdfcb0dcd7d8">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_91d653d3-c699-4900-9893-b41608233094">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_35289459-e967-41ca-9f4b-42e1a6ad6ba0">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_dd7fcf23-d85a-4838-936c-43cd90ebab3d">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry id="_35756c69-1752-45e8-9736-770a0c54a8cc">
+          <dmn:text>"pecorino"</dmn:text>
+        </dmn:outputEntry>
+      </dmn:rule>
+      <dmn:rule id="_d86a901c-c7b9-4d91-8cbe-efa25041b821">
+        <dmn:inputEntry id="_52eb49ae-d3b7-48dd-9810-6779e223f106">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_0edb87a1-f274-4479-98f1-897e77f9be57">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_f92e992b-984b-480d-8faa-b483cead30af">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_40203d44-116b-4637-b833-4da254f6c4be">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_23fa1432-b332-47cc-9ab5-243bc829e457">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_967c981f-d867-4e38-aba4-d051004fe67a">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry id="_7aa5496a-b24f-4a95-86bc-3e55c44d0a9e">
+          <dmn:text>"pepe"</dmn:text>
+        </dmn:outputEntry>
+      </dmn:rule>
+      <dmn:rule id="_38098943-a422-40c3-b7d8-4baae658c00c">
+        <dmn:inputEntry id="_78afcb05-5227-4ee7-8073-cdf6e275b7a9">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_58d2d190-901b-428f-b70a-d1de4f84c8f0">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_58218654-fcc2-4c47-89da-a30d2fe99ff0">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_1f99629d-6f6a-4505-8755-f323f8f2061e">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_3322c038-33f2-481b-b540-33f1157de0ed">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_58289fb9-10a9-42cb-afdb-58ce688cd154">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry id="_dc999781-28db-43b1-b15d-13794232a5e5">
+          <dmn:text>"pomodoro"</dmn:text>
+        </dmn:outputEntry>
+      </dmn:rule>
+      <dmn:rule id="_675c2443-4694-4079-abc1-eec2ed9bf2d6">
+        <dmn:inputEntry id="_0d086cbe-2fcf-4fcc-acc6-b48843ee9f0c">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_6da65882-1dd6-4dde-a42d-ccdf8aa8255d">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_2315eb2b-a210-4458-8714-9c3035fd1004">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_e8519c46-5e09-4f0f-b997-058ea0418190">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_367e397a-f040-477f-9338-378cdd81e475">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_e0123a1c-2dca-459f-804d-455fc4705e43">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry id="_d0c8b161-c203-446d-8866-cacc0a55da9c">
+          <dmn:text>"riso"</dmn:text>
+        </dmn:outputEntry>
+      </dmn:rule>
+      <dmn:rule id="_5315e29b-042b-428e-a6fc-2a707e0c2e67">
+        <dmn:inputEntry id="_f8ca1531-7e4f-44c3-b209-c122d4ceaf8a">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_3173ee6b-e651-48e1-b4ed-333d39fa8a38">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_3364c556-a6d2-499c-a2f3-56926cfb36b0">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_a389429f-9b25-4fee-8f7b-0bde1a335500">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_19085b04-ab44-4a36-a0ed-5ec18c2f48f5">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_ac244600-755c-423d-941b-474e489376bc">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry id="_c2265813-4140-4e7b-81be-d333858aadd7">
+          <dmn:text>"rosmarino"</dmn:text>
+        </dmn:outputEntry>
+      </dmn:rule>
+      <dmn:rule id="_1fabefe5-f99c-43bc-8b72-0418646e601f">
+        <dmn:inputEntry id="_cc28d3ce-a529-4c23-b05e-aa1982463ffa">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_9b2521fa-28cb-4221-bb90-0e3d96949fcf">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_8c60e337-6845-4436-bd16-5c8a0ddf6e7f">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_d5b120de-7e1a-4fb8-accb-4b76b63bfaf4">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_c2da1836-01e4-421e-a99a-939221a82841">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_8b90a151-0f40-4edd-981e-cfc04c2daef4">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry id="_3566d8d0-b489-45bc-88fa-e6192a74a98b">
+          <dmn:text>"salame"</dmn:text>
+        </dmn:outputEntry>
+      </dmn:rule>
+      <dmn:rule id="_bdf74a45-d04f-44aa-ba7e-e1d6a5a01bcb">
+        <dmn:inputEntry id="_8f4eafa1-0c78-417e-b907-25f15f8ad152">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_87e120fd-3584-4d86-9796-2d5310ff5c6c">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_5bebd9a1-eb10-418e-9095-5fac66025f02">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_69a77c17-f69d-4b94-98c9-044f7a53bbfe">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_ee84112a-925b-45dc-a029-e672c4a47cf5">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_1f697f03-b87a-485b-bbac-efe7299b9ff5">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry id="_70966648-3f76-45c4-b057-29c2d9d5ff1d">
+          <dmn:text>"spianata"</dmn:text>
+        </dmn:outputEntry>
+      </dmn:rule>
+      <dmn:rule id="_4b74a732-5bbf-4ff9-88d4-cace0c59d586">
+        <dmn:inputEntry id="_9a80c6cc-c100-4db0-8655-1f517a0c2fc7">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_2749c8e9-b61b-47ce-819e-d070f3de203e">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_53e72163-140c-4fcb-89f8-de6aca60591e">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_422136fa-4bb3-4a48-b6af-8fcc7ee499b3">
+          <dmn:text>false</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_a0a2acda-b077-4865-9430-41986580296d">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_98d8d6d8-93cf-4ffb-9477-9e4a625d0fdd">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry id="_96ad512b-8446-4559-8963-f47e0e6e8b36">
+          <dmn:text>"tonno"</dmn:text>
+        </dmn:outputEntry>
+      </dmn:rule>
+      <dmn:rule id="_a0bfcd22-1354-40bd-b505-8a88f1630433">
+        <dmn:inputEntry id="_2522e9cd-42af-49d7-86c5-e9354203677f">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_8b9ad26d-dfa9-4272-85fb-46889de54fda">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_b6e35ae0-a75f-45a0-ba65-0668e8ec6128">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_3ff56302-9346-4523-a913-75bcc6407d2c">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_06c4b973-08ff-4fe4-b57d-43587d0e11ef">
+          <dmn:text>false</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_449cf897-8868-49a0-86bd-b99590f460aa">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry id="_0a57e91b-02be-47b8-bdee-9981fbc061ee">
+          <dmn:text>"uova"</dmn:text>
+        </dmn:outputEntry>
+      </dmn:rule>
+    </dmn:decisionTable>
+  </dmn:decision>
+  <dmn:inputData id="_ee365248-99cd-4454-83e8-fc8ddbcce10f" name="allergic to soybean" triso:readOnly="false">
+    <dmn:variable id="_46ccc7d7-d373-4c29-bccf-5c35a1799f53" name="allergic to soybean" typeRef="feel:boolean"/>
+  </dmn:inputData>
+  <dmn:inputData id="_ce50779e-27c4-485e-b27d-11585f57f956" name="allergic to peanuts" triso:readOnly="false">
+    <dmn:variable id="_1fd0f9d2-ca1a-442a-b72e-cc079078430c" name="allergic to peanuts" typeRef="feel:boolean"/>
+  </dmn:inputData>
+  <dmn:inputData id="_db05b45e-9f74-424e-8d9b-7645fe4f8e5a" name="allergic to fish" triso:readOnly="false">
+    <dmn:variable id="_42093e83-bebe-41d2-9e82-6fe6d39bc46d" name="allergic to fish" typeRef="feel:boolean"/>
+  </dmn:inputData>
+  <dmn:inputData id="_4ed21f87-61cb-4cf6-a4da-8bc6a7d4d85e" name="allergic to tree nuts" triso:readOnly="false">
+    <dmn:variable id="_6e5139fb-dcae-4d2e-8f56-d62a1c647a18" name="allergic to tree nuts" typeRef="feel:boolean"/>
+  </dmn:inputData>
+  <dmn:inputData id="_8e58ea7f-f5b6-4ba4-ba9a-e084ac27314b" name="allergic to eggs" triso:readOnly="false">
+    <dmn:variable id="_0bf94f2f-ef42-4c9c-a19a-f5fa1db68411" name="allergic to eggs" typeRef="feel:boolean"/>
+  </dmn:inputData>
+  <dmn:inputData id="_d7892d9b-7a19-41e0-a244-112993db0da0" name="allergic to crustacean shellfish" triso:readOnly="false">
+    <dmn:variable id="_2e9f1cc3-f707-4a6f-b971-f243587dbe38" name="allergic to crustacean shellfish" typeRef="feel:boolean"/>
+  </dmn:inputData>
+  <dmn:decision id="_3b96a0ce-3ffc-4eed-93fd-26f76cf35a96" name="allergensResults" triso:readOnly="false">
+    <dmn:variable id="_a2ea0e49-bfe1-4bb6-b5cc-dc1ce42a5456" name="allergensResults" typeRef="collectionOfString"/>
+    <dmn:informationRequirement triso:readOnly="false">
+      <dmn:requiredDecision href="#_48af6b4d-866c-4343-8b26-c9665bc4eae7"/>
+    </dmn:informationRequirement>
+    <dmn:informationRequirement triso:readOnly="false">
+      <dmn:requiredDecision href="#_9fe0f2f5-75cf-4d24-b6e3-8eb6763a38a8"/>
+    </dmn:informationRequirement>
+    <dmn:literalExpression id="_80c92ac2-36bb-4c53-b3ee-806bddc90869" triso:descriptionVisible="false" triso:expressionId="_faca3a63-29f3-4dd4-a3e9-479c2612d759" typeRef="collectionOfString">
+      <dmn:text>for item in ingredientsPerDishes
+return if every ingr in item[2] satisfies ingr in allergensAndAliments then item[1] else "EXCLUDE"</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmn:decision id="_2b70dce2-26e9-40e2-8fb2-9a2313c699ca" name="finalSuggestions" triso:readOnly="false">
+    <dmn:variable id="_0a608cc3-904f-43ec-b8d1-4cff21cb8c12" name="finalSuggestions" typeRef="collectionOfString"/>
+    <dmn:informationRequirement triso:readOnly="false">
+      <dmn:requiredDecision href="#_3b96a0ce-3ffc-4eed-93fd-26f76cf35a96"/>
+    </dmn:informationRequirement>
+    <dmn:informationRequirement triso:readOnly="false">
+      <dmn:requiredDecision href="#_f1020c8e-8d92-4013-b200-4b0086176059"/>
+    </dmn:informationRequirement>
+    <dmn:literalExpression id="_d7df0370-6ccb-4b52-aebc-331e199ce6e5" triso:descriptionVisible="false" triso:expressionId="_a6c25932-c6ff-44e3-bd55-f0da3543257b" typeRef="collectionOfString">
+      <dmn:text>for x in allergensResults return
+  if x in dietsResults then x else "EXCLUDE"</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+</dmn:definitions>
