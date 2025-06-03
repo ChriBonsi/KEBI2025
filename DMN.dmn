@@ -1,0 +1,851 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<semantic:definitions xmlns:semantic="https://www.omg.org/spec/DMN/20240513/MODEL/"  xmlns:sdmn="https://www.omg.org/spec/SDMN/"  xmlns:triso="http://www.trisotech.com/2015/triso/modeling"  xmlns:dmndi="https://www.omg.org/spec/DMN/20230324/DMNDI/"  xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/"  xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/"  xmlns:trisodmn="http://www.trisotech.com/2016/triso/dmn"  xmlns:feel="https://www.omg.org/spec/DMN/20240513/FEEL/"  xmlns:tc="http://www.omg.org/spec/DMN/20160719/testcase"  xmlns:drools="http://www.drools.org/kie/dmn/1.1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xmlns:rss="http://purl.org/rss/2.0/"  xmlns:openapi="https://openapis.org/omg/extension/1.0"  xmlns:xsd="http://www.w3.org/2001/XMLSchema"   xmlns:i18n="http://www.omg.org/spec/BPMN/non-normative/extensions/i18n/1.0"  xmlns="http://www.trisotech.com/definitions/_34da856a-253a-4252-8aaa-29fa717724ed" id="_34da856a-253a-4252-8aaa-29fa717724ed" name="KEBI project 3" namespace="http://www.trisotech.com/definitions/_34da856a-253a-4252-8aaa-29fa717724ed" exporter="Decision Modeler" exporterVersion="9.8.4" xml:lang="en" triso:logoChoice="Default">
+    <semantic:extensionElements/>
+    <semantic:itemDefinition name="Name" label="Name" isCollection="false">
+        <semantic:typeRef>Any</semantic:typeRef>
+    </semantic:itemDefinition>
+    <semantic:itemDefinition name="tMeal" label="tMeal">
+        <semantic:typeRef>ttMeal</semantic:typeRef>
+    </semantic:itemDefinition>
+    <semantic:itemDefinition name="ttMeal" label="ttMeal">
+        <semantic:typeRef>string</semantic:typeRef>
+        <semantic:allowedValues>
+            <semantic:extensionElements>
+                <triso:constraintDetails id="_dbd0b48e-6e17-4ac8-8b6b-af7795544200" constraintsType="expression">
+                    <triso:value>"Carne", "Verdure", "Uova"</triso:value>
+                    <triso:display>"Carne", "Verdure", "Uova"</triso:display>
+                </triso:constraintDetails>
+            </semantic:extensionElements>
+            <semantic:text>"Carne", "Verdure", "Uova"</semantic:text>
+        </semantic:allowedValues>
+    </semantic:itemDefinition>
+    <semantic:itemDefinition name="tDiettype" label="tDiettype">
+        <semantic:typeRef>string</semantic:typeRef>
+        <semantic:allowedValues>
+            <semantic:extensionElements>
+                <triso:constraintDetails id="_62dffd88-5e68-4a88-ad93-a484eb33763c" constraintsType="expression">
+                    <triso:value>"vegetarian", "carnivore", "pescatarian"</triso:value>
+                    <triso:display>"vegetarian", "carnivore", "pescatarian"</triso:display>
+                </triso:constraintDetails>
+            </semantic:extensionElements>
+            <semantic:text>"vegetarian", "carnivore", "pescatarian"</semantic:text>
+        </semantic:allowedValues>
+    </semantic:itemDefinition>
+    <semantic:itemDefinition name="Diet_type" label="Diet type">
+        <semantic:typeRef>tDiettype</semantic:typeRef>
+    </semantic:itemDefinition>
+    <semantic:decisionService id="_34da856a-253a-4252-8aaa-29fa717724ed_DS" name="Whole Model Decision Service" triso:dynamicDecisionService="true" triso:wholeModelService="true">
+        <semantic:variable name="Whole Model Decision Service" id="_34da856a-253a-4252-8aaa-29fa717724ed_DS_VAR" typeRef="Any"/>
+        <semantic:outputDecision href="#_e3ecb99d-42ee-4f13-9fba-94f26750f6a1"/>
+        <semantic:encapsulatedDecision href="#_0a5169a8-8968-4a6b-b118-3b61a6711b96"/>
+        <semantic:inputData href="#_b12b2187-0539-4e9a-b744-354a2e8c3c39"/>
+        <semantic:inputData href="#_d0fdb86b-1b02-4a0f-bbc4-08a2d9dcb1c6"/>
+        <semantic:inputData href="#_b58f2673-f0ee-4c01-b66c-6b35dab7acca"/>
+        <semantic:inputData href="#_561aae88-8dd1-479d-9c6d-551d0aecdcdc"/>
+    </semantic:decisionService>
+    <semantic:decisionService id="_f7f441b4-7bb4-4022-9112-df314885e95a_DS" name="Diagram Page 3" triso:dynamicDecisionService="true">
+        <semantic:variable name="Diagram Page 3" id="_f7f441b4-7bb4-4022-9112-df314885e95a_DS_VAR" typeRef="Any"/>
+        <semantic:outputDecision href="#_e3ecb99d-42ee-4f13-9fba-94f26750f6a1"/>
+        <semantic:encapsulatedDecision href="#_0a5169a8-8968-4a6b-b118-3b61a6711b96"/>
+        <semantic:inputData href="#_b12b2187-0539-4e9a-b744-354a2e8c3c39"/>
+        <semantic:inputData href="#_d0fdb86b-1b02-4a0f-bbc4-08a2d9dcb1c6"/>
+        <semantic:inputData href="#_b58f2673-f0ee-4c01-b66c-6b35dab7acca"/>
+        <semantic:inputData href="#_561aae88-8dd1-479d-9c6d-551d0aecdcdc"/>
+    </semantic:decisionService>
+    <semantic:decisionService id="_a1c142c9-5be9-4169-a2b2-a5079f3ea156" name="Decision Service Conditions" triso:readOnly="false">
+        <semantic:variable name="Decision Service Conditions" id="_247d5915-244f-44d6-b262-fe10d9ccc998" typeRef="Any"/>
+    </semantic:decisionService>
+    <semantic:decisionService id="_75d4a8a0-ef88-4ff2-9063-c109f5a1246a" name="Decision Service _fc630afb-5437-4a52-b090-b753e13405a6" triso:readOnly="false">
+        <semantic:variable name="Decision Service _fc630afb-5437-4a52-b090-b753e13405a6" id="_0ccbb1ba-8b74-4359-b243-468cef1238f0" typeRef="Any"/>
+    </semantic:decisionService>
+    <semantic:decision id="_0a5169a8-8968-4a6b-b118-3b61a6711b96" name="Eligible ingredients" triso:readOnly="false">
+        <semantic:variable name="Eligible ingredients" id="_16dd7348-0e4b-4f13-8b4f-2c5bd943ee84" typeRef="string"/>
+        <semantic:informationRequirement id="_01dd99bc-75a1-44f3-b26c-b1e0aa75e674" triso:readOnly="false">
+            <semantic:requiredInput href="#_d0fdb86b-1b02-4a0f-bbc4-08a2d9dcb1c6"/>
+        </semantic:informationRequirement>
+        <semantic:informationRequirement id="_64f4323e-50df-4f25-b9c7-5da1381873a6" triso:readOnly="false">
+            <semantic:requiredInput href="#_b58f2673-f0ee-4c01-b66c-6b35dab7acca"/>
+        </semantic:informationRequirement>
+        <semantic:informationRequirement id="_7df4cdf5-0f0f-4e70-89e2-59a90a253fb1" triso:readOnly="false">
+            <semantic:requiredInput href="#_b12b2187-0539-4e9a-b744-354a2e8c3c39"/>
+        </semantic:informationRequirement>
+        <semantic:authorityRequirement id="_32605b9f-40f7-4a54-9e66-1ef4620ed9e8" triso:readOnly="false">
+            <semantic:requiredAuthority href="#_920e4d62-8442-4e3e-98ff-9e365cfd88d4"/>
+        </semantic:authorityRequirement>
+        <semantic:decisionTable triso:descriptionVisible="false" id="_8c0f9df7-5374-46d5-a6ce-079f697cb47f" hitPolicy="COLLECT" outputLabel="Eligible ingredients" typeRef="string" triso:expressionId="_ea4a340b-a674-4d57-8487-3a189f94c71f">
+            <semantic:input id="_e2eccbf0-4d97-471d-81f3-a6ecee920b6c" label="Diet type">
+                <semantic:inputExpression typeRef="string">
+                    <semantic:text>Diet type</semantic:text>
+                </semantic:inputExpression>
+                <semantic:inputValues triso:constraintsType="enumeration">
+                    <semantic:text>"vegetarian", "carnivore", "pescatarian"</semantic:text>
+                </semantic:inputValues>
+            </semantic:input>
+            <semantic:input id="_0d8266d3-a07b-4141-856d-bc76ab4d31b9" label="Lactose intolerant">
+                <semantic:inputExpression typeRef="boolean">
+                    <semantic:text>Lactose intolerant</semantic:text>
+                </semantic:inputExpression>
+            </semantic:input>
+            <semantic:input id="_ce73af6c-2de0-4626-8f90-9d40775cea47" label="Celiac">
+                <semantic:inputExpression typeRef="boolean">
+                    <semantic:text>Celiac</semantic:text>
+                </semantic:inputExpression>
+            </semantic:input>
+            <semantic:output id="_de468e68-6095-4d7c-b7fe-11474d70960c" triso:allowNull="false">
+                <semantic:outputValues triso:constraintsType="enumeration">
+                    <semantic:text>"Carne","Coppa","Guanciale","Mortadella","Salame","Spianata","Tonno","Burro","Caciotta","Mozzarella","Parmigiano","Farina","Pasta","Acqua","Aglio","Basilico","Ceci","Cipolla","Fagioli","Lenticchie","Olio","Pecorino","Pepe","Pomodoro","Riso","Uova","Rosmarino"</semantic:text>
+                </semantic:outputValues>
+            </semantic:output>
+            <semantic:annotation name="Description"/>
+            <semantic:rule id="_8bdaa85b-40b0-4268-aca2-8be86cca89b9">
+                <semantic:inputEntry id="_719958e5-090f-4a6d-84ea-0b714bd54dbd" triso:mergeKey="_92b5625c-9aa3-422c-a012-acda9a62cc9c">
+                    <semantic:text>"carnivore"</semantic:text>
+                </semantic:inputEntry>
+                <semantic:inputEntry id="_052eb1d7-601f-4eab-9e3d-81a614bb51d7" triso:mergeKey="_f64a96db-82f0-4720-aa91-f8aa4869c591">
+                    <semantic:text>-</semantic:text>
+                </semantic:inputEntry>
+                <semantic:inputEntry id="_c26146c6-fb08-4a9f-bb50-915053646020" triso:mergeKey="_700baa47-412f-429c-9580-9529cd4a9442">
+                    <semantic:text>-</semantic:text>
+                </semantic:inputEntry>
+                <semantic:outputEntry id="_d9af742e-b782-40b4-a68b-38bda478d3e1">
+                    <semantic:text>"Carne"</semantic:text>
+                </semantic:outputEntry>
+                <semantic:annotationEntry>
+                    <semantic:text/>
+                </semantic:annotationEntry>
+            </semantic:rule>
+            <semantic:rule id="_6e60a14c-bd44-4765-96b7-adeee8fd65dc">
+                <semantic:inputEntry id="_e694bedc-5c00-4c55-8ad4-6f45066e2e92" triso:mergeKey="_92b5625c-9aa3-422c-a012-acda9a62cc9c">
+                    <semantic:text>"carnivore"</semantic:text>
+                </semantic:inputEntry>
+                <semantic:inputEntry id="_bb8b692e-bc2e-4ac1-9627-55822a51e701" triso:mergeKey="_f64a96db-82f0-4720-aa91-f8aa4869c591">
+                    <semantic:text>-</semantic:text>
+                </semantic:inputEntry>
+                <semantic:inputEntry id="_7adc5708-02f3-4044-a99f-eb13fb931246" triso:mergeKey="_700baa47-412f-429c-9580-9529cd4a9442">
+                    <semantic:text>-</semantic:text>
+                </semantic:inputEntry>
+                <semantic:outputEntry id="_babb922e-d52f-490f-911d-328768bc2ff6">
+                    <semantic:text>"Coppa"</semantic:text>
+                </semantic:outputEntry>
+                <semantic:annotationEntry>
+                    <semantic:text/>
+                </semantic:annotationEntry>
+            </semantic:rule>
+            <semantic:rule id="_d676487b-7c24-46d3-8d3f-70124bbfed5e">
+                <semantic:inputEntry id="_d1ade39b-e4d9-48c0-96df-71ea10323eca" triso:mergeKey="_92b5625c-9aa3-422c-a012-acda9a62cc9c">
+                    <semantic:text>"carnivore"</semantic:text>
+                </semantic:inputEntry>
+                <semantic:inputEntry id="_bf45bde9-500b-4ff3-8a80-7dcb1da82a17" triso:mergeKey="_f64a96db-82f0-4720-aa91-f8aa4869c591">
+                    <semantic:text>-</semantic:text>
+                </semantic:inputEntry>
+                <semantic:inputEntry id="_99191b11-b024-4ab2-8a64-77e320b56c2c" triso:mergeKey="_700baa47-412f-429c-9580-9529cd4a9442">
+                    <semantic:text>-</semantic:text>
+                </semantic:inputEntry>
+                <semantic:outputEntry id="_1f5b1ae3-ce89-4169-88dd-8ebdb46ba382">
+                    <semantic:text>"Guanciale"</semantic:text>
+                </semantic:outputEntry>
+                <semantic:annotationEntry>
+                    <semantic:text/>
+                </semantic:annotationEntry>
+            </semantic:rule>
+            <semantic:rule id="_58561fb4-f1fe-4cc1-8a68-0b5ebb784577">
+                <semantic:inputEntry id="_e15210ee-cd7c-4e96-8631-9473b0b5202b" triso:mergeKey="_92b5625c-9aa3-422c-a012-acda9a62cc9c">
+                    <semantic:text>"carnivore"</semantic:text>
+                </semantic:inputEntry>
+                <semantic:inputEntry id="_98d0e494-3b40-42e4-855c-14c14eb75577" triso:mergeKey="_f64a96db-82f0-4720-aa91-f8aa4869c591">
+                    <semantic:text>-</semantic:text>
+                </semantic:inputEntry>
+                <semantic:inputEntry id="_30f92b49-3745-421a-aa06-e1654eff7e49" triso:mergeKey="_700baa47-412f-429c-9580-9529cd4a9442">
+                    <semantic:text>-</semantic:text>
+                </semantic:inputEntry>
+                <semantic:outputEntry id="_2ad142c9-2fbe-4b68-92b8-3bd5175c674d">
+                    <semantic:text>"Mortadella"</semantic:text>
+                </semantic:outputEntry>
+                <semantic:annotationEntry>
+                    <semantic:text/>
+                </semantic:annotationEntry>
+            </semantic:rule>
+            <semantic:rule id="_24d2b0af-bdc0-457d-b5b3-3bb8acc55423">
+                <semantic:inputEntry id="_e3d30375-06a7-4f38-bee6-323a5cb776e1" triso:mergeKey="_92b5625c-9aa3-422c-a012-acda9a62cc9c">
+                    <semantic:text>"carnivore"</semantic:text>
+                </semantic:inputEntry>
+                <semantic:inputEntry id="_f00f91f1-e07d-482b-a9d5-55a235626929" triso:mergeKey="_f64a96db-82f0-4720-aa91-f8aa4869c591">
+                    <semantic:text>-</semantic:text>
+                </semantic:inputEntry>
+                <semantic:inputEntry id="_8b3dff1e-d8e4-4d58-8c6b-6644d200cc61" triso:mergeKey="_700baa47-412f-429c-9580-9529cd4a9442">
+                    <semantic:text>-</semantic:text>
+                </semantic:inputEntry>
+                <semantic:outputEntry id="_d205f3eb-0df8-4717-bec2-f5a1e0482880">
+                    <semantic:text>"Salame"</semantic:text>
+                </semantic:outputEntry>
+                <semantic:annotationEntry>
+                    <semantic:text/>
+                </semantic:annotationEntry>
+            </semantic:rule>
+            <semantic:rule id="_56cca049-e17c-473d-9630-8b03c6c3ca4c">
+                <semantic:inputEntry id="_f960f538-284e-4089-b337-87b1f29d2bc9" triso:mergeKey="_92b5625c-9aa3-422c-a012-acda9a62cc9c">
+                    <semantic:text>"carnivore"</semantic:text>
+                </semantic:inputEntry>
+                <semantic:inputEntry id="_94ba847d-067d-4586-b33e-a8f1c0217588" triso:mergeKey="_f64a96db-82f0-4720-aa91-f8aa4869c591">
+                    <semantic:text>-</semantic:text>
+                </semantic:inputEntry>
+                <semantic:inputEntry id="_585b39ba-3109-4654-bca8-1c5856eac15b" triso:mergeKey="_700baa47-412f-429c-9580-9529cd4a9442">
+                    <semantic:text>-</semantic:text>
+                </semantic:inputEntry>
+                <semantic:outputEntry id="_d7e5d992-f851-4f1c-b6e6-75033dd47772">
+                    <semantic:text>"Spianata"</semantic:text>
+                </semantic:outputEntry>
+                <semantic:annotationEntry>
+                    <semantic:text/>
+                </semantic:annotationEntry>
+            </semantic:rule>
+            <semantic:rule id="_2b7936ca-5bc7-438d-80e9-ccea819ee1cf">
+                <semantic:inputEntry id="_2a717ca4-3830-431c-94ab-2d4bb926296f">
+                    <semantic:text>"pescatarian"</semantic:text>
+                </semantic:inputEntry>
+                <semantic:inputEntry id="_a69938a9-8134-4065-a1ab-c247de0b6f1f">
+                    <semantic:text>-</semantic:text>
+                </semantic:inputEntry>
+                <semantic:inputEntry id="_8941060c-6cb8-4264-8a29-38515b277f88">
+                    <semantic:text>-</semantic:text>
+                </semantic:inputEntry>
+                <semantic:outputEntry id="_c389575f-f5fb-4011-bd18-48b13d21d780">
+                    <semantic:text>"Tonno"</semantic:text>
+                </semantic:outputEntry>
+                <semantic:annotationEntry>
+                    <semantic:text/>
+                </semantic:annotationEntry>
+            </semantic:rule>
+            <semantic:rule id="_9212b684-926f-46b9-8ef1-aeaa35945e46">
+                <semantic:inputEntry id="_cb7429f2-45c5-499e-b576-2bc766674caa" triso:mergeKey="_2f21291e-5696-49a6-af3d-59499385ee3a">
+                    <semantic:text>-</semantic:text>
+                </semantic:inputEntry>
+                <semantic:inputEntry id="_b251671f-3b87-4c77-993e-f307e1bbb4d0" triso:mergeKey="_e54debe0-922d-4afd-8b8e-6f085fd69814">
+                    <semantic:text>false</semantic:text>
+                </semantic:inputEntry>
+                <semantic:inputEntry id="_ee3c1ce2-7445-4f49-9950-2165867e1ee3" triso:mergeKey="_7695ece9-2c02-496d-baa5-3e70b3a8f4b6">
+                    <semantic:text>-</semantic:text>
+                </semantic:inputEntry>
+                <semantic:outputEntry id="_1b0758f8-fe23-4d27-a681-600b6d58a0ce">
+                    <semantic:text>"Burro"</semantic:text>
+                </semantic:outputEntry>
+                <semantic:annotationEntry>
+                    <semantic:text/>
+                </semantic:annotationEntry>
+            </semantic:rule>
+            <semantic:rule id="_eb677a90-3c3d-4386-b063-9f674fc3dbf6">
+                <semantic:inputEntry id="_f1c03747-2ef3-4c30-b43c-711ad043691d" triso:mergeKey="_2f21291e-5696-49a6-af3d-59499385ee3a">
+                    <semantic:text>-</semantic:text>
+                </semantic:inputEntry>
+                <semantic:inputEntry id="_3ab2f771-0654-4778-a990-7c00c42b8c73" triso:mergeKey="_e54debe0-922d-4afd-8b8e-6f085fd69814">
+                    <semantic:text>false</semantic:text>
+                </semantic:inputEntry>
+                <semantic:inputEntry id="_6aaafc90-db1c-4cb4-96d5-7f92fc990b42" triso:mergeKey="_7695ece9-2c02-496d-baa5-3e70b3a8f4b6">
+                    <semantic:text>-</semantic:text>
+                </semantic:inputEntry>
+                <semantic:outputEntry id="_75e23e94-a17c-4e8e-9634-379d7b2024b4">
+                    <semantic:text>"Caciotta"</semantic:text>
+                </semantic:outputEntry>
+                <semantic:annotationEntry>
+                    <semantic:text/>
+                </semantic:annotationEntry>
+            </semantic:rule>
+            <semantic:rule id="_2c6c861f-a351-4db3-b0ab-c2008adc9654">
+                <semantic:inputEntry id="_dd4bcee1-f667-4f66-a576-9f7fc422fc84" triso:mergeKey="_2f21291e-5696-49a6-af3d-59499385ee3a">
+                    <semantic:text>-</semantic:text>
+                </semantic:inputEntry>
+                <semantic:inputEntry id="_cd0c2c15-bcf0-4e14-8c8c-6e416d7d614c" triso:mergeKey="_e54debe0-922d-4afd-8b8e-6f085fd69814">
+                    <semantic:text>false</semantic:text>
+                </semantic:inputEntry>
+                <semantic:inputEntry id="_b0f19e7e-3656-4dce-b8c0-74136c0e24c4" triso:mergeKey="_7695ece9-2c02-496d-baa5-3e70b3a8f4b6">
+                    <semantic:text>-</semantic:text>
+                </semantic:inputEntry>
+                <semantic:outputEntry id="_1322cc2e-b261-4cb2-a8fe-9c698b4a3e2d">
+                    <semantic:text>"Mozzarella"</semantic:text>
+                </semantic:outputEntry>
+                <semantic:annotationEntry>
+                    <semantic:text/>
+                </semantic:annotationEntry>
+            </semantic:rule>
+            <semantic:rule id="_cf978d7c-845f-47e7-852f-f5060afccaea">
+                <semantic:inputEntry id="_79951e28-be46-45ef-bd0c-aa4617e32021" triso:mergeKey="_2f21291e-5696-49a6-af3d-59499385ee3a">
+                    <semantic:text>-</semantic:text>
+                </semantic:inputEntry>
+                <semantic:inputEntry id="_a2671f52-3c15-4a65-8480-66d9a5e7a6cd" triso:mergeKey="_e54debe0-922d-4afd-8b8e-6f085fd69814">
+                    <semantic:text>false</semantic:text>
+                </semantic:inputEntry>
+                <semantic:inputEntry id="_bb4391b1-24e5-4a1c-93d9-fa74f3344fdd" triso:mergeKey="_7695ece9-2c02-496d-baa5-3e70b3a8f4b6">
+                    <semantic:text>-</semantic:text>
+                </semantic:inputEntry>
+                <semantic:outputEntry id="_b8fec4c9-1f1c-4ae5-9762-a981ddee3d94">
+                    <semantic:text>"Parmigiano"</semantic:text>
+                </semantic:outputEntry>
+                <semantic:annotationEntry>
+                    <semantic:text/>
+                </semantic:annotationEntry>
+            </semantic:rule>
+            <semantic:rule id="_05854611-5905-44a4-be79-8c550c800138">
+                <semantic:inputEntry id="_be9dbef2-bdcd-46e8-a26c-c4d53eb792c6" triso:mergeKey="_988171fc-c65e-419e-b3d7-ad47a5318821">
+                    <semantic:text>-</semantic:text>
+                </semantic:inputEntry>
+                <semantic:inputEntry id="_c7a3ecdb-5658-49c9-b724-6d8d2196f7ea" triso:mergeKey="_39d7bbcb-bd0c-4aba-9c05-3c6839031aae">
+                    <semantic:text>-</semantic:text>
+                </semantic:inputEntry>
+                <semantic:inputEntry id="_33f0b21d-d4d5-41c2-a50b-c4534dc02262" triso:mergeKey="_41cf6627-cbab-4a85-b5cf-001d4f7b44d1">
+                    <semantic:text>false</semantic:text>
+                </semantic:inputEntry>
+                <semantic:outputEntry id="_859dac5d-bbae-460a-a1f6-f51be8a834d5">
+                    <semantic:text>"Farina"</semantic:text>
+                </semantic:outputEntry>
+                <semantic:annotationEntry>
+                    <semantic:text/>
+                </semantic:annotationEntry>
+            </semantic:rule>
+            <semantic:rule id="_94c7b8ae-680d-4aa2-9c2f-6e9858b9bf3b">
+                <semantic:inputEntry id="_9c758f1b-c824-4f94-894f-946b1b48481f" triso:mergeKey="_988171fc-c65e-419e-b3d7-ad47a5318821">
+                    <semantic:text>-</semantic:text>
+                </semantic:inputEntry>
+                <semantic:inputEntry id="_82b74374-4ee9-4a2a-af1b-b9a729ed68bb" triso:mergeKey="_39d7bbcb-bd0c-4aba-9c05-3c6839031aae">
+                    <semantic:text>-</semantic:text>
+                </semantic:inputEntry>
+                <semantic:inputEntry id="_8595261e-02eb-47f7-85c8-6dee9fb0ab27" triso:mergeKey="_41cf6627-cbab-4a85-b5cf-001d4f7b44d1">
+                    <semantic:text>false</semantic:text>
+                </semantic:inputEntry>
+                <semantic:outputEntry id="_a5db16a7-8593-42d2-ae96-02bcf15bdd71">
+                    <semantic:text>"Pasta"</semantic:text>
+                </semantic:outputEntry>
+                <semantic:annotationEntry>
+                    <semantic:text/>
+                </semantic:annotationEntry>
+            </semantic:rule>
+            <semantic:rule id="_34a0e2d7-c108-41dd-89e3-4a2c242361e0">
+                <semantic:inputEntry id="_4fbc8273-a6eb-4667-8493-9aad6aeecaa0" triso:mergeKey="_21a5bd50-a235-47bc-8095-1303972dd85f">
+                    <semantic:text>-</semantic:text>
+                </semantic:inputEntry>
+                <semantic:inputEntry id="_6824cc7c-fe85-4b18-b0c8-ba1408177ebb" triso:mergeKey="_f5838bbf-8c61-4d3c-825d-12d0740dba51">
+                    <semantic:text>-</semantic:text>
+                </semantic:inputEntry>
+                <semantic:inputEntry id="_f480b01c-3a5a-48e5-a6be-dc242f1f3f57" triso:mergeKey="_a889e5c3-cc05-45d6-b6e3-2d80ce5ecb8a">
+                    <semantic:text>-</semantic:text>
+                </semantic:inputEntry>
+                <semantic:outputEntry id="_89427055-1a5c-41cd-91c1-933a989d5af4">
+                    <semantic:text>"Acqua"</semantic:text>
+                </semantic:outputEntry>
+                <semantic:annotationEntry>
+                    <semantic:text/>
+                </semantic:annotationEntry>
+            </semantic:rule>
+            <semantic:rule id="_b63a23a9-5142-4dd4-9fc3-1a836fd6a031">
+                <semantic:inputEntry id="_7efe3f6d-598e-458c-95fa-24d3b36f6d5b" triso:mergeKey="_21a5bd50-a235-47bc-8095-1303972dd85f">
+                    <semantic:text>-</semantic:text>
+                </semantic:inputEntry>
+                <semantic:inputEntry id="_16e896d9-af0a-49f3-80cd-b32ac5cf3f5b" triso:mergeKey="_f5838bbf-8c61-4d3c-825d-12d0740dba51">
+                    <semantic:text>-</semantic:text>
+                </semantic:inputEntry>
+                <semantic:inputEntry id="_22b5c451-5e38-4f92-9810-5387026e592f" triso:mergeKey="_a889e5c3-cc05-45d6-b6e3-2d80ce5ecb8a">
+                    <semantic:text>-</semantic:text>
+                </semantic:inputEntry>
+                <semantic:outputEntry id="_954728d3-9f2d-4096-bfdd-1396bec43071">
+                    <semantic:text>"Aglio"</semantic:text>
+                </semantic:outputEntry>
+                <semantic:annotationEntry>
+                    <semantic:text/>
+                </semantic:annotationEntry>
+            </semantic:rule>
+            <semantic:rule id="_f80bfb57-4504-4a2d-9d9e-97a3b40111c7">
+                <semantic:inputEntry id="_f6d245f2-4a05-4a05-bd00-4d6d965d028d" triso:mergeKey="_21a5bd50-a235-47bc-8095-1303972dd85f">
+                    <semantic:text>-</semantic:text>
+                </semantic:inputEntry>
+                <semantic:inputEntry id="_34a880f2-6d15-4621-8f18-07b80d712038" triso:mergeKey="_f5838bbf-8c61-4d3c-825d-12d0740dba51">
+                    <semantic:text>-</semantic:text>
+                </semantic:inputEntry>
+                <semantic:inputEntry id="_d1a034de-f760-44e9-a51f-7d495fee6859" triso:mergeKey="_a889e5c3-cc05-45d6-b6e3-2d80ce5ecb8a">
+                    <semantic:text>-</semantic:text>
+                </semantic:inputEntry>
+                <semantic:outputEntry id="_4db1fe1b-b1ab-49e3-b3e8-17b4a909da54">
+                    <semantic:text>"Basilico"</semantic:text>
+                </semantic:outputEntry>
+                <semantic:annotationEntry>
+                    <semantic:text/>
+                </semantic:annotationEntry>
+            </semantic:rule>
+            <semantic:rule id="_5d42aac2-97aa-48b5-beb7-8f340717913a">
+                <semantic:inputEntry id="_c31dc140-6594-475a-ace4-97fd9a924c84" triso:mergeKey="_21a5bd50-a235-47bc-8095-1303972dd85f">
+                    <semantic:text>-</semantic:text>
+                </semantic:inputEntry>
+                <semantic:inputEntry id="_c689765c-aa4a-46cc-bf06-0216561c5c6c" triso:mergeKey="_f5838bbf-8c61-4d3c-825d-12d0740dba51">
+                    <semantic:text>-</semantic:text>
+                </semantic:inputEntry>
+                <semantic:inputEntry id="_ec85e055-5dc0-44a7-a96d-6861cf31623e" triso:mergeKey="_a889e5c3-cc05-45d6-b6e3-2d80ce5ecb8a">
+                    <semantic:text>-</semantic:text>
+                </semantic:inputEntry>
+                <semantic:outputEntry id="_7fe9db48-5434-449d-b098-013daabaeebc">
+                    <semantic:text>"Ceci"</semantic:text>
+                </semantic:outputEntry>
+                <semantic:annotationEntry>
+                    <semantic:text/>
+                </semantic:annotationEntry>
+            </semantic:rule>
+            <semantic:rule id="_61c9def0-4ee6-4db0-af92-080834c47dc4">
+                <semantic:inputEntry id="_94633de8-b0d5-464e-8668-f78f1d83ad20" triso:mergeKey="_21a5bd50-a235-47bc-8095-1303972dd85f">
+                    <semantic:text>-</semantic:text>
+                </semantic:inputEntry>
+                <semantic:inputEntry id="_3017379b-b62a-4a13-a076-1c56551d8e2d" triso:mergeKey="_f5838bbf-8c61-4d3c-825d-12d0740dba51">
+                    <semantic:text>-</semantic:text>
+                </semantic:inputEntry>
+                <semantic:inputEntry id="_83f6baaf-9f0b-4c5f-8e8b-ac24f3af2145" triso:mergeKey="_a889e5c3-cc05-45d6-b6e3-2d80ce5ecb8a">
+                    <semantic:text>-</semantic:text>
+                </semantic:inputEntry>
+                <semantic:outputEntry id="_97456e4e-4b6b-4e76-8c7b-6756960d2390">
+                    <semantic:text>"Cipolla"</semantic:text>
+                </semantic:outputEntry>
+                <semantic:annotationEntry>
+                    <semantic:text/>
+                </semantic:annotationEntry>
+            </semantic:rule>
+            <semantic:rule id="_149f7f72-cdde-46a3-bad5-5eb922d69d9a">
+                <semantic:inputEntry id="_a78e169f-7719-4b8f-94c7-a3c6d983b6b4" triso:mergeKey="_21a5bd50-a235-47bc-8095-1303972dd85f">
+                    <semantic:text>-</semantic:text>
+                </semantic:inputEntry>
+                <semantic:inputEntry id="_ebbecd2e-9d90-419a-a040-3a923d25ca46" triso:mergeKey="_f5838bbf-8c61-4d3c-825d-12d0740dba51">
+                    <semantic:text>-</semantic:text>
+                </semantic:inputEntry>
+                <semantic:inputEntry id="_9069f7fa-96fb-4cb6-9139-8d3a548043b0" triso:mergeKey="_a889e5c3-cc05-45d6-b6e3-2d80ce5ecb8a">
+                    <semantic:text>-</semantic:text>
+                </semantic:inputEntry>
+                <semantic:outputEntry id="_0c462187-bfe8-437e-a8f1-ae6d6547ade7">
+                    <semantic:text>"Fagioli"</semantic:text>
+                </semantic:outputEntry>
+                <semantic:annotationEntry>
+                    <semantic:text/>
+                </semantic:annotationEntry>
+            </semantic:rule>
+            <semantic:rule id="_74221ac4-2ff9-4aa3-8cac-55f910778038">
+                <semantic:inputEntry id="_ec862686-e111-4686-8a7e-a49ffcddd490" triso:mergeKey="_21a5bd50-a235-47bc-8095-1303972dd85f">
+                    <semantic:text>-</semantic:text>
+                </semantic:inputEntry>
+                <semantic:inputEntry id="_a8e07e92-3daa-4cb1-8dcf-d652c5ba0dd5" triso:mergeKey="_f5838bbf-8c61-4d3c-825d-12d0740dba51">
+                    <semantic:text>-</semantic:text>
+                </semantic:inputEntry>
+                <semantic:inputEntry id="_90fa55fc-e6af-4287-b7c5-3f89fa7e372d" triso:mergeKey="_a889e5c3-cc05-45d6-b6e3-2d80ce5ecb8a">
+                    <semantic:text>-</semantic:text>
+                </semantic:inputEntry>
+                <semantic:outputEntry id="_74002784-ef9d-4b29-9c03-e314542d8af7">
+                    <semantic:text>"Lenticchie"</semantic:text>
+                </semantic:outputEntry>
+                <semantic:annotationEntry>
+                    <semantic:text/>
+                </semantic:annotationEntry>
+            </semantic:rule>
+            <semantic:rule id="_13ba7adc-05fc-4326-9173-8e0ea504792e">
+                <semantic:inputEntry id="_f7591842-6300-46e0-900e-6983d84fc36d" triso:mergeKey="_21a5bd50-a235-47bc-8095-1303972dd85f">
+                    <semantic:text>-</semantic:text>
+                </semantic:inputEntry>
+                <semantic:inputEntry id="_a04a98f9-6f01-474e-99f9-c1e7240bd4a5" triso:mergeKey="_f5838bbf-8c61-4d3c-825d-12d0740dba51">
+                    <semantic:text>-</semantic:text>
+                </semantic:inputEntry>
+                <semantic:inputEntry id="_dee0750c-050d-409c-bac2-8451bd2fd69f" triso:mergeKey="_a889e5c3-cc05-45d6-b6e3-2d80ce5ecb8a">
+                    <semantic:text>-</semantic:text>
+                </semantic:inputEntry>
+                <semantic:outputEntry id="_dfe64301-fe2c-49e9-8dc5-34c00efad2c6">
+                    <semantic:text>"Olio"</semantic:text>
+                </semantic:outputEntry>
+                <semantic:annotationEntry>
+                    <semantic:text/>
+                </semantic:annotationEntry>
+            </semantic:rule>
+            <semantic:rule id="_fe8be3d4-c189-4484-96ea-5b2bf48e474a">
+                <semantic:inputEntry id="_a126f30b-9355-425b-8eeb-8a299389f26e" triso:mergeKey="_21a5bd50-a235-47bc-8095-1303972dd85f">
+                    <semantic:text>-</semantic:text>
+                </semantic:inputEntry>
+                <semantic:inputEntry id="_23718ab9-a44e-47ad-a39e-ec18690a5981" triso:mergeKey="_f5838bbf-8c61-4d3c-825d-12d0740dba51">
+                    <semantic:text>-</semantic:text>
+                </semantic:inputEntry>
+                <semantic:inputEntry id="_4e27596d-42f3-4c54-a833-18b1baf94181" triso:mergeKey="_a889e5c3-cc05-45d6-b6e3-2d80ce5ecb8a">
+                    <semantic:text>-</semantic:text>
+                </semantic:inputEntry>
+                <semantic:outputEntry id="_0049039f-2e97-4d88-9de1-5de46cbb8909">
+                    <semantic:text>"Pecorino"</semantic:text>
+                </semantic:outputEntry>
+                <semantic:annotationEntry>
+                    <semantic:text/>
+                </semantic:annotationEntry>
+            </semantic:rule>
+            <semantic:rule id="_f04076b1-0bef-4b5c-a687-72dfbb506ee6">
+                <semantic:inputEntry id="_1ab7769e-7681-4d6f-9083-03ff5662dd49" triso:mergeKey="_21a5bd50-a235-47bc-8095-1303972dd85f">
+                    <semantic:text>-</semantic:text>
+                </semantic:inputEntry>
+                <semantic:inputEntry id="_89a3cd4e-667d-4a82-a1db-becc0682c4ba" triso:mergeKey="_f5838bbf-8c61-4d3c-825d-12d0740dba51">
+                    <semantic:text>-</semantic:text>
+                </semantic:inputEntry>
+                <semantic:inputEntry id="_3d0c593b-7a7d-4617-8937-9fb1c67da8d7" triso:mergeKey="_a889e5c3-cc05-45d6-b6e3-2d80ce5ecb8a">
+                    <semantic:text>-</semantic:text>
+                </semantic:inputEntry>
+                <semantic:outputEntry id="_c14c94a9-66a9-4968-a3cd-8c2f0829d64b">
+                    <semantic:text>"Pepe"</semantic:text>
+                </semantic:outputEntry>
+                <semantic:annotationEntry>
+                    <semantic:text/>
+                </semantic:annotationEntry>
+            </semantic:rule>
+            <semantic:rule id="_e433445e-ed63-434a-9fcd-f88453fe3079">
+                <semantic:inputEntry id="_100ec003-3e42-4ad2-8277-7f0e0f684fd1" triso:mergeKey="_21a5bd50-a235-47bc-8095-1303972dd85f">
+                    <semantic:text>-</semantic:text>
+                </semantic:inputEntry>
+                <semantic:inputEntry id="_cc922ca0-2586-471f-9e42-3e3d9438d9da" triso:mergeKey="_f5838bbf-8c61-4d3c-825d-12d0740dba51">
+                    <semantic:text>-</semantic:text>
+                </semantic:inputEntry>
+                <semantic:inputEntry id="_ec351b92-7af4-41a9-bfa5-8c4fb9847936" triso:mergeKey="_a889e5c3-cc05-45d6-b6e3-2d80ce5ecb8a">
+                    <semantic:text>-</semantic:text>
+                </semantic:inputEntry>
+                <semantic:outputEntry id="_66115269-1cc0-4e76-9915-26d8de0e392e">
+                    <semantic:text>"Pomodoro"</semantic:text>
+                </semantic:outputEntry>
+                <semantic:annotationEntry>
+                    <semantic:text/>
+                </semantic:annotationEntry>
+            </semantic:rule>
+            <semantic:rule id="_07bf6035-668e-4366-ae39-e9e9cfa6335a">
+                <semantic:inputEntry id="_71f67278-00a5-4a25-9ea7-8671c8feda7d" triso:mergeKey="_21a5bd50-a235-47bc-8095-1303972dd85f">
+                    <semantic:text>-</semantic:text>
+                </semantic:inputEntry>
+                <semantic:inputEntry id="_afe39c24-58a5-460a-902e-330b7cb5bbad" triso:mergeKey="_f5838bbf-8c61-4d3c-825d-12d0740dba51">
+                    <semantic:text>-</semantic:text>
+                </semantic:inputEntry>
+                <semantic:inputEntry id="_da4ffa3f-eaff-4548-a4a5-3b5424f0a2fd" triso:mergeKey="_a889e5c3-cc05-45d6-b6e3-2d80ce5ecb8a">
+                    <semantic:text>-</semantic:text>
+                </semantic:inputEntry>
+                <semantic:outputEntry id="_988a1d3f-ce28-4260-b8a2-d16ccd7366bf">
+                    <semantic:text>"Riso"</semantic:text>
+                </semantic:outputEntry>
+                <semantic:annotationEntry>
+                    <semantic:text/>
+                </semantic:annotationEntry>
+            </semantic:rule>
+            <semantic:rule id="_b4034511-9ed4-4f96-b741-55ee240676b3">
+                <semantic:inputEntry id="_dbe96c8b-1966-4edf-bb9c-1142cd39d413" triso:mergeKey="_21a5bd50-a235-47bc-8095-1303972dd85f">
+                    <semantic:text>-</semantic:text>
+                </semantic:inputEntry>
+                <semantic:inputEntry id="_aa1b2ad3-a5df-44be-bd8a-3f3d27a79f66" triso:mergeKey="_f5838bbf-8c61-4d3c-825d-12d0740dba51">
+                    <semantic:text>-</semantic:text>
+                </semantic:inputEntry>
+                <semantic:inputEntry id="_dc869e78-2520-4449-b6e5-30510a605e84" triso:mergeKey="_a889e5c3-cc05-45d6-b6e3-2d80ce5ecb8a">
+                    <semantic:text>-</semantic:text>
+                </semantic:inputEntry>
+                <semantic:outputEntry id="_c9bdbb92-307f-439f-9ce2-56817cbf5095">
+                    <semantic:text>"Rosmarino"</semantic:text>
+                </semantic:outputEntry>
+                <semantic:annotationEntry>
+                    <semantic:text/>
+                </semantic:annotationEntry>
+            </semantic:rule>
+            <semantic:rule id="_508ee95c-bd4d-4fe0-9886-42cc16ca1131">
+                <semantic:inputEntry id="_a45ec334-c7a7-404f-896e-e277290a05a3" triso:mergeKey="_21a5bd50-a235-47bc-8095-1303972dd85f">
+                    <semantic:text>-</semantic:text>
+                </semantic:inputEntry>
+                <semantic:inputEntry id="_67b3eba1-48c5-4f0e-8fae-298b549e0b68" triso:mergeKey="_f5838bbf-8c61-4d3c-825d-12d0740dba51">
+                    <semantic:text>-</semantic:text>
+                </semantic:inputEntry>
+                <semantic:inputEntry id="_3f9ed58d-d026-46c3-adf3-d13fa0995d83" triso:mergeKey="_a889e5c3-cc05-45d6-b6e3-2d80ce5ecb8a">
+                    <semantic:text>-</semantic:text>
+                </semantic:inputEntry>
+                <semantic:outputEntry id="_6b2d338e-854e-4128-b765-d7d2b86de6ef">
+                    <semantic:text>"Uova"</semantic:text>
+                </semantic:outputEntry>
+                <semantic:annotationEntry>
+                    <semantic:text/>
+                </semantic:annotationEntry>
+            </semantic:rule>
+        </semantic:decisionTable>
+    </semantic:decision>
+    <semantic:inputData id="_b12b2187-0539-4e9a-b744-354a2e8c3c39" name="Diet type" triso:readOnly="false">
+        <semantic:variable name="Diet type" id="_755e9774-313e-4137-b1ac-c4cb16d25ac3" typeRef="string"/>
+    </semantic:inputData>
+    <semantic:inputData id="_d0fdb86b-1b02-4a0f-bbc4-08a2d9dcb1c6" name="Celiac" triso:readOnly="false">
+        <semantic:variable name="Celiac" id="_3299fea4-70f2-4e76-9b9d-c59fd0431d47" typeRef="boolean"/>
+    </semantic:inputData>
+    <semantic:inputData id="_b58f2673-f0ee-4c01-b66c-6b35dab7acca" name="Lactose intolerant" triso:readOnly="false">
+        <semantic:variable name="Lactose intolerant" id="_486ddef5-4443-43f6-b3d8-cc2d81452c1f" typeRef="boolean"/>
+    </semantic:inputData>
+    <semantic:decision id="_e3ecb99d-42ee-4f13-9fba-94f26750f6a1" name="Eligible dishes" triso:readOnly="false">
+        <semantic:variable name="Eligible dishes" id="_6533341d-ba1a-49e5-a44e-76a9e8d56fe4" typeRef="string"/>
+        <semantic:informationRequirement id="_f428f8e9-2a34-4554-8e90-cde42b29184c" triso:readOnly="false">
+            <semantic:requiredDecision href="#_0a5169a8-8968-4a6b-b118-3b61a6711b96"/>
+        </semantic:informationRequirement>
+        <semantic:informationRequirement id="_503df160-7e5c-4ec7-ba09-a825caa0267c" triso:readOnly="false">
+            <semantic:requiredInput href="#_561aae88-8dd1-479d-9c6d-551d0aecdcdc"/>
+        </semantic:informationRequirement>
+        <semantic:authorityRequirement id="_f1ceba80-e1d1-4527-baff-854cd663f678" triso:readOnly="false">
+            <semantic:requiredAuthority href="#_56288986-3bc8-4516-a4cb-7070284c4506"/>
+        </semantic:authorityRequirement>
+        <semantic:decisionTable triso:descriptionVisible="false" id="_302d0ab3-8bc5-4eb6-baa9-ba81bcf4583f" hitPolicy="COLLECT" outputLabel="Eligible dishes" typeRef="string" triso:expressionId="_489b0fcf-bf96-4979-ade2-6f10bd8c6c03">
+            <semantic:input id="_5d333d89-6fa5-43a4-8b5f-8c9dd74faf2b" triso:allowNull="false" label="Eligible ingredients">
+                <semantic:inputExpression typeRef="string">
+                    <semantic:text>Eligible ingredients</semantic:text>
+                </semantic:inputExpression>
+                <semantic:inputValues triso:constraintsType="enumeration">
+                    <semantic:text>"Carne","Coppa","Guanciale","Mortadella","Salame","Spianata","Tonno","Burro","Caciotta","Mozzarella","Parmigiano","Farina","Pasta","Acqua","Aglio","Basilico","Ceci","Cipolla","Fagioli","Lenticchie","Olio","Pecorino","Pepe","Pomodoro","Riso","Uova","Rosmarino"</semantic:text>
+                </semantic:inputValues>
+            </semantic:input>
+            <semantic:input id="_79c47a64-b697-43cc-8bec-d2f95069491b" label="Calorie conscious">
+                <semantic:inputExpression typeRef="boolean">
+                    <semantic:text>Calorie conscious</semantic:text>
+                </semantic:inputExpression>
+            </semantic:input>
+            <semantic:output id="_831fe28a-251f-416b-84b1-f372d0d302d9" triso:allowNull="true">
+                <semantic:outputValues triso:constraintsType="enumeration">
+                    <semantic:text>"tagliereFormaggi","tagliereSalumi","crescia","pastaPesto","pastaCarbonara","risottoPomodoro","pizzaMargherita","pizzaTonnoCipolla","pizzaDiavola","insalataLegumi","uovaSode","tagliataRosmarino",null</semantic:text>
+                </semantic:outputValues>
+            </semantic:output>
+            <semantic:annotation name="Description"/>
+            <semantic:rule id="_bf668581-e2c0-48d0-8ed1-909c699703b2">
+                <semantic:inputEntry id="_052b3713-1ac9-4957-8334-1e5a82b6cef3">
+                    <semantic:text>list contains(?,"Coppa") and list contains(?, "Mortadella") and list contains(?, "Salame")</semantic:text>
+                </semantic:inputEntry>
+                <semantic:inputEntry id="_ff8a7dfa-da4e-4e0d-ab90-68ef68fe7277" triso:mergeKey="_a605db7c-f392-434f-ab26-7fdafac4dfa1">
+                    <semantic:text>false</semantic:text>
+                </semantic:inputEntry>
+                <semantic:outputEntry id="_ef0ef550-8bf5-4267-9973-d20c466ea352">
+                    <semantic:text>"tagliereSalumi"</semantic:text>
+                </semantic:outputEntry>
+                <semantic:annotationEntry>
+                    <semantic:text/>
+                </semantic:annotationEntry>
+            </semantic:rule>
+            <semantic:rule id="_af6fdec9-51fe-4f6a-a64f-c6f8fb623e8d">
+                <semantic:inputEntry id="_fa751fc2-c991-4868-bf8a-0eb16bba8ce3">
+                    <semantic:text>list contains(?,"Parmigiano") and list contains(?, "Pasta") and list contains(?, "Basilico") and list contains(?,"Olio") and list contains(?, "Aglio")</semantic:text>
+                </semantic:inputEntry>
+                <semantic:inputEntry id="_7c5f588b-f562-41d9-a86c-4ca85e65ab5d" triso:mergeKey="_a605db7c-f392-434f-ab26-7fdafac4dfa1">
+                    <semantic:text>false</semantic:text>
+                </semantic:inputEntry>
+                <semantic:outputEntry id="_aea15946-c5b7-4c44-912f-fca989b589ff">
+                    <semantic:text>"pastaPesto"</semantic:text>
+                </semantic:outputEntry>
+                <semantic:annotationEntry>
+                    <semantic:text/>
+                </semantic:annotationEntry>
+            </semantic:rule>
+            <semantic:rule id="_293f2db3-00a9-452c-bb3e-75e8ebff5bb1">
+                <semantic:inputEntry id="_994d80d8-99f6-4f67-b1ef-a84aa650781b">
+                    <semantic:text>list contains(?,"Pasta") and list contains(?,"Pecorino") and list contains(?, "Pecorino") and list contains(?, "Pepe") and list contains(?, "Guanciale")</semantic:text>
+                </semantic:inputEntry>
+                <semantic:inputEntry id="_ddfdc112-bed0-433c-be2a-899ac139d0d1" triso:mergeKey="_a605db7c-f392-434f-ab26-7fdafac4dfa1">
+                    <semantic:text>false</semantic:text>
+                </semantic:inputEntry>
+                <semantic:outputEntry id="_8ee69e0e-f984-4d25-8355-ed3d74406c77">
+                    <semantic:text>"pastaCarbonara"</semantic:text>
+                </semantic:outputEntry>
+                <semantic:annotationEntry>
+                    <semantic:text/>
+                </semantic:annotationEntry>
+            </semantic:rule>
+            <semantic:rule id="_b964a0a9-7d6c-41ca-95f0-d118a819a8b7">
+                <semantic:inputEntry id="_e874b162-db93-49de-8a03-5d5cf4c89d23">
+                    <semantic:text>list contains(?,"Farina") and list contains(?, "Olio") and list contains(?, "Acqua") and list contains(?, "Pomodoro") and list contains(?, "Mozzarella") and list contains(?, "Basilico")</semantic:text>
+                </semantic:inputEntry>
+                <semantic:inputEntry id="_d3c147d9-65ac-475e-bae2-3d09519a37ee" triso:mergeKey="_a605db7c-f392-434f-ab26-7fdafac4dfa1">
+                    <semantic:text>false</semantic:text>
+                </semantic:inputEntry>
+                <semantic:outputEntry id="_beb76c9e-b777-44a9-8f2b-e59d467a2e0b">
+                    <semantic:text>"pizzaMargherita"</semantic:text>
+                </semantic:outputEntry>
+                <semantic:annotationEntry>
+                    <semantic:text/>
+                </semantic:annotationEntry>
+            </semantic:rule>
+            <semantic:rule id="_9298933e-4f1e-4bb0-83de-5de61d1a15b2">
+                <semantic:inputEntry id="_79063f77-b313-415d-93e6-a161b105069d">
+                    <semantic:text>list contains(?,"Farina") and list contains(?, "Olio") and list contains(?, "Acqua") and list contains(?, "Tonno") and list contains(?, "Cipolla")</semantic:text>
+                </semantic:inputEntry>
+                <semantic:inputEntry id="_66e6f657-5a5a-4288-b5e8-14213297f79f" triso:mergeKey="_a605db7c-f392-434f-ab26-7fdafac4dfa1">
+                    <semantic:text>false</semantic:text>
+                </semantic:inputEntry>
+                <semantic:outputEntry id="_130b4245-d9e8-4100-9dee-12c2fdf91371">
+                    <semantic:text>"pizzaTonnoCipolla"</semantic:text>
+                </semantic:outputEntry>
+                <semantic:annotationEntry>
+                    <semantic:text/>
+                </semantic:annotationEntry>
+            </semantic:rule>
+            <semantic:rule id="_0842ed47-0829-46ee-acfe-3c60316e820b">
+                <semantic:inputEntry id="_992fca06-ddf2-40c6-b79e-de84c808549b">
+                    <semantic:text>list contains(?, "Farina") and list contains(?, "Acqua") and list contains(?, "Olio") and list contains(?, "Spianata") and list contains(?, "Pomodoro")</semantic:text>
+                </semantic:inputEntry>
+                <semantic:inputEntry id="_96960468-97a4-4e10-bc6e-32e079739c25" triso:mergeKey="_a605db7c-f392-434f-ab26-7fdafac4dfa1">
+                    <semantic:text>false</semantic:text>
+                </semantic:inputEntry>
+                <semantic:outputEntry id="_3237605c-1d84-4151-9c95-e943ecbc29b0">
+                    <semantic:text>"pizzaDiavola"</semantic:text>
+                </semantic:outputEntry>
+                <semantic:annotationEntry>
+                    <semantic:text/>
+                </semantic:annotationEntry>
+            </semantic:rule>
+            <semantic:rule id="_d6431351-1bd9-46f7-beaa-fcb0390bc070">
+                <semantic:inputEntry id="_c3643a6a-61d8-4753-a695-38f7dd73753b">
+                    <semantic:text>list contains(?,"Riso") and list contains(?, "Pomodoro") and list contains(?, "Basilico") and list contains(?, "Parmigiano") and list contains(?, "Burro")</semantic:text>
+                </semantic:inputEntry>
+                <semantic:inputEntry id="_91fa9339-6131-4918-8a0a-5cf3bee0ea12" triso:mergeKey="_c6cb63ff-325b-426f-b20c-0ab2271b6ae9">
+                    <semantic:text>true</semantic:text>
+                </semantic:inputEntry>
+                <semantic:outputEntry id="_08ebfb34-de99-47e4-93b0-101264b42142">
+                    <semantic:text>"risottoPomodoro"</semantic:text>
+                </semantic:outputEntry>
+                <semantic:annotationEntry>
+                    <semantic:text/>
+                </semantic:annotationEntry>
+            </semantic:rule>
+            <semantic:rule id="_633bd53f-9cb8-4210-a9fb-4d402537eca0">
+                <semantic:inputEntry id="_10b78bb2-c888-4ec3-9a28-92e0b30d663f">
+                    <semantic:text>list contains(?,"Acqua") and list contains(?, "Olio") and list contains(?, "Farina") and list contains(?, "Rosmarino")</semantic:text>
+                </semantic:inputEntry>
+                <semantic:inputEntry id="_3e2ed45b-2cf8-43ab-9623-f3ead90872ac" triso:mergeKey="_c6cb63ff-325b-426f-b20c-0ab2271b6ae9">
+                    <semantic:text>true</semantic:text>
+                </semantic:inputEntry>
+                <semantic:outputEntry id="_82348408-37f7-476a-8f0d-b4a0dd381647">
+                    <semantic:text>"crescia"</semantic:text>
+                </semantic:outputEntry>
+                <semantic:annotationEntry>
+                    <semantic:text/>
+                </semantic:annotationEntry>
+            </semantic:rule>
+            <semantic:rule id="_2c59feb4-45a8-43be-a9f7-3fd019d85247">
+                <semantic:inputEntry id="_2fb1456e-04d1-4c60-8cfb-a8eae925aa4e">
+                    <semantic:text>list contains(?,"Caciotta") and list contains(?, "Pecorino") and list contains(?, "Parmigiano")</semantic:text>
+                </semantic:inputEntry>
+                <semantic:inputEntry id="_f1827d07-634f-4f92-95ac-80f31d0150d5" triso:mergeKey="_c6cb63ff-325b-426f-b20c-0ab2271b6ae9">
+                    <semantic:text>true</semantic:text>
+                </semantic:inputEntry>
+                <semantic:outputEntry id="_7103f707-8f71-4f61-bdc9-812d70536f8b">
+                    <semantic:text>"tagliereFormaggi"</semantic:text>
+                </semantic:outputEntry>
+                <semantic:annotationEntry>
+                    <semantic:text/>
+                </semantic:annotationEntry>
+            </semantic:rule>
+            <semantic:rule id="_30a3a70d-e23d-496f-82cf-0ff822e2acd5">
+                <semantic:inputEntry id="_2dd9dcc1-abfa-4127-ac7a-fbb488363904">
+                    <semantic:text>list contains(?,"Ceci") and list contains(?, "Lenticchie") and list contains(?, "Fagioli") and list contains(?, "Pepe") and list contains(?, "Olio") and list contains(?, "Cipolla")</semantic:text>
+                </semantic:inputEntry>
+                <semantic:inputEntry id="_2e13608a-db68-4a87-aae8-597d589e081d" triso:mergeKey="_c6cb63ff-325b-426f-b20c-0ab2271b6ae9">
+                    <semantic:text>true</semantic:text>
+                </semantic:inputEntry>
+                <semantic:outputEntry id="_92e28d53-4f3a-43fd-961d-c86f73e53cb2">
+                    <semantic:text>"insalataLegumi"</semantic:text>
+                </semantic:outputEntry>
+                <semantic:annotationEntry>
+                    <semantic:text/>
+                </semantic:annotationEntry>
+            </semantic:rule>
+            <semantic:rule id="_a6d29ac1-0990-4f35-a3f6-c77ef95767f8">
+                <semantic:inputEntry id="_dda1069d-edac-4c71-a539-5cc360554f04">
+                    <semantic:text>list contains(?,"Uova") and list contains(?, "Olio") and list contains(?, "Pepe")</semantic:text>
+                </semantic:inputEntry>
+                <semantic:inputEntry id="_50491041-dd1a-4580-bf1e-382f4746faf6" triso:mergeKey="_c6cb63ff-325b-426f-b20c-0ab2271b6ae9">
+                    <semantic:text>true</semantic:text>
+                </semantic:inputEntry>
+                <semantic:outputEntry id="_4171f986-10c8-46c4-b99d-18cdbbf7d7df">
+                    <semantic:text>"uovaSode"</semantic:text>
+                </semantic:outputEntry>
+                <semantic:annotationEntry>
+                    <semantic:text/>
+                </semantic:annotationEntry>
+            </semantic:rule>
+            <semantic:rule id="_2cedc2ac-0ef3-453e-aea1-0030298944e1">
+                <semantic:inputEntry id="_187e8f6d-74a7-4fe1-ac92-a1acd8607534">
+                    <semantic:text>list contains(?, "Carne") and list contains(?, "Olio") and list contains(?, "Rosmarino") and list contains(?, "Aglio")</semantic:text>
+                </semantic:inputEntry>
+                <semantic:inputEntry id="_4e81a899-26cd-4978-8da5-ef9640a34bc0" triso:mergeKey="_c6cb63ff-325b-426f-b20c-0ab2271b6ae9">
+                    <semantic:text>true</semantic:text>
+                </semantic:inputEntry>
+                <semantic:outputEntry id="_027e5073-0bac-4363-a6a5-c03ed980a58c">
+                    <semantic:text>"tagliataRosmarino"</semantic:text>
+                </semantic:outputEntry>
+                <semantic:annotationEntry>
+                    <semantic:text/>
+                </semantic:annotationEntry>
+            </semantic:rule>
+        </semantic:decisionTable>
+    </semantic:decision>
+    <semantic:inputData id="_561aae88-8dd1-479d-9c6d-551d0aecdcdc" name="Calorie conscious" triso:readOnly="false">
+        <semantic:variable name="Calorie conscious" id="_96039e3f-6b5c-4cc9-87dd-a82262dcdb66" typeRef="boolean"/>
+    </semantic:inputData>
+    <semantic:knowledgeSource id="_920e4d62-8442-4e3e-98ff-9e365cfd88d4" name="Ingredients" triso:readOnly="false"/>
+    <semantic:knowledgeSource id="_56288986-3bc8-4516-a4cb-7070284c4506" name="Menu" triso:readOnly="false"/>
+    <dmndi:DMNDI>
+        <dmndi:DMNDiagram id="_f7f441b4-7bb4-4022-9112-df314885e95a" triso:modelElementRef="_913ba2ad-1d2c-4fa7-8274-35c536d319f5" name="Page 3">
+            <di:extension/>
+            <dmndi:Size height="1050" width="2079.964692684657"/>
+            <dmndi:DMNShape id="_3119a46f-9801-4c55-8735-21cd633a3780" dmnElementRef="_b12b2187-0539-4e9a-b744-354a2e8c3c39">
+                <dc:Bounds x="613.1411453049859" y="592.3999587059037" width="135.48234176635742" height="60.00000762939453"/>
+                <dmndi:DMNLabel sharedStyle="LS_34da856a-253a-4252-8aaa-29fa717724ed_0" trisodmn:defaultBounds="true"/>
+            </dmndi:DMNShape>
+            <dmndi:DMNShape id="_24d97fb3-411b-410c-b717-b96ac7e6896f" dmnElementRef="_d0fdb86b-1b02-4a0f-bbc4-08a2d9dcb1c6">
+                <dc:Bounds x="419.6588094970763" y="710.3999725992834" width="135.48234176635742" height="60.00000762939453"/>
+                <dmndi:DMNLabel sharedStyle="LS_34da856a-253a-4252-8aaa-29fa717724ed_0" trisodmn:defaultBounds="true"/>
+            </dmndi:DMNShape>
+            <dmndi:DMNShape id="_c34c9f91-a981-493a-878e-93d9d015fe36" dmnElementRef="_b58f2673-f0ee-4c01-b66c-6b35dab7acca">
+                <dc:Bounds x="419.65881575047985" y="592.399967533351" width="135.48234176635737" height="60.00000762939453"/>
+                <dmndi:DMNLabel sharedStyle="LS_34da856a-253a-4252-8aaa-29fa717724ed_0" trisodmn:defaultBounds="true"/>
+            </dmndi:DMNShape>
+            <dmndi:DMNShape id="_a82575a0-ef1c-49dd-a55a-6a4900e1858e" dmnElementRef="_561aae88-8dd1-479d-9c6d-551d0aecdcdc">
+                <dc:Bounds x="852.1411381822309" y="592.3999587059037" width="135.48234176635765" height="60.00000762939453"/>
+                <dmndi:DMNLabel sharedStyle="LS_34da856a-253a-4252-8aaa-29fa717724ed_0" trisodmn:defaultBounds="true"/>
+            </dmndi:DMNShape>
+            <dmndi:DMNShape id="_aeef1795-0f45-4f09-9636-a9e0b0664684" dmnElementRef="_56288986-3bc8-4516-a4cb-7070284c4506">
+                <dc:Bounds x="869.8822869889904" y="853.4213052771639" width="100" height="69.95735931396484"/>
+                <dmndi:DMNLabel sharedStyle="LS_34da856a-253a-4252-8aaa-29fa717724ed_0" trisodmn:defaultBounds="true"/>
+            </dmndi:DMNShape>
+            <dmndi:DMNShape id="_7a0aaed5-3db5-455d-8c9c-5074da5033cd" dmnElementRef="_920e4d62-8442-4e3e-98ff-9e365cfd88d4">
+                <dc:Bounds x="630.8823253246796" y="853.4213179941323" width="99.99999999999989" height="69.95735931396484"/>
+                <dmndi:DMNLabel sharedStyle="LS_34da856a-253a-4252-8aaa-29fa717724ed_0" trisodmn:defaultBounds="true"/>
+            </dmndi:DMNShape>
+            <dmndi:DMNShape id="_3edd1857-e098-4f3d-ace1-b81cfe63205a" dmnElementRef="_e3ecb99d-42ee-4f13-9fba-94f26750f6a1">
+                <dc:Bounds x="843.3822999512465" y="710.3999658281963" width="152.9999999999999" height="60"/>
+                <dmndi:DMNLabel sharedStyle="LS_34da856a-253a-4252-8aaa-29fa717724ed_0" trisodmn:defaultBounds="true"/>
+            </dmndi:DMNShape>
+            <dmndi:DMNShape id="_61449bdf-a981-4f39-a214-54f4f6fa04da" dmnElementRef="_0a5169a8-8968-4a6b-b118-3b61a6711b96">
+                <dc:Bounds x="604.3823253246796" y="710.3999869997651" width="152.9999999999999" height="60"/>
+                <dmndi:DMNLabel sharedStyle="LS_34da856a-253a-4252-8aaa-29fa717724ed_0" trisodmn:defaultBounds="true"/>
+            </dmndi:DMNShape>
+            <dmndi:DMNEdge id="_98249be0-7bf8-4030-8a9c-637b3f4cc1d7" dmnElementRef="_f1ceba80-e1d1-4527-baff-854cd663f678">
+                <di:waypoint x="919.8822869889904" y="853.4213052771639"/>
+                <di:waypoint x="919.8822999512465" y="770.3999658281963"/>
+                <dmndi:DMNLabel sharedStyle="LS_34da856a-253a-4252-8aaa-29fa717724ed_0"/>
+            </dmndi:DMNEdge>
+            <dmndi:DMNEdge id="_643e7ab5-b935-4afd-a2bb-95dbbcb9a893" dmnElementRef="_32605b9f-40f7-4a54-9e66-1ef4620ed9e8">
+                <di:waypoint x="680.8823253246796" y="853.4213179941323"/>
+                <di:waypoint x="680.8823253246796" y="810.9106525118498"/>
+                <di:waypoint x="680.8823253246796" y="770.3999869997651"/>
+                <dmndi:DMNLabel sharedStyle="LS_34da856a-253a-4252-8aaa-29fa717724ed_0"/>
+            </dmndi:DMNEdge>
+            <dmndi:DMNEdge id="_144e293b-42fe-43f7-9f29-968527ba36b7" dmnElementRef="_f428f8e9-2a34-4554-8e90-cde42b29184c">
+                <di:waypoint x="757.3823253246795" y="740.3999869997651"/>
+                <di:waypoint x="843.3822999512465" y="740.3999658281963"/>
+                <dmndi:DMNLabel sharedStyle="LS_34da856a-253a-4252-8aaa-29fa717724ed_0"/>
+            </dmndi:DMNEdge>
+            <dmndi:DMNEdge id="_1844bc8c-125c-4955-ae27-6dda41137a60" dmnElementRef="_01dd99bc-75a1-44f3-b26c-b1e0aa75e674">
+                <di:waypoint x="555.1411512634337" y="740.3999725992834"/>
+                <di:waypoint x="604.3823253246796" y="740.3999869997651"/>
+                <dmndi:DMNLabel sharedStyle="LS_34da856a-253a-4252-8aaa-29fa717724ed_0"/>
+            </dmndi:DMNEdge>
+            <dmndi:DMNEdge id="_1df612e1-b678-4ecf-9831-0f1a02c9d2ef" dmnElementRef="_64f4323e-50df-4f25-b9c7-5da1381873a6">
+                <di:waypoint x="555.1411575168372" y="622.399967533351"/>
+                <di:waypoint x="604.3823253246796" y="720.3999869997651"/>
+                <dmndi:DMNLabel sharedStyle="LS_34da856a-253a-4252-8aaa-29fa717724ed_0"/>
+            </dmndi:DMNEdge>
+            <dmndi:DMNEdge id="_07e4770b-c948-43c6-ae56-f3e695a95284" dmnElementRef="_7df4cdf5-0f0f-4e70-89e2-59a90a253fb1">
+                <di:waypoint x="680.8791175645074" y="652.3999587059037"/>
+                <di:waypoint x="680.8823253246796" y="710.3999869997651"/>
+                <dmndi:DMNLabel sharedStyle="LS_34da856a-253a-4252-8aaa-29fa717724ed_0"/>
+            </dmndi:DMNEdge>
+            <dmndi:DMNEdge id="_18ffb61c-1a0d-48f3-b61b-a3e317b2a3ab" dmnElementRef="_503df160-7e5c-4ec7-ba09-a825caa0267c">
+                <di:waypoint x="919.8791104417523" y="652.3999587059037"/>
+                <di:waypoint x="919.8822999512465" y="710.3999658281963"/>
+                <dmndi:DMNLabel sharedStyle="LS_34da856a-253a-4252-8aaa-29fa717724ed_0"/>
+            </dmndi:DMNEdge>
+        </dmndi:DMNDiagram>
+        <dmndi:DMNStyle id="LS_34da856a-253a-4252-8aaa-29fa717724ed_0" fontFamily="arial,helvetica,sans-serif" fontSize="11" fontBold="false" fontItalic="false" fontUnderline="false" fontStrikeThrough="false"/>
+    </dmndi:DMNDI>
+</semantic:definitions>
