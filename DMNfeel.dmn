@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><dmn:definitions xmlns:dmn="http://www.omg.org/spec/DMN/20151101/dmn.xsd" xmlns:triso="http://www.trisotech.com/2015/triso/modeling" xmlns="http://www.trisotech.com/definitions/_18bc3d6f-ca3c-4375-809e-9bf1990eb25d" xmlns:boxedext="https://www.trisotech.com/spec/DMN/20191111/EXT/" xmlns:drools="http://www.drools.org/kie/dmn/1.1" xmlns:feel="http://www.omg.org/spec/FEEL/20140401" xmlns:i18n="http://www.omg.org/spec/BPMN/non-normative/extensions/i18n/1.0" xmlns:openapi="https://openapis.org/omg/extension/1.0" xmlns:rss="http://purl.org/rss/2.0/" xmlns:sdmn="https://www.omg.org/spec/SDMN/" xmlns:tc="http://www.omg.org/spec/DMN/20160719/testcase" xmlns:trisodmn="http://www.trisotech.com/2016/triso/dmn" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" exporter="Decision Modeler" exporterVersion="9.8.4" id="_18bc3d6f-ca3c-4375-809e-9bf1990eb25d" name="first model " namespace="http://www.trisotech.com/definitions/_18bc3d6f-ca3c-4375-809e-9bf1990eb25d" triso:logoChoice="Default" xml:lang="en">
+<?xml version="1.0" encoding="UTF-8"?><dmn:definitions xmlns:dmn="http://www.omg.org/spec/DMN/20151101/dmn.xsd" xmlns:triso="http://www.trisotech.com/2015/triso/modeling" xmlns="http://www.trisotech.com/definitions/_18bc3d6f-ca3c-4375-809e-9bf1990eb25d" xmlns:boxedext="https://www.trisotech.com/spec/DMN/20191111/EXT/" xmlns:dmndi="https://www.omg.org/spec/DMN/20230324/DMNDI/" xmlns:drools="http://www.drools.org/kie/dmn/1.1" xmlns:feel="https://www.omg.org/spec/DMN/20240513/FEEL/" xmlns:i18n="http://www.omg.org/spec/BPMN/non-normative/extensions/i18n/1.0" xmlns:ns2="http://www.omg.org/spec/FEEL/20140401" xmlns:openapi="https://openapis.org/omg/extension/1.0" xmlns:rss="http://purl.org/rss/2.0/" xmlns:sdmn="https://www.omg.org/spec/SDMN/" xmlns:tc="http://www.omg.org/spec/DMN/20160719/testcase" xmlns:trisodmn="http://www.trisotech.com/2016/triso/dmn" xmlns:trisofeed="http://trisotech.com/feed" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" exporter="Decision Modeler" exporterVersion="9.8.4" id="_18bc3d6f-ca3c-4375-809e-9bf1990eb25d" name="first model " namespace="http://www.trisotech.com/definitions/_18bc3d6f-ca3c-4375-809e-9bf1990eb25d" triso:logoChoice="Default" triso:translationLanguages="" xml:lang="en">
   <dmn11:extensionElements xmlns:dmn11="http://www.omg.org/spec/DMN/20151101/dmn.xsd">
     <drools:decisionServices>
       <dmn11:decisionService id="_18bc3d6f-ca3c-4375-809e-9bf1990eb25d_DS" name="Whole Model Decision Service" triso:dynamicDecisionService="true" triso:wholeModelService="true">
@@ -17,13 +17,14 @@
         <dmn:inputData href="#_4ed21f87-61cb-4cf6-a4da-8bc6a7d4d85e"/>
         <dmn:inputData href="#_8e58ea7f-f5b6-4ba4-ba9a-e084ac27314b"/>
         <dmn:inputData href="#_d7892d9b-7a19-41e0-a244-112993db0da0"/>
+        <dmn:inputData href="#_00e1e463-6d73-443b-8f63-4f4629e6aac2"/>
       </dmn11:decisionService>
-      <dmn11:decisionService id="_aacd7a05-79e7-435e-8166-b9127ce0ab12_DS" name="Diagram Page 1" triso:dynamicDecisionService="true">
+      <dmn11:decisionService id="_18bc3d6f-ca3c-4375-809e-9bf1990eb25d_D1_DS" name="Diagram Page 1" triso:dynamicDecisionService="true">
         <dmn:outputDecision href="#_2b70dce2-26e9-40e2-8fb2-9a2313c699ca"/>
+        <dmn:encapsulatedDecision href="#_42689ad5-6ab5-4261-995f-e35864787d3c"/>
         <dmn:encapsulatedDecision href="#_9fe0f2f5-75cf-4d24-b6e3-8eb6763a38a8"/>
         <dmn:encapsulatedDecision href="#_f1020c8e-8d92-4013-b200-4b0086176059"/>
         <dmn:encapsulatedDecision href="#_48af6b4d-866c-4343-8b26-c9665bc4eae7"/>
-        <dmn:encapsulatedDecision href="#_42689ad5-6ab5-4261-995f-e35864787d3c"/>
         <dmn:encapsulatedDecision href="#_3b96a0ce-3ffc-4eed-93fd-26f76cf35a96"/>
         <dmn:inputData href="#_9ecf3302-deaf-4f37-9d01-b5f17f2cf41c"/>
         <dmn:inputData href="#_669fa454-afcf-4627-bc00-7d4829df5c1c"/>
@@ -34,6 +35,7 @@
         <dmn:inputData href="#_4ed21f87-61cb-4cf6-a4da-8bc6a7d4d85e"/>
         <dmn:inputData href="#_8e58ea7f-f5b6-4ba4-ba9a-e084ac27314b"/>
         <dmn:inputData href="#_d7892d9b-7a19-41e0-a244-112993db0da0"/>
+        <dmn:inputData href="#_00e1e463-6d73-443b-8f63-4f4629e6aac2"/>
       </dmn11:decisionService>
     </drools:decisionServices>
   </dmn11:extensionElements>
@@ -49,7 +51,7 @@
   <dmn:inputData id="_97dac1c9-1985-43a5-b11f-239e75eaa517" name="only celiac meal" triso:readOnly="false">
     <dmn:variable id="_7be2ac7a-525c-438f-b472-b99230e1a992" name="only celiac meal" typeRef="feel:boolean"/>
   </dmn:inputData>
-  <dmn:decision id="_42689ad5-6ab5-4261-995f-e35864787d3c" name="foods" triso:readOnly="false">
+  <dmn:decision id="_42689ad5-6ab5-4261-995f-e35864787d3c" name="foods" triso:readOnly="false" triso:useOutputTypeAsAnswer="false">
     <dmn:variable id="_d2025ca2-c23a-4745-a619-6d08eaa4789e" name="foods" typeRef="collectionOfString"/>
     <dmn:informationRequirement triso:readOnly="false">
       <dmn:requiredInput href="#_9ecf3302-deaf-4f37-9d01-b5f17f2cf41c"/>
@@ -443,48 +445,51 @@
       </dmn:rule>
     </dmn:decisionTable>
   </dmn:decision>
-  <dmn:decision id="_9fe0f2f5-75cf-4d24-b6e3-8eb6763a38a8" name="ingredientsPerDishes" triso:readOnly="false">
+  <dmn:decision id="_9fe0f2f5-75cf-4d24-b6e3-8eb6763a38a8" name="ingredientsPerDishes" triso:readOnly="false" triso:useOutputTypeAsAnswer="false">
     <dmn:variable id="_4baea53a-7a4a-444e-8dc0-09bb83055ff2" name="ingredientsPerDishes" typeRef="collectionOfString"/>
+    <dmn:authorityRequirement triso:readOnly="false">
+      <dmn:requiredAuthority href="#_a209776d-718c-4238-8e6a-e8cc89731795"/>
+    </dmn:authorityRequirement>
     <dmn:list id="_e97a0156-a4b9-4f24-9f75-750f0d8ffa69" triso:descriptionVisible="false" triso:expressionId="_42722df0-6348-4d82-b5ac-cd63fbbf6ba5" typeRef="collectionOfString">
       <dmn:literalExpression id="_536ed9cc-c815-499c-a231-ec48bac9ba6c">
-        <dmn:text>[ "tagliereFormaggi", ["caciotta", "pecorino", "parmigiano"]]</dmn:text>
+        <dmn:text>[ "tagliereFormaggi", ["caciotta", "pecorino", "parmigiano"], 350]</dmn:text>
       </dmn:literalExpression>
       <dmn:literalExpression id="_793d016b-31f0-4a94-bc8a-7cb870c6b364">
-        <dmn:text>["tagliereSalumi", ["salame", "mortadella", "coppa"]]</dmn:text>
+        <dmn:text>["tagliereSalumi", ["salame", "mortadella", "coppa"], 880]</dmn:text>
       </dmn:literalExpression>
       <dmn:literalExpression id="_eefd5197-3758-4dc3-82ed-e47273c625e2">
-        <dmn:text>["crescia", ["acqua", "olio", "farina", "rosmarino"]]</dmn:text>
+        <dmn:text>["crescia", ["acqua", "olio", "farina", "rosmarino"], 483]</dmn:text>
       </dmn:literalExpression>
       <dmn:literalExpression id="_c8b41e5e-3c3c-4fa2-a05a-c9a7807f56c6">
-        <dmn:text>["pastaPesto", ["pasta", "olio", "basilico", "aglio", "parmigiano"]]</dmn:text>
+        <dmn:text>["pastaPesto", ["pasta", "olio", "basilico", "aglio", "parmigiano"], 456]</dmn:text>
       </dmn:literalExpression>
       <dmn:literalExpression id="_252d28dc-7be3-45f4-bd98-2e2c9ad839c5">
-        <dmn:text>["pastaCarbonara", ["guanciale", "pecorino", "uova", "pasta", "pepe"]]</dmn:text>
+        <dmn:text>["pastaCarbonara", ["guanciale", "pecorino", "uova", "pasta", "pepe"], 722]</dmn:text>
       </dmn:literalExpression>
       <dmn:literalExpression id="_0d3894fe-23f1-42ab-89e6-3d7c104cab3f">
-        <dmn:text>["risottoPomodoro", ["riso", "pomodoro", "basilico", "parmigiano", "burro"]]</dmn:text>
+        <dmn:text>["risottoPomodoro", ["riso", "pomodoro", "basilico", "parmigiano", "burro"], 433]</dmn:text>
       </dmn:literalExpression>
       <dmn:literalExpression id="_c7fbfe03-5a1c-41ff-8bdd-93247bee80a8">
-        <dmn:text>["pizzaMargherita", ["farina", "olio", "acqua", "pomodoro", "mozzarella", "basilico"]]</dmn:text>
+        <dmn:text>["pizzaMargherita", ["farina", "olio", "acqua", "pomodoro", "mozzarella", "basilico"], 586]</dmn:text>
       </dmn:literalExpression>
       <dmn:literalExpression id="_9041b26f-c79f-444c-8639-87cb588e3c69">
-        <dmn:text>["pizzaTonnoCipolla", ["farina", "olio", "acqua", "tonno", "cipolla"]]</dmn:text>
+        <dmn:text>["pizzaTonnoCipolla", ["farina", "olio", "acqua", "tonno", "cipolla"], 660]</dmn:text>
       </dmn:literalExpression>
       <dmn:literalExpression id="_29d6b240-b648-4a2c-9ddc-aca52f244b9b">
-        <dmn:text>["pizzaDiavola", ["farina", "acqua", "olio", "spianata", "pomodoro"]]</dmn:text>
+        <dmn:text>["pizzaDiavola", ["farina", "acqua", "olio", "spianata", "pomodoro"], 810]</dmn:text>
       </dmn:literalExpression>
       <dmn:literalExpression id="_13b74204-85d4-4b46-b6c8-cb5c79096d61">
-        <dmn:text>["insalataLegumi", ["ceci", "lenticchie", "fagioli", "pepe", "olio", "cipolla"]]</dmn:text>
+        <dmn:text>["insalataLegumi", ["ceci", "lenticchie", "fagioli", "pepe", "olio", "cipolla"], 577]</dmn:text>
       </dmn:literalExpression>
       <dmn:literalExpression id="_660df771-8d88-4d9c-a3ae-555d08a4d8cc">
-        <dmn:text>["uovaSode", ["uova", "olio", "pepe"]]</dmn:text>
+        <dmn:text>["uovaSode", ["uova", "olio", "pepe"], 192]</dmn:text>
       </dmn:literalExpression>
       <dmn:literalExpression id="_70d350db-bfe0-4c04-b827-b2ebb203bc2e">
-        <dmn:text>["tagliataRosmarino", ["carne", "olio", "rosmarino", "aglio"]]</dmn:text>
+        <dmn:text>["tagliataRosmarino", ["carne", "olio", "rosmarino", "aglio"], 378]</dmn:text>
       </dmn:literalExpression>
     </dmn:list>
   </dmn:decision>
-  <dmn:decision id="_f1020c8e-8d92-4013-b200-4b0086176059" name="dietsResults" triso:readOnly="false">
+  <dmn:decision id="_f1020c8e-8d92-4013-b200-4b0086176059" name="dietsResults" triso:readOnly="false" triso:useOutputTypeAsAnswer="false">
     <dmn:variable id="_ce494e26-b1f7-400e-884e-5974ee6a8d1c" name="dietsResults" typeRef="collectionOfString"/>
     <dmn:informationRequirement triso:readOnly="false">
       <dmn:requiredDecision href="#_9fe0f2f5-75cf-4d24-b6e3-8eb6763a38a8"/>
@@ -492,15 +497,18 @@
     <dmn:informationRequirement triso:readOnly="false">
       <dmn:requiredDecision href="#_42689ad5-6ab5-4261-995f-e35864787d3c"/>
     </dmn:informationRequirement>
+    <dmn:informationRequirement triso:readOnly="false">
+      <dmn:requiredInput href="#_00e1e463-6d73-443b-8f63-4f4629e6aac2"/>
+    </dmn:informationRequirement>
     <dmn:literalExpression id="_27ffceed-133a-42cd-9efd-fc3ada06fb09" triso:descriptionVisible="false" triso:expressionId="_a3f2e6a7-a7d4-41f6-9968-b91f5a434188" typeRef="collectionOfString">
       <dmn:text>for item in ingredientsPerDishes
-return if every ingr in item[2] satisfies ingr in foods then item[1] else "EXCLUDE"
-
-  
+return if (every ingr in item[2] satisfies ingr in foods) and (item[3] &lt;= caloriesLimit)
+then item[1]
+else "EXCLUDE"
 </dmn:text>
     </dmn:literalExpression>
   </dmn:decision>
-  <dmn:decision id="_48af6b4d-866c-4343-8b26-c9665bc4eae7" name="allergensAndAliments" triso:readOnly="false">
+  <dmn:decision id="_48af6b4d-866c-4343-8b26-c9665bc4eae7" name="allergensAndAliments" triso:readOnly="false" triso:useOutputTypeAsAnswer="false">
     <dmn:variable id="_385d3bb0-6b82-4ef1-88b7-b4a74c6a258d" name="allergensAndAliments" typeRef="collectionOfString"/>
     <dmn:informationRequirement triso:readOnly="false">
       <dmn:requiredInput href="#_4ed21f87-61cb-4cf6-a4da-8bc6a7d4d85e"/>
@@ -1170,7 +1178,7 @@ return if every ingr in item[2] satisfies ingr in foods then item[1] else "EXCLU
   <dmn:inputData id="_d7892d9b-7a19-41e0-a244-112993db0da0" name="allergic to crustacean shellfish" triso:readOnly="false">
     <dmn:variable id="_2e9f1cc3-f707-4a6f-b971-f243587dbe38" name="allergic to crustacean shellfish" typeRef="feel:boolean"/>
   </dmn:inputData>
-  <dmn:decision id="_3b96a0ce-3ffc-4eed-93fd-26f76cf35a96" name="allergensResults" triso:readOnly="false">
+  <dmn:decision id="_3b96a0ce-3ffc-4eed-93fd-26f76cf35a96" name="allergensResults" triso:readOnly="false" triso:useOutputTypeAsAnswer="false">
     <dmn:variable id="_a2ea0e49-bfe1-4bb6-b5cc-dc1ce42a5456" name="allergensResults" typeRef="collectionOfString"/>
     <dmn:informationRequirement triso:readOnly="false">
       <dmn:requiredDecision href="#_48af6b4d-866c-4343-8b26-c9665bc4eae7"/>
@@ -1183,7 +1191,7 @@ return if every ingr in item[2] satisfies ingr in foods then item[1] else "EXCLU
 return if every ingr in item[2] satisfies ingr in allergensAndAliments then item[1] else "EXCLUDE"</dmn:text>
     </dmn:literalExpression>
   </dmn:decision>
-  <dmn:decision id="_2b70dce2-26e9-40e2-8fb2-9a2313c699ca" name="finalSuggestions" triso:readOnly="false">
+  <dmn:decision id="_2b70dce2-26e9-40e2-8fb2-9a2313c699ca" name="finalSuggestions" triso:readOnly="false" triso:useOutputTypeAsAnswer="false">
     <dmn:variable id="_0a608cc3-904f-43ec-b8d1-4cff21cb8c12" name="finalSuggestions" typeRef="collectionOfString"/>
     <dmn:informationRequirement triso:readOnly="false">
       <dmn:requiredDecision href="#_3b96a0ce-3ffc-4eed-93fd-26f76cf35a96"/>
@@ -1196,4 +1204,8 @@ return if every ingr in item[2] satisfies ingr in allergensAndAliments then item
   if x in dietsResults then x else "EXCLUDE"</dmn:text>
     </dmn:literalExpression>
   </dmn:decision>
+  <dmn:knowledgeSource id="_a209776d-718c-4238-8e6a-e8cc89731795" name="menu" triso:readOnly="false"/>
+  <dmn:inputData id="_00e1e463-6d73-443b-8f63-4f4629e6aac2" name="caloriesLimit" triso:readOnly="false">
+    <dmn:variable id="_a48c0266-78bd-457d-b703-6862f7e6726f" name="caloriesLimit" typeRef="feel:number"/>
+  </dmn:inputData>
 </dmn:definitions>
