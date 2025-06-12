@@ -1,0 +1,290 @@
+@prefix ex: <http://example.org/food#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ex:crescia a ex:Dish ;
+    ex:hasIngredient ex:acqua,
+        ex:farina,
+        ex:olio,
+        ex:rosmarino .
+
+ex:hasCalories a owl:DatatypeProperty ;
+    rdfs:domain ex:Ingredient ;
+    rdfs:range xsd:integer .
+
+ex:hasIngredient a owl:ObjectProperty ;
+    rdfs:domain ex:Dish ;
+    rdfs:range ex:Ingredient .
+
+ex:insalataLegumi a ex:Dish ;
+    ex:hasIngredient ex:ceci,
+        ex:cipolla,
+        ex:fagioli,
+        ex:lenticchie,
+        ex:olio,
+        ex:pepe .
+
+ex:isGlutenFree a owl:DatatypeProperty ;
+    rdfs:domain ex:Ingredient ;
+    rdfs:range xsd:boolean .
+
+ex:isLactoseFree a owl:DatatypeProperty ;
+    rdfs:domain ex:Ingredient ;
+    rdfs:range xsd:boolean .
+
+ex:isVegetarian a owl:DatatypeProperty ;
+    rdfs:domain ex:Ingredient ;
+    rdfs:range xsd:boolean .
+
+ex:pastaCarbonara a ex:Dish ;
+    ex:hasIngredient ex:guanciale,
+        ex:pasta,
+        ex:pecorino,
+        ex:pepe,
+        ex:uova .
+
+ex:pastaPesto a ex:Dish ;
+    ex:hasIngredient ex:aglio,
+        ex:basilico,
+        ex:olio,
+        ex:parmigiano,
+        ex:pasta .
+
+ex:pizzaDiavola a ex:Dish ;
+    ex:hasIngredient ex:acqua,
+        ex:farina,
+        ex:olio,
+        ex:pomodoro,
+        ex:spianata .
+
+ex:pizzaMargherita a ex:Dish ;
+    ex:hasIngredient ex:acqua,
+        ex:basilico,
+        ex:farina,
+        ex:mozzarella,
+        ex:olio,
+        ex:pomodoro .
+
+ex:pizzaTonnoCipolla a ex:Dish ;
+    ex:hasIngredient ex:acqua,
+        ex:cipolla,
+        ex:farina,
+        ex:olio,
+        ex:tonno .
+
+ex:risottoPomodoro a ex:Dish ;
+    ex:hasIngredient ex:basilico,
+        ex:burro,
+        ex:parmigiano,
+        ex:pomodoro,
+        ex:riso .
+
+ex:tagliataRosmarino a ex:Dish ;
+    ex:hasIngredient ex:aglio,
+        ex:carne,
+        ex:olio,
+        ex:rosmarino .
+
+ex:tagliereFormaggi a ex:Dish ;
+    ex:hasIngredient ex:caciotta,
+        ex:parmigiano,
+        ex:pecorino .
+
+ex:tagliereSalumi a ex:Dish ;
+    ex:hasIngredient ex:coppa,
+        ex:mortadella,
+        ex:salame .
+
+ex:uovaSode a ex:Dish ;
+    ex:hasIngredient ex:olio,
+        ex:pepe,
+        ex:uova .
+
+ex:Egg a owl:Class ;
+    rdfs:subClassOf ex:Ingredient .
+
+ex:Fish a owl:Class ;
+    rdfs:subClassOf ex:Ingredient .
+
+ex:burro a ex:Dairy ;
+    ex:hasCalories 102 ;
+    ex:isGlutenFree true ;
+    ex:isLactoseFree false ;
+    ex:isVegetarian true .
+
+ex:caciotta a ex:Dairy ;
+    ex:hasCalories 110 ;
+    ex:isGlutenFree true ;
+    ex:isLactoseFree false ;
+    ex:isVegetarian true .
+
+ex:carne a ex:Meat ;
+    ex:hasCalories 250 ;
+    ex:isGlutenFree true ;
+    ex:isLactoseFree true ;
+    ex:isVegetarian false .
+
+ex:ceci a ex:Vegetables ;
+    ex:hasCalories 180 ;
+    ex:isGlutenFree true ;
+    ex:isLactoseFree true ;
+    ex:isVegetarian true .
+
+ex:coppa a ex:Meat ;
+    ex:hasCalories 270 ;
+    ex:isGlutenFree true ;
+    ex:isLactoseFree true ;
+    ex:isVegetarian false .
+
+ex:fagioli a ex:Vegetables ;
+    ex:hasCalories 120 ;
+    ex:isGlutenFree true ;
+    ex:isLactoseFree true ;
+    ex:isVegetarian true .
+
+ex:guanciale a ex:Meat ;
+    ex:hasCalories 300 ;
+    ex:isGlutenFree true ;
+    ex:isLactoseFree true ;
+    ex:isVegetarian false .
+
+ex:lenticchie a ex:Vegetables ;
+    ex:hasCalories 115 ;
+    ex:isGlutenFree true ;
+    ex:isLactoseFree true ;
+    ex:isVegetarian true .
+
+ex:mortadella a ex:Meat ;
+    ex:hasCalories 310 ;
+    ex:isGlutenFree true ;
+    ex:isLactoseFree false ;
+    ex:isVegetarian false .
+
+ex:mozzarella a ex:Dairy ;
+    ex:hasCalories 85 ;
+    ex:isGlutenFree true ;
+    ex:isLactoseFree false ;
+    ex:isVegetarian true .
+
+ex:riso a ex:Pasta ;
+    ex:hasCalories 200 ;
+    ex:isGlutenFree true ;
+    ex:isLactoseFree true ;
+    ex:isVegetarian true .
+
+ex:salame a ex:Meat ;
+    ex:hasCalories 300 ;
+    ex:isGlutenFree true ;
+    ex:isLactoseFree true ;
+    ex:isVegetarian false .
+
+ex:spianata a ex:Meat ;
+    ex:hasCalories 310 ;
+    ex:isGlutenFree true ;
+    ex:isLactoseFree true ;
+    ex:isVegetarian false .
+
+ex:tonno a ex:Fish ;
+    ex:hasCalories 140 ;
+    ex:isGlutenFree true ;
+    ex:isLactoseFree true ;
+    ex:isVegetarian false .
+
+ex:Other a owl:Class ;
+    rdfs:subClassOf ex:Ingredient .
+
+ex:aglio a ex:Vegetables ;
+    ex:hasCalories 5 ;
+    ex:isGlutenFree true ;
+    ex:isLactoseFree true ;
+    ex:isVegetarian true .
+
+ex:cipolla a ex:Vegetables ;
+    ex:hasCalories 40 ;
+    ex:isGlutenFree true ;
+    ex:isLactoseFree true ;
+    ex:isVegetarian true .
+
+ex:pasta a ex:Pasta ;
+    ex:hasCalories 220 ;
+    ex:isGlutenFree false ;
+    ex:isLactoseFree true ;
+    ex:isVegetarian true .
+
+ex:pecorino a ex:Dairy ;
+    ex:hasCalories 130 ;
+    ex:isGlutenFree true ;
+    ex:isLactoseFree true ;
+    ex:isVegetarian true .
+
+ex:rosmarino a ex:Vegetables ;
+    ex:hasCalories 3 ;
+    ex:isGlutenFree true ;
+    ex:isLactoseFree true ;
+    ex:isVegetarian true .
+
+ex:uova a ex:Egg ;
+    ex:hasCalories 70 ;
+    ex:isGlutenFree true ;
+    ex:isLactoseFree true ;
+    ex:isVegetarian true .
+
+ex:Pasta a owl:Class ;
+    rdfs:subClassOf ex:Ingredient .
+
+ex:basilico a ex:Vegetables ;
+    ex:hasCalories 1 ;
+    ex:isGlutenFree true ;
+    ex:isLactoseFree true ;
+    ex:isVegetarian true .
+
+ex:parmigiano a ex:Dairy ;
+    ex:hasCalories 110 ;
+    ex:isGlutenFree true ;
+    ex:isLactoseFree false ;
+    ex:isVegetarian true .
+
+ex:pepe a ex:Vegetables ;
+    ex:hasCalories 2 ;
+    ex:isGlutenFree true ;
+    ex:isLactoseFree true ;
+    ex:isVegetarian true .
+
+ex:pomodoro a ex:Vegetables ;
+    ex:hasCalories 20 ;
+    ex:isGlutenFree true ;
+    ex:isLactoseFree true ;
+    ex:isVegetarian true .
+
+ex:acqua a ex:Other ;
+    ex:hasCalories 0 ;
+    ex:isGlutenFree true ;
+    ex:isLactoseFree true ;
+    ex:isVegetarian true .
+
+ex:farina a ex:Pasta ;
+    ex:hasCalories 360 ;
+    ex:isGlutenFree false ;
+    ex:isLactoseFree true ;
+    ex:isVegetarian true .
+
+ex:Dairy a owl:Class ;
+    rdfs:subClassOf ex:Ingredient .
+
+ex:Meat a owl:Class ;
+    rdfs:subClassOf ex:Ingredient .
+
+ex:olio a ex:Other ;
+    ex:hasCalories 120 ;
+    ex:isGlutenFree true ;
+    ex:isLactoseFree true ;
+    ex:isVegetarian true .
+
+ex:Vegetables a owl:Class ;
+    rdfs:subClassOf ex:Ingredient .
+
+ex:Ingredient a owl:Class .
+
+ex:Dish a owl:Class .
+
