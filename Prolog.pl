@@ -45,7 +45,7 @@ ingredient(tonno).
 ingredient(uova).
 
 %%% attributes
-%% has_attributes(Ingredient, CalorieCount, isGlutenFree, isLactoseFree, isVegetarian, Nuts, Soy, Peanuts, Eggs, Crustacean Shellfish)
+%% has_attributes(Ingredient, CalorieCount, isGlutenFree, isLactoseFree, isVegetarian)
 
 has_attributes(acqua, 0, true, true, true).
 has_attributes(aglio, 5, true, true, true).
