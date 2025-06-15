@@ -1,290 +1,474 @@
-@prefix ex: <http://example.org/food#> .
+@prefix : <http://www.semanticweb.org/alessandro/ontologies/2025/5/ontologia_ricette#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
-ex:crescia a ex:Dish ;
-    ex:hasIngredient ex:acqua,
-        ex:farina,
-        ex:olio,
-        ex:rosmarino .
 
-ex:hasCalories a owl:DatatypeProperty ;
-    rdfs:domain ex:Ingredient ;
-    rdfs:range xsd:integer .
+#check if necessary
+@prefix swrl: <http://www.w3.org/2003/11/swrl#> .
+@prefix swrla: <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#> .
+@prefix swrlb: <http://www.w3.org/2003/11/swrlb#> .
+@prefix prova: <http://www.semanticweb.org/alessandro/ontologies/2025/5/ontologia_ricette/> .
 
-ex:hasIngredient a owl:ObjectProperty ;
-    rdfs:domain ex:Dish ;
-    rdfs:range ex:Ingredient .
+@base <http://www.semanticweb.org/alessandro/ontologies/2025/5/ontologia_ricette/> .
 
-ex:insalataLegumi a ex:Dish ;
-    ex:hasIngredient ex:ceci,
-        ex:cipolla,
-        ex:fagioli,
-        ex:lenticchie,
-        ex:olio,
-        ex:pepe .
 
-ex:isGlutenFree a owl:DatatypeProperty ;
-    rdfs:domain ex:Ingredient ;
-    rdfs:range xsd:boolean .
+<http://www.semanticweb.org/alessandro/ontologies/2025/5/ontologia_ricette> rdf:type owl:Ontology .
 
-ex:isLactoseFree a owl:DatatypeProperty ;
-    rdfs:domain ex:Ingredient ;
-    rdfs:range xsd:boolean .
+#check if necessary
+#################################################################
+#    Annotation properties 
+#################################################################
 
-ex:isVegetarian a owl:DatatypeProperty ;
-    rdfs:domain ex:Ingredient ;
-    rdfs:range xsd:boolean .
+###  http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled
+swrla:isRuleEnabled rdf:type owl:AnnotationProperty .
 
-ex:pastaCarbonara a ex:Dish ;
-    ex:hasIngredient ex:guanciale,
-        ex:pasta,
-        ex:pecorino,
-        ex:pepe,
-        ex:uova .
+#################################################################
+#    Object Properties
+#################################################################
 
-ex:pastaPesto a ex:Dish ;
-    ex:hasIngredient ex:aglio,
-        ex:basilico,
-        ex:olio,
-        ex:parmigiano,
-        ex:pasta .
+###  http://www.semanticweb.org/alessandro/ontologies/2025/5/ontologia_ricette#hasIngredient
+:hasIngredient rdf:type owl:ObjectProperty ;
+                 rdfs:domain :Dish ;
+                 rdfs:range :Ingredient .
 
-ex:pizzaDiavola a ex:Dish ;
-    ex:hasIngredient ex:acqua,
-        ex:farina,
-        ex:olio,
-        ex:pomodoro,
-        ex:spianata .
 
-ex:pizzaMargherita a ex:Dish ;
-    ex:hasIngredient ex:acqua,
-        ex:basilico,
-        ex:farina,
-        ex:mozzarella,
-        ex:olio,
-        ex:pomodoro .
+#################################################################
+#    Data properties
+#################################################################
 
-ex:pizzaTonnoCipolla a ex:Dish ;
-    ex:hasIngredient ex:acqua,
-        ex:cipolla,
-        ex:farina,
-        ex:olio,
-        ex:tonno .
+###  http://www.semanticweb.org/alessandro/ontologies/2025/5/ontologia_ricette#hasCalories
+:hasCalories rdf:type owl:DatatypeProperty ;
+               rdfs:domain :Ingredient ;
+               rdfs:range xsd:integer .
 
-ex:risottoPomodoro a ex:Dish ;
-    ex:hasIngredient ex:basilico,
-        ex:burro,
-        ex:parmigiano,
-        ex:pomodoro,
-        ex:riso .
 
-ex:tagliataRosmarino a ex:Dish ;
-    ex:hasIngredient ex:aglio,
-        ex:carne,
-        ex:olio,
-        ex:rosmarino .
+###  http://www.semanticweb.org/alessandro/ontologies/2025/5/ontologia_ricette#isGlutenFree
+:isGlutenFree rdf:type owl:DatatypeProperty ;
+                rdfs:domain :Ingredient ;
+                rdfs:range xsd:boolean .
 
-ex:tagliereFormaggi a ex:Dish ;
-    ex:hasIngredient ex:caciotta,
-        ex:parmigiano,
-        ex:pecorino .
 
-ex:tagliereSalumi a ex:Dish ;
-    ex:hasIngredient ex:coppa,
-        ex:mortadella,
-        ex:salame .
+###  http://www.semanticweb.org/alessandro/ontologies/2025/5/ontologia_ricette#isLactoseFree
+:isLactoseFree rdf:type owl:DatatypeProperty ;
+                 rdfs:domain :Ingredient ;
+                 rdfs:range xsd:boolean .
 
-ex:uovaSode a ex:Dish ;
-    ex:hasIngredient ex:olio,
-        ex:pepe,
-        ex:uova .
 
-ex:Egg a owl:Class ;
-    rdfs:subClassOf ex:Ingredient .
+###  http://www.semanticweb.org/alessandro/ontologies/2025/5/ontologia_ricette#isVegetarian
+:isVegetarian rdf:type owl:DatatypeProperty ;
+                rdfs:domain :Ingredient ;
+                rdfs:range xsd:boolean .
 
-ex:Fish a owl:Class ;
-    rdfs:subClassOf ex:Ingredient .
 
-ex:burro a ex:Dairy ;
-    ex:hasCalories 102 ;
-    ex:isGlutenFree true ;
-    ex:isLactoseFree false ;
-    ex:isVegetarian true .
+#################################################################
+#    Classes
+#################################################################
 
-ex:caciotta a ex:Dairy ;
-    ex:hasCalories 110 ;
-    ex:isGlutenFree true ;
-    ex:isLactoseFree false ;
-    ex:isVegetarian true .
+###  http://www.semanticweb.org/alessandro/ontologies/2025/5/ontologia_ricette#Dairy
+:Dairy rdf:type owl:Class ;
+         rdfs:subClassOf :Ingredient .
 
-ex:carne a ex:Meat ;
-    ex:hasCalories 250 ;
-    ex:isGlutenFree true ;
-    ex:isLactoseFree true ;
-    ex:isVegetarian false .
 
-ex:ceci a ex:Vegetables ;
-    ex:hasCalories 180 ;
-    ex:isGlutenFree true ;
-    ex:isLactoseFree true ;
-    ex:isVegetarian true .
+###  http://www.semanticweb.org/alessandro/ontologies/2025/5/ontologia_ricette#Dish
+:Dish rdf:type owl:Class .
 
-ex:coppa a ex:Meat ;
-    ex:hasCalories 270 ;
-    ex:isGlutenFree true ;
-    ex:isLactoseFree true ;
-    ex:isVegetarian false .
 
-ex:fagioli a ex:Vegetables ;
-    ex:hasCalories 120 ;
-    ex:isGlutenFree true ;
-    ex:isLactoseFree true ;
-    ex:isVegetarian true .
+###  http://www.semanticweb.org/alessandro/ontologies/2025/5/ontologia_ricette#Egg
+:Egg rdf:type owl:Class ;
+       rdfs:subClassOf :Ingredient .
 
-ex:guanciale a ex:Meat ;
-    ex:hasCalories 300 ;
-    ex:isGlutenFree true ;
-    ex:isLactoseFree true ;
-    ex:isVegetarian false .
 
-ex:lenticchie a ex:Vegetables ;
-    ex:hasCalories 115 ;
-    ex:isGlutenFree true ;
-    ex:isLactoseFree true ;
-    ex:isVegetarian true .
+###  http://www.semanticweb.org/alessandro/ontologies/2025/5/ontologia_ricette#Fish
+:Fish rdf:type owl:Class ;
+        rdfs:subClassOf :Ingredient .
 
-ex:mortadella a ex:Meat ;
-    ex:hasCalories 310 ;
-    ex:isGlutenFree true ;
-    ex:isLactoseFree false ;
-    ex:isVegetarian false .
 
-ex:mozzarella a ex:Dairy ;
-    ex:hasCalories 85 ;
-    ex:isGlutenFree true ;
-    ex:isLactoseFree false ;
-    ex:isVegetarian true .
+###  http://www.semanticweb.org/alessandro/ontologies/2025/5/ontologia_ricette#Ingredient
+:Ingredient rdf:type owl:Class .
 
-ex:riso a ex:Pasta ;
-    ex:hasCalories 200 ;
-    ex:isGlutenFree true ;
-    ex:isLactoseFree true ;
-    ex:isVegetarian true .
 
-ex:salame a ex:Meat ;
-    ex:hasCalories 300 ;
-    ex:isGlutenFree true ;
-    ex:isLactoseFree true ;
-    ex:isVegetarian false .
+###  http://www.semanticweb.org/alessandro/ontologies/2025/5/ontologia_ricette#Meat
+:Meat rdf:type owl:Class ;
+        rdfs:subClassOf :Ingredient .
 
-ex:spianata a ex:Meat ;
-    ex:hasCalories 310 ;
-    ex:isGlutenFree true ;
-    ex:isLactoseFree true ;
-    ex:isVegetarian false .
 
-ex:tonno a ex:Fish ;
-    ex:hasCalories 140 ;
-    ex:isGlutenFree true ;
-    ex:isLactoseFree true ;
-    ex:isVegetarian false .
+###  http://www.semanticweb.org/alessandro/ontologies/2025/5/ontologia_ricette#Other
+:Other rdf:type owl:Class ;
+         rdfs:subClassOf :Ingredient .
 
-ex:Other a owl:Class ;
-    rdfs:subClassOf ex:Ingredient .
 
-ex:aglio a ex:Vegetables ;
-    ex:hasCalories 5 ;
-    ex:isGlutenFree true ;
-    ex:isLactoseFree true ;
-    ex:isVegetarian true .
+###  http://www.semanticweb.org/alessandro/ontologies/2025/5/ontologia_ricette#Pasta
+:Pasta rdf:type owl:Class ;
+         rdfs:subClassOf :Ingredient .
 
-ex:cipolla a ex:Vegetables ;
-    ex:hasCalories 40 ;
-    ex:isGlutenFree true ;
-    ex:isLactoseFree true ;
-    ex:isVegetarian true .
 
-ex:pasta a ex:Pasta ;
-    ex:hasCalories 220 ;
-    ex:isGlutenFree false ;
-    ex:isLactoseFree true ;
-    ex:isVegetarian true .
+###  http://www.semanticweb.org/alessandro/ontologies/2025/5/ontologia_ricette#Vegetables
+:Vegetables rdf:type owl:Class ;
+              rdfs:subClassOf :Ingredient .
 
-ex:pecorino a ex:Dairy ;
-    ex:hasCalories 130 ;
-    ex:isGlutenFree true ;
-    ex:isLactoseFree true ;
-    ex:isVegetarian true .
 
-ex:rosmarino a ex:Vegetables ;
-    ex:hasCalories 3 ;
-    ex:isGlutenFree true ;
-    ex:isLactoseFree true ;
-    ex:isVegetarian true .
+#################################################################
+#    Individuals
+#################################################################
 
-ex:uova a ex:Egg ;
-    ex:hasCalories 70 ;
-    ex:isGlutenFree true ;
-    ex:isLactoseFree true ;
-    ex:isVegetarian true .
+###  http://www.semanticweb.org/alessandro/ontologies/2025/5/ontologia_ricette#acqua
+:acqua rdf:type owl:NamedIndividual ,
+                  :Other ;
+         :hasCalories 0 ;
+         :isGlutenFree "true"^^xsd:boolean ;
+         :isLactoseFree "true"^^xsd:boolean ;
+         :isVegetarian "true"^^xsd:boolean .
 
-ex:Pasta a owl:Class ;
-    rdfs:subClassOf ex:Ingredient .
 
-ex:basilico a ex:Vegetables ;
-    ex:hasCalories 1 ;
-    ex:isGlutenFree true ;
-    ex:isLactoseFree true ;
-    ex:isVegetarian true .
+###  http://www.semanticweb.org/alessandro/ontologies/2025/5/ontologia_ricette#aglio
+:aglio rdf:type owl:NamedIndividual ,
+                  :Vegetables ;
+         :hasCalories 5 ;
+         :isGlutenFree "true"^^xsd:boolean ;
+         :isLactoseFree "true"^^xsd:boolean ;
+         :isVegetarian "true"^^xsd:boolean .
 
-ex:parmigiano a ex:Dairy ;
-    ex:hasCalories 110 ;
-    ex:isGlutenFree true ;
-    ex:isLactoseFree false ;
-    ex:isVegetarian true .
 
-ex:pepe a ex:Vegetables ;
-    ex:hasCalories 2 ;
-    ex:isGlutenFree true ;
-    ex:isLactoseFree true ;
-    ex:isVegetarian true .
+###  http://www.semanticweb.org/alessandro/ontologies/2025/5/ontologia_ricette#basilico
+:basilico rdf:type owl:NamedIndividual ,
+                     :Vegetables ;
+            :hasCalories 1 ;
+            :isGlutenFree "true"^^xsd:boolean ;
+            :isLactoseFree "true"^^xsd:boolean ;
+            :isVegetarian "true"^^xsd:boolean .
 
-ex:pomodoro a ex:Vegetables ;
-    ex:hasCalories 20 ;
-    ex:isGlutenFree true ;
-    ex:isLactoseFree true ;
-    ex:isVegetarian true .
 
-ex:acqua a ex:Other ;
-    ex:hasCalories 0 ;
-    ex:isGlutenFree true ;
-    ex:isLactoseFree true ;
-    ex:isVegetarian true .
+###  http://www.semanticweb.org/alessandro/ontologies/2025/5/ontologia_ricette#burro
+:burro rdf:type owl:NamedIndividual ,
+                  :Dairy ;
+         :hasCalories 102 ;
+         :isGlutenFree "true"^^xsd:boolean ;
+         :isLactoseFree "false"^^xsd:boolean ;
+         :isVegetarian "true"^^xsd:boolean .
 
-ex:farina a ex:Pasta ;
-    ex:hasCalories 360 ;
-    ex:isGlutenFree false ;
-    ex:isLactoseFree true ;
-    ex:isVegetarian true .
 
-ex:Dairy a owl:Class ;
-    rdfs:subClassOf ex:Ingredient .
+###  http://www.semanticweb.org/alessandro/ontologies/2025/5/ontologia_ricette#caciotta
+:caciotta rdf:type owl:NamedIndividual ,
+                     :Dairy ;
+            :hasCalories 110 ;
+            :isGlutenFree "true"^^xsd:boolean ;
+            :isLactoseFree "false"^^xsd:boolean ;
+            :isVegetarian "true"^^xsd:boolean .
 
-ex:Meat a owl:Class ;
-    rdfs:subClassOf ex:Ingredient .
 
-ex:olio a ex:Other ;
-    ex:hasCalories 120 ;
-    ex:isGlutenFree true ;
-    ex:isLactoseFree true ;
-    ex:isVegetarian true .
+###  http://www.semanticweb.org/alessandro/ontologies/2025/5/ontologia_ricette#carne
+:carne rdf:type owl:NamedIndividual ,
+                  :Meat ;
+         :hasCalories 250 ;
+         :isGlutenFree "true"^^xsd:boolean ;
+         :isLactoseFree "true"^^xsd:boolean ;
+         :isVegetarian "false"^^xsd:boolean .
 
-ex:Vegetables a owl:Class ;
-    rdfs:subClassOf ex:Ingredient .
 
-ex:Ingredient a owl:Class .
+###  http://www.semanticweb.org/alessandro/ontologies/2025/5/ontologia_ricette#ceci
+:ceci rdf:type owl:NamedIndividual ,
+                 :Vegetables ;
+        :hasCalories 180 ;
+        :isGlutenFree "true"^^xsd:boolean ;
+        :isLactoseFree "true"^^xsd:boolean ;
+        :isVegetarian "true"^^xsd:boolean .
 
-ex:Dish a owl:Class .
 
+###  http://www.semanticweb.org/alessandro/ontologies/2025/5/ontologia_ricette#cipolla
+:cipolla rdf:type owl:NamedIndividual ,
+                    :Vegetables ;
+           :hasCalories 40 ;
+           :isGlutenFree "true"^^xsd:boolean ;
+           :isLactoseFree "true"^^xsd:boolean ;
+           :isVegetarian "true"^^xsd:boolean .
+
+
+###  http://www.semanticweb.org/alessandro/ontologies/2025/5/ontologia_ricette#coppa
+:coppa rdf:type owl:NamedIndividual ,
+                  :Meat ;
+         :hasCalories 270 ;
+         :isGlutenFree "true"^^xsd:boolean ;
+         :isLactoseFree "true"^^xsd:boolean ;
+         :isVegetarian "false"^^xsd:boolean .
+
+
+###  http://www.semanticweb.org/alessandro/ontologies/2025/5/ontologia_ricette#crescia
+:crescia rdf:type owl:NamedIndividual ,
+                    :Dish ;
+           :hasIngredient :acqua ,
+                            :farina ,
+                            :olio ,
+                            :rosmarino .
+
+
+###  http://www.semanticweb.org/alessandro/ontologies/2025/5/ontologia_ricette#fagioli
+:fagioli rdf:type owl:NamedIndividual ,
+                    :Vegetables ;
+           :hasCalories 120 ;
+           :isGlutenFree "true"^^xsd:boolean ;
+           :isLactoseFree "true"^^xsd:boolean ;
+           :isVegetarian "true"^^xsd:boolean .
+
+
+###  http://www.semanticweb.org/alessandro/ontologies/2025/5/ontologia_ricette#farina
+:farina rdf:type owl:NamedIndividual ,
+                   :Pasta ;
+          :hasCalories 360 ;
+          :isGlutenFree "false"^^xsd:boolean ;
+          :isLactoseFree "true"^^xsd:boolean ;
+          :isVegetarian "true"^^xsd:boolean .
+
+
+###  http://www.semanticweb.org/alessandro/ontologies/2025/5/ontologia_ricette#guanciale
+:guanciale rdf:type owl:NamedIndividual ,
+                      :Meat ;
+             :hasCalories 300 ;
+             :isGlutenFree "true"^^xsd:boolean ;
+             :isLactoseFree "true"^^xsd:boolean ;
+             :isVegetarian "false"^^xsd:boolean .
+
+
+###  http://www.semanticweb.org/alessandro/ontologies/2025/5/ontologia_ricette#insalataLegumi
+:insalataLegumi rdf:type owl:NamedIndividual ,
+                           :Dish ;
+                  :hasIngredient :ceci ,
+                                   :cipolla ,
+                                   :fagioli ,
+                                   :lenticchie ,
+                                   :olio ,
+                                   :pepe .
+
+
+###  http://www.semanticweb.org/alessandro/ontologies/2025/5/ontologia_ricette#lenticchie
+:lenticchie rdf:type owl:NamedIndividual ,
+                       :Vegetables ;
+              :hasCalories 115 ;
+              :isGlutenFree "true"^^xsd:boolean ;
+              :isLactoseFree "true"^^xsd:boolean ;
+              :isVegetarian "true"^^xsd:boolean .
+
+
+###  http://www.semanticweb.org/alessandro/ontologies/2025/5/ontologia_ricette#mortadella
+:mortadella rdf:type owl:NamedIndividual ,
+                       :Meat ;
+              :hasCalories 310 ;
+              :isGlutenFree "true"^^xsd:boolean ;
+              :isLactoseFree "false"^^xsd:boolean ;
+              :isVegetarian "false"^^xsd:boolean .
+
+
+###  http://www.semanticweb.org/alessandro/ontologies/2025/5/ontologia_ricette#mozzarella
+:mozzarella rdf:type owl:NamedIndividual ,
+                       :Dairy ;
+              :hasCalories 85 ;
+              :isGlutenFree "true"^^xsd:boolean ;
+              :isLactoseFree "false"^^xsd:boolean ;
+              :isVegetarian "true"^^xsd:boolean .
+
+
+###  http://www.semanticweb.org/alessandro/ontologies/2025/5/ontologia_ricette#olio
+:olio rdf:type owl:NamedIndividual ,
+                 :Other ;
+        :hasCalories 120 ;
+        :isGlutenFree "true"^^xsd:boolean ;
+        :isLactoseFree "true"^^xsd:boolean ;
+        :isVegetarian "true"^^xsd:boolean .
+
+
+###  http://www.semanticweb.org/alessandro/ontologies/2025/5/ontologia_ricette#parmigiano
+:parmigiano rdf:type owl:NamedIndividual ,
+                       :Dairy ;
+              :hasCalories 110 ;
+              :isGlutenFree "true"^^xsd:boolean ;
+              :isLactoseFree "false"^^xsd:boolean ;
+              :isVegetarian "true"^^xsd:boolean .
+
+
+###  http://www.semanticweb.org/alessandro/ontologies/2025/5/ontologia_ricette#pasta
+:pasta rdf:type owl:NamedIndividual ,
+                  :Pasta ;
+         :hasCalories 220 ;
+         :isGlutenFree "false"^^xsd:boolean ;
+         :isLactoseFree "true"^^xsd:boolean ;
+         :isVegetarian "true"^^xsd:boolean .
+
+
+###  http://www.semanticweb.org/alessandro/ontologies/2025/5/ontologia_ricette#pastaCarbonara
+:pastaCarbonara rdf:type owl:NamedIndividual ,
+                           :Dish ;
+                  :hasIngredient :guanciale ,
+                                   :pasta ,
+                                   :pecorino ,
+                                   :pepe ,
+                                   :uova .
+
+
+###  http://www.semanticweb.org/alessandro/ontologies/2025/5/ontologia_ricette#pastaPesto
+:pastaPesto rdf:type owl:NamedIndividual ,
+                       :Dish ;
+              :hasIngredient :aglio ,
+                               :basilico ,
+                               :olio ,
+                               :parmigiano ,
+                               :pasta .
+
+
+###  http://www.semanticweb.org/alessandro/ontologies/2025/5/ontologia_ricette#pecorino
+:pecorino rdf:type owl:NamedIndividual ,
+                     :Dairy ;
+            :hasCalories 130 ;
+            :isGlutenFree "true"^^xsd:boolean ;
+            :isLactoseFree "true"^^xsd:boolean ;
+            :isVegetarian "true"^^xsd:boolean .
+
+
+###  http://www.semanticweb.org/alessandro/ontologies/2025/5/ontologia_ricette#pepe
+:pepe rdf:type owl:NamedIndividual ,
+                 :Vegetables ;
+        :hasCalories 2 ;
+        :isGlutenFree "true"^^xsd:boolean ;
+        :isLactoseFree "true"^^xsd:boolean ;
+        :isVegetarian "true"^^xsd:boolean .
+
+
+###  http://www.semanticweb.org/alessandro/ontologies/2025/5/ontologia_ricette#pizzaDiavola
+:pizzaDiavola rdf:type owl:NamedIndividual ,
+                         :Dish ;
+                :hasIngredient :acqua ,
+                                 :farina ,
+                                 :olio ,
+                                 :pomodoro ,
+                                 :spianata .
+
+
+###  http://www.semanticweb.org/alessandro/ontologies/2025/5/ontologia_ricette#pizzaMargherita
+:pizzaMargherita rdf:type owl:NamedIndividual ,
+                            :Dish ;
+                   :hasIngredient :acqua ,
+                                    :basilico ,
+                                    :farina ,
+                                    :mozzarella ,
+                                    :olio ,
+                                    :pomodoro .
+
+
+###  http://www.semanticweb.org/alessandro/ontologies/2025/5/ontologia_ricette#pizzaTonnoCipolla
+:pizzaTonnoCipolla rdf:type owl:NamedIndividual ,
+                              :Dish ;
+                     :hasIngredient :acqua ,
+                                      :cipolla ,
+                                      :farina ,
+                                      :olio ,
+                                      :tonno .
+
+
+###  http://www.semanticweb.org/alessandro/ontologies/2025/5/ontologia_ricette#pomodoro
+:pomodoro rdf:type owl:NamedIndividual ,
+                     :Vegetables ;
+            :hasCalories 20 ;
+            :isGlutenFree "true"^^xsd:boolean ;
+            :isLactoseFree "true"^^xsd:boolean ;
+            :isVegetarian "true"^^xsd:boolean .
+
+
+###  http://www.semanticweb.org/alessandro/ontologies/2025/5/ontologia_ricette#riso
+:riso rdf:type owl:NamedIndividual ,
+                 :Pasta ;
+        :hasCalories 200 ;
+        :isGlutenFree "true"^^xsd:boolean ;
+        :isLactoseFree "true"^^xsd:boolean ;
+        :isVegetarian "true"^^xsd:boolean .
+
+
+###  http://www.semanticweb.org/alessandro/ontologies/2025/5/ontologia_ricette#risottoPomodoro
+:risottoPomodoro rdf:type owl:NamedIndividual ,
+                            :Dish ;
+                   :hasIngredient :basilico ,
+                                    :burro ,
+                                    :parmigiano ,
+                                    :pomodoro ,
+                                    :riso .
+
+
+###  http://www.semanticweb.org/alessandro/ontologies/2025/5/ontologia_ricette#rosmarino
+:rosmarino rdf:type owl:NamedIndividual ,
+                      :Vegetables ;
+             :hasCalories 3 ;
+             :isGlutenFree "true"^^xsd:boolean ;
+             :isLactoseFree "true"^^xsd:boolean ;
+             :isVegetarian "true"^^xsd:boolean .
+
+
+###  http://www.semanticweb.org/alessandro/ontologies/2025/5/ontologia_ricette#salame
+:salame rdf:type owl:NamedIndividual ,
+                   :Meat ;
+          :hasCalories 300 ;
+          :isGlutenFree "true"^^xsd:boolean ;
+          :isLactoseFree "true"^^xsd:boolean ;
+          :isVegetarian "false"^^xsd:boolean .
+
+
+###  http://www.semanticweb.org/alessandro/ontologies/2025/5/ontologia_ricette#spianata
+:spianata rdf:type owl:NamedIndividual ,
+                     :Meat ;
+            :hasCalories 310 ;
+            :isGlutenFree "true"^^xsd:boolean ;
+            :isLactoseFree "true"^^xsd:boolean ;
+            :isVegetarian "false"^^xsd:boolean .
+
+
+###  http://www.semanticweb.org/alessandro/ontologies/2025/5/ontologia_ricette#tagliataRosmarino
+:tagliataRosmarino rdf:type owl:NamedIndividual ,
+                              :Dish ;
+                     :hasIngredient :aglio ,
+                                      :carne ,
+                                      :olio ,
+                                      :rosmarino .
+
+
+###  http://www.semanticweb.org/alessandro/ontologies/2025/5/ontologia_ricette#tagliereFormaggi
+:tagliereFormaggi rdf:type owl:NamedIndividual ,
+                             :Dish ;
+                    :hasIngredient :caciotta ,
+                                     :parmigiano ,
+                                     :pecorino .
+
+
+###  http://www.semanticweb.org/alessandro/ontologies/2025/5/ontologia_ricette#tagliereSalumi
+:tagliereSalumi rdf:type owl:NamedIndividual ,
+                           :Dish ;
+                  :hasIngredient :coppa ,
+                                   :mortadella ,
+                                   :salame .
+
+
+###  http://www.semanticweb.org/alessandro/ontologies/2025/5/ontologia_ricette#tonno
+:tonno rdf:type owl:NamedIndividual ,
+                  :Fish ;
+         :hasCalories 140 ;
+         :isGlutenFree "true"^^xsd:boolean ;
+         :isLactoseFree "true"^^xsd:boolean ;
+         :isVegetarian "false"^^xsd:boolean .
+
+
+###  http://www.semanticweb.org/alessandro/ontologies/2025/5/ontologia_ricette#uova
+:uova rdf:type owl:NamedIndividual ,
+                 :Egg ;
+        :hasCalories 70 ;
+        :isGlutenFree "true"^^xsd:boolean ;
+        :isLactoseFree "true"^^xsd:boolean ;
+        :isVegetarian "true"^^xsd:boolean .
+
+
+###  http://www.semanticweb.org/alessandro/ontologies/2025/5/ontologia_ricette#uovaSode
+:uovaSode rdf:type owl:NamedIndividual ,
+                     :Dish ;
+            :hasIngredient :olio ,
+                             :pepe ,
+                             :uova .
+
+
+###  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi
