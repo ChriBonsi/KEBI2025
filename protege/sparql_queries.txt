@@ -1,0 +1,57 @@
+QUERIES
+
+%% Dishes where all ingredients are vegetarian
+
+PREFIX : <http://www.semanticweb.org/alessandro/ontologies/2025/5/ontologia_ricette#>
+
+SELECT ?dish
+WHERE {
+  ?dish a :Dish .
+  FILTER NOT EXISTS {
+    ?dish :hasIngredient ?i .
+    ?i :isVegetarian false .
+  }
+}
+
+%% Gluten-free dishes
+
+SELECT ?dish
+WHERE {
+  ?dish a :Dish .
+  FILTER NOT EXISTS {
+    ?dish :hasIngredient ?i .
+    ?i :isGlutenFree false .
+  }
+}
+
+%% Lactose-free dishes
+SELECT ?dish
+WHERE {
+  ?dish a :Dish .
+  FILTER NOT EXISTS {
+    ?dish :hasIngredient ?i .
+    ?i :isLactoseFree false .
+  }
+}
+
+
+%% Total calories of any dish
+
+SELECT ?dish (STR(SUM(?cal)) AS ?totalCalories)
+WHERE {
+  ?dish a :Dish ;
+        :hasIngredient ?ingredient .
+  ?ingredient :hasCalories ?cal .
+}
+GROUP BY ?dish
+
+%% Dishes below a certain calorie threshold
+
+SELECT ?dish (STR(SUM(?cal)) AS ?totalCalories)
+WHERE {
+  ?dish a :Dish ;
+        :hasIngredient ?ingredient .
+  ?ingredient :hasCalories ?cal .
+}
+GROUP BY ?dish
+HAVING (SUM(?cal) < 500)
