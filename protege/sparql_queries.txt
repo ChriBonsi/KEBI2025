@@ -55,3 +55,43 @@ WHERE {
 }
 GROUP BY ?dish
 HAVING (SUM(?cal) < 500)
+
+%% Filter for multiple conditions
+
+PREFIX : <http://www.semanticweb.org/alessandro/ontologies/2025/5/ontologia_ricette#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+SELECT DISTINCT ?dish WHERE {
+    # Bind all input parameters
+    BIND(5000 AS ?maxCalories)
+    BIND(false AS ?glutenFree)
+    BIND(false AS ?lactoseFree)
+    BIND(false AS ?vegetarian)
+    
+    # Define excluded ingredients as VALUES
+    VALUES ?excludedIng {
+	:null
+    }
+    
+    ?dish a :Dish .
+    
+    # Calculate total calories
+    {
+        SELECT ?dish (SUM(?ingCalories) AS ?totalCalories) WHERE {
+            ?dish :hasIngredient ?ingredient .
+            ?ingredient :hasCalories ?ingCalories .
+        }
+        GROUP BY ?dish
+    }
+    FILTER (?totalCalories <= ?maxCalories)
+    
+    # Dietary restrictions
+    FILTER (IF(?glutenFree, NOT EXISTS { ?dish :hasIngredient [ :isGlutenFree false ] }, true))
+    FILTER (IF(?lactoseFree, NOT EXISTS { ?dish :hasIngredient [ :isLactoseFree false ] }, true))
+    FILTER (IF(?vegetarian, NOT EXISTS { ?dish :hasIngredient [ :isVegetarian false ] }, true))
+    
+    # Excluded ingredients check
+    FILTER NOT EXISTS {
+        ?dish :hasIngredient ?excludedIng .
+    }
+}
