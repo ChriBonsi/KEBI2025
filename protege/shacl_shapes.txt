@@ -1,0 +1,57 @@
+@prefix : <http://www.semanticweb.org/alessandro/ontologies/2025/5/ontologia_ricette#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>
+
+# Validates that all dishes have at least one ingredient
+:MinimumIngredientRequirementShape
+    a sh:NodeShape ;
+    sh:targetClass :Dish ;
+    sh:property [
+        sh:path :hasIngredient ;
+        sh:minCount 1 ;
+        sh:message "A dish must contain at least one ingredient" ;
+    ] .
+
+# Validates that all ingredients have properly formatted data properties
+:IngredientDataQualityShape
+    a sh:NodeShape ;
+    sh:targetClass :Ingredient ;
+    sh:property [
+        sh:path :hasCalories ;
+        sh:datatype xsd:integer ;
+        sh:minInclusive 0 ;
+        sh:message "Calories must be a non-negative integer" ;
+    ] ;
+    sh:property [
+        sh:path :isGlutenFree ;
+        sh:datatype xsd:boolean ;
+        sh:message "Gluten-free flag must be a boolean value" ;
+    ] ;
+    sh:property [
+        sh:path :isLactoseFree ;
+        sh:datatype xsd:boolean ;
+        sh:message "Lactose-free flag must be a boolean value" ;
+    ] ;
+    sh:property [
+        sh:path :isVegetarian ;
+        sh:datatype xsd:boolean ;
+        sh:message "Vegetarian flag must be a boolean value" ;
+    ] .
+
+
+# Ensures all ingredients are properly classified into subclasses
+:IngredientClassificationShape
+    a sh:NodeShape ;
+    sh:targetClass :Ingredient ;
+    sh:or (
+        [ sh:class :Dairy ]
+        [ sh:class :Egg ]
+        [ sh:class :Fish ]
+        [ sh:class :Meat ]
+        [ sh:class :Vegetables ]
+        [ sh:class :Pasta ]
+        [ sh:class :Other ]
+    ) ;
+    sh:message "Ingredients must belong to one of the defined subclasses (Dairy, Egg, Fish, Meat, Vegetables, Pasta, or Other)" ;
+    sh:severity sh:Warning .
