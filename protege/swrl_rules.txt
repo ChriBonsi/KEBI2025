@@ -1,0 +1,45 @@
+1. gluten/gluten-free ingredient 
+
+	:Ingredient(?x) ^ :isGlutenFree(?x, true) -> :glutenFreeIngredient(?x)
+
+	:Ingredient(?x) ^ :isGlutenFree(?x, false) -> :glutenIngredient(?x)
+
+2. lactose/lactose-free ingredient
+
+	:Ingredient(?x) ^ :isLactoseFree(?x, true) -> :lactoseFreeIngredient(?x)
+
+	:Ingredient(?x) ^ :isLactoseFree(?x, false) -> :lactoseIngredient(?x)
+
+3. vegetarian/carnivor ingredient
+
+	:Ingredient(?x) ^ :isVegetarian(?x, true) -> :vegetarianIngredient(?x)
+
+	:Ingredient(?x) ^ :isVegetarian(?x, false) -> :canivorIngredient(?x)
+
+4. dish with gluten
+
+	:glutenIngredient(?x) ^ :hasIngredient(?y, ?x) -> :glutenMeal(?y)
+
+5. dish with lactose
+
+	:lactoseIngredient(?x) ^ :hasIngredient(?y, ?x) -> :lactoseMeal(?y)
+
+6. carnivor dish 
+
+	:carnivorIngredient(?x) ^ :hasIngredient(?y, ?x) -> :canivorMeal(?y)
+
+7. reverse rule for hasIngredient
+
+	:hasIngredient(?x, ?y) -> :isInMeal(?y, ?x)
+
+8. calorie count 
+		
+	:Ingredient(?x) ^ :hasCalories(?x, ^cal) ^ swrlb:greaterThan(?cal, 199) -> :highCaloriesIngredient(?x)
+
+	:Ingredient(?x) ^ :hasCalories(?x, ?cal) ^ swrlb:lessThan(?cal, 101) → :lowCaloriesIngredient(?x)
+
+	:Ingredient(?x) ^ :hasCalories(?x, ?cal) ^ swrlb:greaterThan(?cal, 100) ^ swrlb:lessThan(?cal, 200) → :mediumCaloriesIngredient(?x)
+
+	
+
+	
