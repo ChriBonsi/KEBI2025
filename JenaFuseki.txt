@@ -1,0 +1,56 @@
+%% Query to see properties of AOAME custom task in graph
+PREFIX : <http://www.semanticweb.org/alessandro/ontologies/2025/5/ontologia_ricette#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+prefix mod: <http://fhnw.ch/modelingEnvironment/ModelOntology#>
+#prefix lo: <http://fhnw.ch/modelingEnvironment/LanguageOntology#>
+#prefix bpaas: <http://ikm-group.ch/archimeo/bpaas#>
+
+
+SELECT DISTINCT ?property ?value WHERE {
+  mod:custom_task_818bb0f8-861f-40d1-99f1-bcb05cb818fc ?property ?value .
+}
+
+%% Equivalent to the complex filter
+PREFIX mod: <http://fhnw.ch/modelingEnvironment/ModelOntology#>
+PREFIX : <http://www.semanticweb.org/alessandro/ontologies/2025/5/ontologia_ricette#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX lo: <http://fhnw.ch/modelingEnvironment/LanguageOntology#>
+
+SELECT ?dish
+WHERE {
+  mod:custom_task_818bb0f8-861f-40d1-99f1-bcb05cb818fc
+    lo:vegetarian ?prefVegetarian ;
+    lo:lactoseFree ?prefLactoseFree ;
+    lo:glutenFree ?prefGlutenFree ;
+    lo:maxCalories ?prefMaxCalories .
+
+  ?dish a :Dish ;
+        :hasIngredient ?ingredient .
+
+  ?ingredient :hasCalories ?ingCalories .
+
+  OPTIONAL { ?ingredient :isVegetarian ?ingVegetarian . }
+  OPTIONAL { ?ingredient :isLactoseFree ?ingLactoseFree . }
+  OPTIONAL { ?ingredient :isGlutenFree ?ingGlutenFree . }
+
+  # Default missing properties to true (no restriction)
+  BIND(COALESCE(?ingVegetarian, false) AS ?veg)
+  BIND(COALESCE(?ingLactoseFree, false) AS ?lac)
+  BIND(COALESCE(?ingGlutenFree, false) AS ?glu)
+
+  # Check if ingredient matches preferences or preference is false (no restriction)
+  BIND(
+    (
+      (!?prefVegetarian || ?veg = true) &&
+      (!?prefLactoseFree || ?lac = true) &&
+      (!?prefGlutenFree || ?glu = true)
+    ) AS ?ingredientMatches
+  )
+}
+GROUP BY ?dish ?prefMaxCalories
+HAVING (
+  COUNT(?ingredient) = COUNT(IF(?ingredientMatches, ?ingredient, "")) &&
+  SUM(?ingCalories) < ?prefMaxCalories
+)
