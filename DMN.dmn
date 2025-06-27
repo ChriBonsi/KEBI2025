@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<semantic:definitions xmlns:semantic="https://www.omg.org/spec/DMN/20240513/MODEL/"  xmlns:sdmn="https://www.omg.org/spec/SDMN/"  xmlns:triso="http://www.trisotech.com/2015/triso/modeling"  xmlns:dmndi="https://www.omg.org/spec/DMN/20230324/DMNDI/"  xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/"  xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/"  xmlns:trisodmn="http://www.trisotech.com/2016/triso/dmn"  xmlns:feel="https://www.omg.org/spec/DMN/20240513/FEEL/"  xmlns:tc="http://www.omg.org/spec/DMN/20160719/testcase"  xmlns:drools="http://www.drools.org/kie/dmn/1.1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xmlns:rss="http://purl.org/rss/2.0/"  xmlns:openapi="https://openapis.org/omg/extension/1.0"  xmlns:xsd="http://www.w3.org/2001/XMLSchema"   xmlns:i18n="http://www.omg.org/spec/BPMN/non-normative/extensions/i18n/1.0"  xmlns="http://www.trisotech.com/definitions/_34da856a-253a-4252-8aaa-29fa717724ed" id="_34da856a-253a-4252-8aaa-29fa717724ed" name="KEBI project 3" namespace="http://www.trisotech.com/definitions/_34da856a-253a-4252-8aaa-29fa717724ed" exporter="Decision Modeler" exporterVersion="9.8.4" xml:lang="en" triso:logoChoice="Default">
+<semantic:definitions xmlns:semantic="https://www.omg.org/spec/DMN/20240513/MODEL/"  xmlns:sdmn="https://www.omg.org/spec/SDMN/"  xmlns:triso="http://www.trisotech.com/2015/triso/modeling"  xmlns:dmndi="https://www.omg.org/spec/DMN/20230324/DMNDI/"  xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/"  xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/"  xmlns:trisodmn="http://www.trisotech.com/2016/triso/dmn"  xmlns:feel="https://www.omg.org/spec/DMN/20240513/FEEL/"  xmlns:tc="http://www.omg.org/spec/DMN/20160719/testcase"  xmlns:drools="http://www.drools.org/kie/dmn/1.1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xmlns:rss="http://purl.org/rss/2.0/"  xmlns:openapi="https://openapis.org/omg/extension/1.0"  xmlns:xsd="http://www.w3.org/2001/XMLSchema"   xmlns:i18n="http://www.omg.org/spec/BPMN/non-normative/extensions/i18n/1.0"  xmlns="http://www.trisotech.com/definitions/_34da856a-253a-4252-8aaa-29fa717724ed" id="_34da856a-253a-4252-8aaa-29fa717724ed" name="KEBI project 3" namespace="http://www.trisotech.com/definitions/_34da856a-253a-4252-8aaa-29fa717724ed" exporter="Decision Modeler" exporterVersion="9.9.2" xml:lang="en" triso:logoChoice="Default">
     <semantic:extensionElements/>
     <semantic:itemDefinition name="Name" label="Name" isCollection="false">
         <semantic:typeRef>Any</semantic:typeRef>
@@ -78,7 +78,7 @@
                     <semantic:text>Diet type</semantic:text>
                 </semantic:inputExpression>
                 <semantic:inputValues triso:constraintsType="enumeration">
-                    <semantic:text>"vegetarian", "carnivore", "pescatarian"</semantic:text>
+                    <semantic:text>"vegetarian", "pescatarian", "carnivore"</semantic:text>
                 </semantic:inputValues>
             </semantic:input>
             <semantic:input id="_0d8266d3-a07b-4141-856d-bc76ab4d31b9" label="Lactose intolerant">
@@ -602,7 +602,7 @@
                 <semantic:inputEntry id="_052b3713-1ac9-4957-8334-1e5a82b6cef3">
                     <semantic:text>list contains(?,"Coppa") and list contains(?, "Mortadella") and list contains(?, "Salame")</semantic:text>
                 </semantic:inputEntry>
-                <semantic:inputEntry id="_ff8a7dfa-da4e-4e0d-ab90-68ef68fe7277" triso:mergeKey="_a605db7c-f392-434f-ab26-7fdafac4dfa1">
+                <semantic:inputEntry id="_ff8a7dfa-da4e-4e0d-ab90-68ef68fe7277" triso:mergeKey="_cdb5c3cb-b3ec-4803-b9d6-d89b4103a70b">
                     <semantic:text>false</semantic:text>
                 </semantic:inputEntry>
                 <semantic:outputEntry id="_ef0ef550-8bf5-4267-9973-d20c466ea352">
@@ -612,15 +612,15 @@
                     <semantic:text/>
                 </semantic:annotationEntry>
             </semantic:rule>
-            <semantic:rule id="_af6fdec9-51fe-4f6a-a64f-c6f8fb623e8d">
-                <semantic:inputEntry id="_fa751fc2-c991-4868-bf8a-0eb16bba8ce3">
-                    <semantic:text>list contains(?,"Parmigiano") and list contains(?, "Pasta") and list contains(?, "Basilico") and list contains(?,"Olio") and list contains(?, "Aglio")</semantic:text>
+            <semantic:rule id="_30a3a70d-e23d-496f-82cf-0ff822e2acd5">
+                <semantic:inputEntry id="_2dd9dcc1-abfa-4127-ac7a-fbb488363904">
+                    <semantic:text>list contains(?,"Ceci") and list contains(?, "Lenticchie") and list contains(?, "Fagioli") and list contains(?, "Pepe") and list contains(?, "Olio") and list contains(?, "Cipolla")</semantic:text>
                 </semantic:inputEntry>
-                <semantic:inputEntry id="_7c5f588b-f562-41d9-a86c-4ca85e65ab5d" triso:mergeKey="_a605db7c-f392-434f-ab26-7fdafac4dfa1">
+                <semantic:inputEntry id="_2e13608a-db68-4a87-aae8-597d589e081d" triso:mergeKey="_cdb5c3cb-b3ec-4803-b9d6-d89b4103a70b">
                     <semantic:text>false</semantic:text>
                 </semantic:inputEntry>
-                <semantic:outputEntry id="_aea15946-c5b7-4c44-912f-fca989b589ff">
-                    <semantic:text>"pastaPesto"</semantic:text>
+                <semantic:outputEntry id="_92e28d53-4f3a-43fd-961d-c86f73e53cb2">
+                    <semantic:text>"insalataLegumi"</semantic:text>
                 </semantic:outputEntry>
                 <semantic:annotationEntry>
                     <semantic:text/>
@@ -630,7 +630,7 @@
                 <semantic:inputEntry id="_994d80d8-99f6-4f67-b1ef-a84aa650781b">
                     <semantic:text>list contains(?,"Pasta") and list contains(?,"Pecorino") and list contains(?, "Pecorino") and list contains(?, "Pepe") and list contains(?, "Guanciale")</semantic:text>
                 </semantic:inputEntry>
-                <semantic:inputEntry id="_ddfdc112-bed0-433c-be2a-899ac139d0d1" triso:mergeKey="_a605db7c-f392-434f-ab26-7fdafac4dfa1">
+                <semantic:inputEntry id="_ddfdc112-bed0-433c-be2a-899ac139d0d1" triso:mergeKey="_cdb5c3cb-b3ec-4803-b9d6-d89b4103a70b">
                     <semantic:text>false</semantic:text>
                 </semantic:inputEntry>
                 <semantic:outputEntry id="_8ee69e0e-f984-4d25-8355-ed3d74406c77">
@@ -644,7 +644,7 @@
                 <semantic:inputEntry id="_e874b162-db93-49de-8a03-5d5cf4c89d23">
                     <semantic:text>list contains(?,"Farina") and list contains(?, "Olio") and list contains(?, "Acqua") and list contains(?, "Pomodoro") and list contains(?, "Mozzarella") and list contains(?, "Basilico")</semantic:text>
                 </semantic:inputEntry>
-                <semantic:inputEntry id="_d3c147d9-65ac-475e-bae2-3d09519a37ee" triso:mergeKey="_a605db7c-f392-434f-ab26-7fdafac4dfa1">
+                <semantic:inputEntry id="_d3c147d9-65ac-475e-bae2-3d09519a37ee" triso:mergeKey="_cdb5c3cb-b3ec-4803-b9d6-d89b4103a70b">
                     <semantic:text>false</semantic:text>
                 </semantic:inputEntry>
                 <semantic:outputEntry id="_beb76c9e-b777-44a9-8f2b-e59d467a2e0b">
@@ -658,7 +658,7 @@
                 <semantic:inputEntry id="_79063f77-b313-415d-93e6-a161b105069d">
                     <semantic:text>list contains(?,"Farina") and list contains(?, "Olio") and list contains(?, "Acqua") and list contains(?, "Tonno") and list contains(?, "Cipolla")</semantic:text>
                 </semantic:inputEntry>
-                <semantic:inputEntry id="_66e6f657-5a5a-4288-b5e8-14213297f79f" triso:mergeKey="_a605db7c-f392-434f-ab26-7fdafac4dfa1">
+                <semantic:inputEntry id="_66e6f657-5a5a-4288-b5e8-14213297f79f" triso:mergeKey="_cdb5c3cb-b3ec-4803-b9d6-d89b4103a70b">
                     <semantic:text>false</semantic:text>
                 </semantic:inputEntry>
                 <semantic:outputEntry id="_130b4245-d9e8-4100-9dee-12c2fdf91371">
@@ -672,7 +672,7 @@
                 <semantic:inputEntry id="_992fca06-ddf2-40c6-b79e-de84c808549b">
                     <semantic:text>list contains(?, "Farina") and list contains(?, "Acqua") and list contains(?, "Olio") and list contains(?, "Spianata") and list contains(?, "Pomodoro")</semantic:text>
                 </semantic:inputEntry>
-                <semantic:inputEntry id="_96960468-97a4-4e10-bc6e-32e079739c25" triso:mergeKey="_a605db7c-f392-434f-ab26-7fdafac4dfa1">
+                <semantic:inputEntry id="_96960468-97a4-4e10-bc6e-32e079739c25" triso:mergeKey="_cdb5c3cb-b3ec-4803-b9d6-d89b4103a70b">
                     <semantic:text>false</semantic:text>
                 </semantic:inputEntry>
                 <semantic:outputEntry id="_3237605c-1d84-4151-9c95-e943ecbc29b0">
@@ -686,7 +686,7 @@
                 <semantic:inputEntry id="_c3643a6a-61d8-4753-a695-38f7dd73753b">
                     <semantic:text>list contains(?,"Riso") and list contains(?, "Pomodoro") and list contains(?, "Basilico") and list contains(?, "Parmigiano") and list contains(?, "Burro")</semantic:text>
                 </semantic:inputEntry>
-                <semantic:inputEntry id="_91fa9339-6131-4918-8a0a-5cf3bee0ea12" triso:mergeKey="_c6cb63ff-325b-426f-b20c-0ab2271b6ae9">
+                <semantic:inputEntry id="_91fa9339-6131-4918-8a0a-5cf3bee0ea12" triso:mergeKey="_6942db82-9a1f-43cb-a931-90f7e5e40b78">
                     <semantic:text>true</semantic:text>
                 </semantic:inputEntry>
                 <semantic:outputEntry id="_08ebfb34-de99-47e4-93b0-101264b42142">
@@ -700,7 +700,7 @@
                 <semantic:inputEntry id="_10b78bb2-c888-4ec3-9a28-92e0b30d663f">
                     <semantic:text>list contains(?,"Acqua") and list contains(?, "Olio") and list contains(?, "Farina") and list contains(?, "Rosmarino")</semantic:text>
                 </semantic:inputEntry>
-                <semantic:inputEntry id="_3e2ed45b-2cf8-43ab-9623-f3ead90872ac" triso:mergeKey="_c6cb63ff-325b-426f-b20c-0ab2271b6ae9">
+                <semantic:inputEntry id="_3e2ed45b-2cf8-43ab-9623-f3ead90872ac" triso:mergeKey="_6942db82-9a1f-43cb-a931-90f7e5e40b78">
                     <semantic:text>true</semantic:text>
                 </semantic:inputEntry>
                 <semantic:outputEntry id="_82348408-37f7-476a-8f0d-b4a0dd381647">
@@ -710,11 +710,25 @@
                     <semantic:text/>
                 </semantic:annotationEntry>
             </semantic:rule>
+            <semantic:rule id="_af6fdec9-51fe-4f6a-a64f-c6f8fb623e8d">
+                <semantic:inputEntry id="_fa751fc2-c991-4868-bf8a-0eb16bba8ce3">
+                    <semantic:text>list contains(?,"Parmigiano") and list contains(?, "Pasta") and list contains(?, "Basilico") and list contains(?,"Olio") and list contains(?, "Aglio")</semantic:text>
+                </semantic:inputEntry>
+                <semantic:inputEntry id="_7c5f588b-f562-41d9-a86c-4ca85e65ab5d" triso:mergeKey="_6942db82-9a1f-43cb-a931-90f7e5e40b78">
+                    <semantic:text>true</semantic:text>
+                </semantic:inputEntry>
+                <semantic:outputEntry id="_aea15946-c5b7-4c44-912f-fca989b589ff">
+                    <semantic:text>"pastaPesto"</semantic:text>
+                </semantic:outputEntry>
+                <semantic:annotationEntry>
+                    <semantic:text/>
+                </semantic:annotationEntry>
+            </semantic:rule>
             <semantic:rule id="_2c59feb4-45a8-43be-a9f7-3fd019d85247">
                 <semantic:inputEntry id="_2fb1456e-04d1-4c60-8cfb-a8eae925aa4e">
                     <semantic:text>list contains(?,"Caciotta") and list contains(?, "Pecorino") and list contains(?, "Parmigiano")</semantic:text>
                 </semantic:inputEntry>
-                <semantic:inputEntry id="_f1827d07-634f-4f92-95ac-80f31d0150d5" triso:mergeKey="_c6cb63ff-325b-426f-b20c-0ab2271b6ae9">
+                <semantic:inputEntry id="_f1827d07-634f-4f92-95ac-80f31d0150d5" triso:mergeKey="_6942db82-9a1f-43cb-a931-90f7e5e40b78">
                     <semantic:text>true</semantic:text>
                 </semantic:inputEntry>
                 <semantic:outputEntry id="_7103f707-8f71-4f61-bdc9-812d70536f8b">
@@ -724,25 +738,11 @@
                     <semantic:text/>
                 </semantic:annotationEntry>
             </semantic:rule>
-            <semantic:rule id="_30a3a70d-e23d-496f-82cf-0ff822e2acd5">
-                <semantic:inputEntry id="_2dd9dcc1-abfa-4127-ac7a-fbb488363904">
-                    <semantic:text>list contains(?,"Ceci") and list contains(?, "Lenticchie") and list contains(?, "Fagioli") and list contains(?, "Pepe") and list contains(?, "Olio") and list contains(?, "Cipolla")</semantic:text>
-                </semantic:inputEntry>
-                <semantic:inputEntry id="_2e13608a-db68-4a87-aae8-597d589e081d" triso:mergeKey="_c6cb63ff-325b-426f-b20c-0ab2271b6ae9">
-                    <semantic:text>true</semantic:text>
-                </semantic:inputEntry>
-                <semantic:outputEntry id="_92e28d53-4f3a-43fd-961d-c86f73e53cb2">
-                    <semantic:text>"insalataLegumi"</semantic:text>
-                </semantic:outputEntry>
-                <semantic:annotationEntry>
-                    <semantic:text/>
-                </semantic:annotationEntry>
-            </semantic:rule>
             <semantic:rule id="_a6d29ac1-0990-4f35-a3f6-c77ef95767f8">
                 <semantic:inputEntry id="_dda1069d-edac-4c71-a539-5cc360554f04">
                     <semantic:text>list contains(?,"Uova") and list contains(?, "Olio") and list contains(?, "Pepe")</semantic:text>
                 </semantic:inputEntry>
-                <semantic:inputEntry id="_50491041-dd1a-4580-bf1e-382f4746faf6" triso:mergeKey="_c6cb63ff-325b-426f-b20c-0ab2271b6ae9">
+                <semantic:inputEntry id="_50491041-dd1a-4580-bf1e-382f4746faf6" triso:mergeKey="_6942db82-9a1f-43cb-a931-90f7e5e40b78">
                     <semantic:text>true</semantic:text>
                 </semantic:inputEntry>
                 <semantic:outputEntry id="_4171f986-10c8-46c4-b99d-18cdbbf7d7df">
@@ -756,7 +756,7 @@
                 <semantic:inputEntry id="_187e8f6d-74a7-4fe1-ac92-a1acd8607534">
                     <semantic:text>list contains(?, "Carne") and list contains(?, "Olio") and list contains(?, "Rosmarino") and list contains(?, "Aglio")</semantic:text>
                 </semantic:inputEntry>
-                <semantic:inputEntry id="_4e81a899-26cd-4978-8da5-ef9640a34bc0" triso:mergeKey="_c6cb63ff-325b-426f-b20c-0ab2271b6ae9">
+                <semantic:inputEntry id="_4e81a899-26cd-4978-8da5-ef9640a34bc0" triso:mergeKey="_6942db82-9a1f-43cb-a931-90f7e5e40b78">
                     <semantic:text>true</semantic:text>
                 </semantic:inputEntry>
                 <semantic:outputEntry id="_027e5073-0bac-4363-a6a5-c03ed980a58c">
