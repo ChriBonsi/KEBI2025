@@ -34,11 +34,11 @@
 
 8. calorie count 
 		
-	:Ingredient(?x) ^ :hasCalories(?x, ^cal) ^ swrlb:greaterThan(?cal, 199) -> :highCaloriesIngredient(?x)
+	:Ingredient(?x) ^ :hasCalories(?x, ?cal) ^ swrlb:greaterThan(?cal, 199) -> :highCaloriesIngredient(?x)
 
-	:Ingredient(?x) ^ :hasCalories(?x, ?cal) ^ swrlb:lessThan(?cal, 101) → :lowCaloriesIngredient(?x)
+	:Ingredient(?x) ^ :hasCalories(?x, ?cal) ^ swrlb:lessThan(?cal, 101) -> :lowCaloriesIngredient(?x)
 
-	:Ingredient(?x) ^ :hasCalories(?x, ?cal) ^ swrlb:greaterThan(?cal, 100) ^ swrlb:lessThan(?cal, 200) → :mediumCaloriesIngredient(?x)
+	:Ingredient(?x) ^ :hasCalories(?x, ?cal) ^ swrlb:greaterThan(?cal, 100) ^ swrlb:lessThan(?cal, 200) -> :mediumCaloriesIngredient(?x)
 
 	
 
